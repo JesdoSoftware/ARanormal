@@ -28,10 +28,12 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 
 		startCapturingVideo()
 
-		let (scnView, cameraNode) = setUpSceneView()
 		let motionManager = createMotionManager()
+		let (scnView, cameraNode, ghostNode, ghostPivotNode) = setUpSceneView()
+		let ghostController = GhostController(ghostNode: ghostNode, ghostPivotNode: ghostPivotNode)
 
-		_sceneRendererDelegate = SceneRendererDelegate(motionManager: motionManager, cameraNode: cameraNode)
+		_sceneRendererDelegate = SceneRendererDelegate(motionManager: motionManager, cameraNode: cameraNode,
+				ghostController: ghostController)
 		scnView.delegate = _sceneRendererDelegate!
 
 		// add a tap gesture recognizer
@@ -117,7 +119,8 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 		_avCaptureSession!.startRunning()
 	}
 
-	private func setUpSceneView() -> (sceneView: SCNView, cameraNode: SCNNode) {
+	private func setUpSceneView() ->
+			(sceneView: SCNView, cameraNode: SCNNode, ghostNode: SCNNode, ghostPivotNode: SCNNode) {
 		// create a new scene
 		let scene = SCNScene()
 
@@ -143,14 +146,14 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 		ambientLightNode.light!.color = UIColor.darkGrayColor()
 		scene.rootNode.addChildNode(ambientLightNode)
 
-		// retrieve the ship node
 		let orb = SCNSphere(radius: 2)
 		let orbNode = SCNNode(geometry: orb)
+		let orbPivotNode = SCNNode()
+		orbPivotNode.addChildNode(orbNode)
 		orbNode.position = SCNVector3Make(0, 50, 50)
-		scene.rootNode.addChildNode(orbNode)
+		scene.rootNode.addChildNode(orbPivotNode)
 
-		// animate the 3d object
-		orbNode.runAction(SCNAction.repeatActionForever(SCNAction.rotateByX(0, y: 2, z: 0, duration: 1)))
+		orbPivotNode.runAction(SCNAction.repeatActionForever(SCNAction.rotateByX(0, y: 0, z: 2, duration: 1)))
 
 		// retrieve the SCNView
 		let scnView = SCNView(frame: view.bounds)
@@ -166,8 +169,9 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 		scnView.showsStatistics = true
 
 		scnView.backgroundColor = UIColor.clearColor()
+		scnView.playing = true
 
-		return (scnView, cameraNode)
+		return (scnView, cameraNode, orbNode, orbPivotNode)
 	}
 
 	private func createMotionManager() -> CMMotionManager {

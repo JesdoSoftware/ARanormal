@@ -11,12 +11,15 @@ import SceneKit
 import CoreMotion
 
 class SceneRendererDelegate: NSObject, SCNSceneRendererDelegate {
+
 	private let _motionManager: CMMotionManager
 	private let _cameraNode: SCNNode
+	private let _ghostController: GhostController
 
-	init(motionManager: CMMotionManager, cameraNode: SCNNode) {
+	init(motionManager: CMMotionManager, cameraNode: SCNNode, ghostController: GhostController) {
 		_motionManager = motionManager
 		_cameraNode = cameraNode
+		_ghostController = ghostController
 	}
 
 	func renderer(renderer: SCNSceneRenderer, updateAtTime time: NSTimeInterval) {
@@ -33,5 +36,7 @@ class SceneRendererDelegate: NSObject, SCNSceneRendererDelegate {
 			quaternion = SCNQuaternion()
 		}
 		_cameraNode.orientation = quaternion
+
+		_ghostController.updateAtTime(time)
 	}
 }

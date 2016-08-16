@@ -21,6 +21,10 @@ public class GhostController {
 	}
 
 	public func updateAtTime(time: NSTimeInterval) {
-
+		let rnd = arc4random_uniform(600) + 1
+		if rnd == 1 {
+			_ghostPivotNode.removeAllActions()
+			_ghostPivotNode.runAction(SCNAction.rotateByX(0, y: 0, z: 1, duration: 5))
+		}
 	}
 }

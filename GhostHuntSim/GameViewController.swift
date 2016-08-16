@@ -158,7 +158,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 		orbNode.position = SCNVector3Make(0, 50, 50)
 		scene.rootNode.addChildNode(orbPivotNode)
 
-		orbPivotNode.runAction(SCNAction.repeatActionForever(SCNAction.rotateByX(0, y: 0, z: 2, duration: 1)))
+//		orbPivotNode.runAction(SCNAction.repeatActionForever(SCNAction.rotateByX(0, y: 0, z: 2, duration: 1)))
 
 		// retrieve the SCNView
 		let scnView = SCNView(frame: view.bounds)

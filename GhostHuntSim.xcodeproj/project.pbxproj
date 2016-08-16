@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		605620405675BC7486F5E924 /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562773D515A68FE53039B3 /* VoiceController.swift */; };
+		605620AA020C0B4C9FD17CE0 /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562593CD951F34CBD60F08 /* TemperatureController.swift */; };
+		605625F9A2257A0F4BA14C49 /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562593CD951F34CBD60F08 /* TemperatureController.swift */; };
+		6056262176DFB553F0309EA8 /* HudController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CA1A9B0E29C20AAA679 /* HudController.swift */; };
 		60562A48E29C26EBA6BD50B7 /* Ghost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605626393B98B63A4C7D0E46 /* Ghost.swift */; };
 		60562A8E394EF53E8EA2998D /* Ghost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605626393B98B63A4C7D0E46 /* Ghost.swift */; };
 		60562A9C01196E35B5ECAF91 /* GhostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562D15DB35712DA2EC97F1 /* GhostController.swift */; };
 		60562AA5519320F22925344A /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562773D515A68FE53039B3 /* VoiceController.swift */; };
+		60562AB43265F69984E34A3F /* HudController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CA1A9B0E29C20AAA679 /* HudController.swift */; };
 		60562C132E7C9BE3A62A93C3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60562BB1A56A1433159F2F1E /* AudioToolbox.framework */; };
 		60562D029ED62D0FA6E17CE7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605625FED9E2D592EF208DF0 /* AVFoundation.framework */; };
 		60562ECC8D04A3645F308A72 /* GhostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562D15DB35712DA2EC97F1 /* GhostController.swift */; };
@@ -42,10 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60562593CD951F34CBD60F08 /* TemperatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureController.swift; sourceTree = "<group>"; };
 		605625FED9E2D592EF208DF0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		605626393B98B63A4C7D0E46 /* Ghost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ghost.swift; sourceTree = "<group>"; };
 		60562773D515A68FE53039B3 /* VoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceController.swift; sourceTree = "<group>"; };
 		60562BB1A56A1433159F2F1E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		60562CA1A9B0E29C20AAA679 /* HudController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudController.swift; sourceTree = "<group>"; };
 		60562D15DB35712DA2EC97F1 /* GhostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GhostController.swift; sourceTree = "<group>"; };
 		8807B53F1D541ED500BA3EA5 /* GhostHuntSim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostHuntSim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8807B5421D541ED500BA3EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +139,8 @@
 				60562773D515A68FE53039B3 /* VoiceController.swift */,
 				605626393B98B63A4C7D0E46 /* Ghost.swift */,
 				60562D15DB35712DA2EC97F1 /* GhostController.swift */,
+				60562593CD951F34CBD60F08 /* TemperatureController.swift */,
+				60562CA1A9B0E29C20AAA679 /* HudController.swift */,
 			);
 			path = GhostHuntSim;
 			sourceTree = "<group>";
@@ -266,6 +274,8 @@
 				60562AA5519320F22925344A /* VoiceController.swift in Sources */,
 				60562A48E29C26EBA6BD50B7 /* Ghost.swift in Sources */,
 				60562A9C01196E35B5ECAF91 /* GhostController.swift in Sources */,
+				605625F9A2257A0F4BA14C49 /* TemperatureController.swift in Sources */,
+				6056262176DFB553F0309EA8 /* HudController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +287,8 @@
 				605620405675BC7486F5E924 /* VoiceController.swift in Sources */,
 				60562A8E394EF53E8EA2998D /* Ghost.swift in Sources */,
 				60562ECC8D04A3645F308A72 /* GhostController.swift in Sources */,
+				605620AA020C0B4C9FD17CE0 /* TemperatureController.swift in Sources */,
+				60562AB43265F69984E34A3F /* HudController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

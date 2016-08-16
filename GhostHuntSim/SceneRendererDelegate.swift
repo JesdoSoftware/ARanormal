@@ -15,11 +15,14 @@ class SceneRendererDelegate: NSObject, SCNSceneRendererDelegate {
 	private let _motionManager: CMMotionManager
 	private let _cameraNode: SCNNode
 	private let _ghostController: GhostController
+	private let _temperatureController: TemperatureController
 
-	init(motionManager: CMMotionManager, cameraNode: SCNNode, ghostController: GhostController) {
+	init(motionManager: CMMotionManager, cameraNode: SCNNode, ghostController: GhostController,
+	        temperatureController: TemperatureController) {
 		_motionManager = motionManager
 		_cameraNode = cameraNode
 		_ghostController = ghostController
+		_temperatureController = temperatureController
 	}
 
 	func renderer(renderer: SCNSceneRenderer, updateAtTime time: NSTimeInterval) {
@@ -38,5 +41,6 @@ class SceneRendererDelegate: NSObject, SCNSceneRendererDelegate {
 		_cameraNode.orientation = quaternion
 
 		_ghostController.updateAtTime(time)
+		_temperatureController.updateAtTime(time)
 	}
 }

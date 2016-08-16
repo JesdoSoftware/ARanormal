@@ -11,6 +11,7 @@ import QuartzCore
 import SceneKit
 import CoreMotion
 import AVFoundation
+import SpriteKit
 
 class GameViewController: UIViewController, SCNSceneRendererDelegate {
 
@@ -27,14 +28,18 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 		_voiceController!.startListening()
 
 		startCapturingVideo()
-
 		let motionManager = createMotionManager()
-		let (scnView, cameraNode, ghostNode, ghostPivotNode) = setUpSceneView()
+
+		let (sceneView, cameraNode, ghostNode, ghostPivotNode) = setUpSceneView()
+		let hudController = HudController(sceneView: sceneView)
+
 		let ghostController = GhostController(ghostNode: ghostNode, ghostPivotNode: ghostPivotNode)
+		let temperatureController = TemperatureController(sceneView: sceneView, ghostNode: ghostNode,
+				hudController: hudController)
 
 		_sceneRendererDelegate = SceneRendererDelegate(motionManager: motionManager, cameraNode: cameraNode,
-				ghostController: ghostController)
-		scnView.delegate = _sceneRendererDelegate!
+				ghostController: ghostController, temperatureController: temperatureController)
+		sceneView.delegate = _sceneRendererDelegate!
 
 		// add a tap gesture recognizer
 		//let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))

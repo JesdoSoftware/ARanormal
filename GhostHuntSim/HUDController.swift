@@ -28,10 +28,10 @@ public class HUDController: MessengerSubscriber {
 	}
 
 	public func processMessage(message: AnyObject) {
-		if let temperatureMessage = message as? TemperatureMessage {
-			if temperatureMessage.direction == .Down {
+		if let isGhostInViewMessage = message as? IsGhostInViewMessage {
+			if isGhostInViewMessage.isInView {
 				decreaseTemperature()
-			} else if temperatureMessage.direction == .Up {
+			} else {
 				increaseTemperature()
 			}
 		}

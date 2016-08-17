@@ -29,9 +29,9 @@ public class HUDController: MessengerSubscriber {
 
 	public func processMessage(message: AnyObject) {
 		if let temperatureMessage = message as? TemperatureMessage {
-			if temperatureMessage.Direction == .Down {
+			if temperatureMessage.direction == .Down {
 				decreaseTemperature()
-			} else if temperatureMessage.Direction == .Up {
+			} else if temperatureMessage.direction == .Up {
 				increaseTemperature()
 			}
 		}

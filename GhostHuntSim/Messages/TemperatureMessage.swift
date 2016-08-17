@@ -6,10 +6,11 @@
 import Foundation
 
 public class TemperatureMessage {
-	public let Direction: TemperatureDirection
 
-	init(direction: TemperatureDirection) {
-		Direction = direction
+	public let direction: TemperatureDirection
+
+	init(direction dir: TemperatureDirection) {
+		direction = dir
 	}
 
 	public enum TemperatureDirection {

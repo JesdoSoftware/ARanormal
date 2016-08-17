@@ -6,7 +6,7 @@
 import Foundation
 import SceneKit
 
-public class GhostController {
+public class GhostController: MessengerSubscriber {
 
 	public let ghost: Ghost
 
@@ -20,13 +20,15 @@ public class GhostController {
 		ghost = Ghost()
 	}
 
-	public func updateAtTime(time: NSTimeInterval) {
+	public func processMessage(message: AnyObject) {
 		_ghostNode.opacity = CGFloat(ghost.visibility)
 
-		let rnd = arc4random_uniform(600) + 1
-		if rnd == 1 {
-			_ghostPivotNode.removeAllActions()
-			_ghostPivotNode.runAction(SCNAction.rotateByX(0, y: 0, z: 1, duration: 5))
+		if message is HeartbeatMessage {
+			let rnd = arc4random_uniform(10) + 1
+			if rnd == 1 {
+				_ghostPivotNode.removeAllActions()
+				_ghostPivotNode.runAction(SCNAction.rotateByX(0, y: 0, z: 1, duration: 1))
+			}
 		}
 	}
 }

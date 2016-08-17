@@ -9,15 +9,21 @@
 /* Begin PBXBuildFile section */
 		605620405675BC7486F5E924 /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562773D515A68FE53039B3 /* VoiceController.swift */; };
 		605620AA020C0B4C9FD17CE0 /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562593CD951F34CBD60F08 /* TemperatureController.swift */; };
+		605623B68E9D337C30B47862 /* MessengerSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605628CC23613C9C84F7A3CA /* MessengerSubscriber.swift */; };
+		605623D2C847A6DEF897EA63 /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562ECDD18BC73C2EA2B745 /* Messenger.swift */; };
+		605624E34E7A3990EDC84D6D /* MessengerSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605628CC23613C9C84F7A3CA /* MessengerSubscriber.swift */; };
 		605625F9A2257A0F4BA14C49 /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562593CD951F34CBD60F08 /* TemperatureController.swift */; };
-		6056262176DFB553F0309EA8 /* HudController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CA1A9B0E29C20AAA679 /* HudController.swift */; };
+		6056262176DFB553F0309EA8 /* HUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CA1A9B0E29C20AAA679 /* HUDController.swift */; };
 		60562A48E29C26EBA6BD50B7 /* Ghost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605626393B98B63A4C7D0E46 /* Ghost.swift */; };
 		60562A8E394EF53E8EA2998D /* Ghost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605626393B98B63A4C7D0E46 /* Ghost.swift */; };
 		60562A9C01196E35B5ECAF91 /* GhostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562D15DB35712DA2EC97F1 /* GhostController.swift */; };
 		60562AA5519320F22925344A /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562773D515A68FE53039B3 /* VoiceController.swift */; };
-		60562AB43265F69984E34A3F /* HudController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CA1A9B0E29C20AAA679 /* HudController.swift */; };
+		60562AB43265F69984E34A3F /* HUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CA1A9B0E29C20AAA679 /* HUDController.swift */; };
+		60562BD0791130FB839AF6C1 /* TemperatureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562669CEE1253A4A101E2A /* TemperatureMessage.swift */; };
 		60562C132E7C9BE3A62A93C3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60562BB1A56A1433159F2F1E /* AudioToolbox.framework */; };
 		60562D029ED62D0FA6E17CE7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605625FED9E2D592EF208DF0 /* AVFoundation.framework */; };
+		60562D7F07B99EA257BECCD6 /* TemperatureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562669CEE1253A4A101E2A /* TemperatureMessage.swift */; };
+		60562E5D5E8BFD6C15A9998A /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562ECDD18BC73C2EA2B745 /* Messenger.swift */; };
 		60562ECC8D04A3645F308A72 /* GhostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562D15DB35712DA2EC97F1 /* GhostController.swift */; };
 		8807B5431D541ED500BA3EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8807B5421D541ED500BA3EA5 /* AppDelegate.swift */; };
 		8807B5451D541ED500BA3EA5 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 8807B5441D541ED500BA3EA5 /* art.scnassets */; };
@@ -49,10 +55,13 @@
 		60562593CD951F34CBD60F08 /* TemperatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureController.swift; sourceTree = "<group>"; };
 		605625FED9E2D592EF208DF0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		605626393B98B63A4C7D0E46 /* Ghost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ghost.swift; sourceTree = "<group>"; };
+		60562669CEE1253A4A101E2A /* TemperatureMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureMessage.swift; sourceTree = "<group>"; };
 		60562773D515A68FE53039B3 /* VoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceController.swift; sourceTree = "<group>"; };
+		605628CC23613C9C84F7A3CA /* MessengerSubscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerSubscriber.swift; sourceTree = "<group>"; };
 		60562BB1A56A1433159F2F1E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		60562CA1A9B0E29C20AAA679 /* HudController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudController.swift; sourceTree = "<group>"; };
+		60562CA1A9B0E29C20AAA679 /* HUDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDController.swift; sourceTree = "<group>"; };
 		60562D15DB35712DA2EC97F1 /* GhostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GhostController.swift; sourceTree = "<group>"; };
+		60562ECDD18BC73C2EA2B745 /* Messenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
 		8807B53F1D541ED500BA3EA5 /* GhostHuntSim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostHuntSim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8807B5421D541ED500BA3EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8807B5441D541ED500BA3EA5 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -104,6 +113,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		605629B2ECA281B3FBC56866 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				60562669CEE1253A4A101E2A /* TemperatureMessage.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
 		8807B5361D541ED500BA3EA5 = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +157,10 @@
 				605626393B98B63A4C7D0E46 /* Ghost.swift */,
 				60562D15DB35712DA2EC97F1 /* GhostController.swift */,
 				60562593CD951F34CBD60F08 /* TemperatureController.swift */,
-				60562CA1A9B0E29C20AAA679 /* HudController.swift */,
+				60562CA1A9B0E29C20AAA679 /* HUDController.swift */,
+				60562ECDD18BC73C2EA2B745 /* Messenger.swift */,
+				605628CC23613C9C84F7A3CA /* MessengerSubscriber.swift */,
+				605629B2ECA281B3FBC56866 /* Messages */,
 			);
 			path = GhostHuntSim;
 			sourceTree = "<group>";
@@ -275,7 +295,10 @@
 				60562A48E29C26EBA6BD50B7 /* Ghost.swift in Sources */,
 				60562A9C01196E35B5ECAF91 /* GhostController.swift in Sources */,
 				605625F9A2257A0F4BA14C49 /* TemperatureController.swift in Sources */,
-				6056262176DFB553F0309EA8 /* HudController.swift in Sources */,
+				6056262176DFB553F0309EA8 /* HUDController.swift in Sources */,
+				60562E5D5E8BFD6C15A9998A /* Messenger.swift in Sources */,
+				605623B68E9D337C30B47862 /* MessengerSubscriber.swift in Sources */,
+				60562D7F07B99EA257BECCD6 /* TemperatureMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +311,10 @@
 				60562A8E394EF53E8EA2998D /* Ghost.swift in Sources */,
 				60562ECC8D04A3645F308A72 /* GhostController.swift in Sources */,
 				605620AA020C0B4C9FD17CE0 /* TemperatureController.swift in Sources */,
-				60562AB43265F69984E34A3F /* HudController.swift in Sources */,
+				60562AB43265F69984E34A3F /* HUDController.swift in Sources */,
+				605623D2C847A6DEF897EA63 /* Messenger.swift in Sources */,
+				605624E34E7A3990EDC84D6D /* MessengerSubscriber.swift in Sources */,
+				60562BD0791130FB839AF6C1 /* TemperatureMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

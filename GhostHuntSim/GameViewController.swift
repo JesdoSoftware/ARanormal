@@ -29,16 +29,20 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 
 		startCapturingVideo()
 		let motionManager = createMotionManager()
-
 		let (sceneView, cameraNode, ghostNode, ghostPivotNode) = setUpSceneView()
-		let hudController = HudController(sceneView: sceneView)
+
+		let messenger = Messenger()
+
+		let hudController = HUDController(sceneView: sceneView)
+		messenger.addSubscriber(hudController)
 
 		let ghostController = GhostController(ghostNode: ghostNode, ghostPivotNode: ghostPivotNode)
 		let temperatureController = TemperatureController(sceneView: sceneView, ghostNode: ghostNode,
-				hudController: hudController)
+				messenger: messenger)
 
 		_sceneRendererDelegate = SceneRendererDelegate(motionManager: motionManager, cameraNode: cameraNode,
-				ghostController: ghostController, temperatureController: temperatureController)
+				ghostController: ghostController, temperatureController: temperatureController,
+				hudController: hudController)
 		sceneView.delegate = _sceneRendererDelegate!
 
 		// add a tap gesture recognizer

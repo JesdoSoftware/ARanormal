@@ -21,6 +21,8 @@ public class GhostController {
 	}
 
 	public func updateAtTime(time: NSTimeInterval) {
+		_ghostNode.opacity = CGFloat(ghost.visibility)
+
 		let rnd = arc4random_uniform(600) + 1
 		if rnd == 1 {
 			_ghostPivotNode.removeAllActions()

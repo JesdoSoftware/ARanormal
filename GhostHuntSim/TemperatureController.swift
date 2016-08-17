@@ -10,19 +10,19 @@ public class TemperatureController {
 
 	private let _sceneView: SCNView
 	private let _ghostNode: SCNNode
-	private let _hudController: HudController
+	private let _messenger: Messenger
 
-	init(sceneView: SCNView, ghostNode: SCNNode, hudController: HudController) {
+	init(sceneView: SCNView, ghostNode: SCNNode, messenger: Messenger) {
 		_sceneView = sceneView
 		_ghostNode = ghostNode
-		_hudController = hudController
+		_messenger = messenger
 	}
 
 	public func updateAtTime(time: NSTimeInterval) {
 		if _sceneView.isNodeInsideFrustum(_ghostNode, withPointOfView: _sceneView.pointOfView!) {
-			_hudController.decreaseTemperature()
+			_messenger.publishMessage(TemperatureMessage(direction: .Down))
 		} else {
-			_hudController.increaseTemperature()
+			_messenger.publishMessage(TemperatureMessage(direction: .Up))
 		}
 	}
 }

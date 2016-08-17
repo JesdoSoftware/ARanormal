@@ -7,11 +7,6 @@ import Foundation
 
 public class Ghost {
 
-	public var visibility: Double
-	public var activity: Double
-
-	init() {
-		visibility = 0
-		activity = 0
-	}
+	public var visibility: Double = 0.25
+	public var activity: Double = 0
 }

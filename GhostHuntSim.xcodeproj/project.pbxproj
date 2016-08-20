@@ -16,8 +16,6 @@
 		6056262176DFB553F0309EA8 /* HUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CA1A9B0E29C20AAA679 /* HUDController.swift */; };
 		6056275A8E40AE9DF4135C2B /* ActivityChangedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */; };
 		6056298F9E549B866376E700 /* WordRecognizedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605629A6C779E703759C0734 /* WordRecognizedMessage.swift */; };
-		60562A48E29C26EBA6BD50B7 /* Ghost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605626393B98B63A4C7D0E46 /* Ghost.swift */; };
-		60562A8E394EF53E8EA2998D /* Ghost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605626393B98B63A4C7D0E46 /* Ghost.swift */; };
 		60562A9C01196E35B5ECAF91 /* GhostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562D15DB35712DA2EC97F1 /* GhostController.swift */; };
 		60562AA5519320F22925344A /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562773D515A68FE53039B3 /* VoiceController.swift */; };
 		60562AB43265F69984E34A3F /* HUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CA1A9B0E29C20AAA679 /* HUDController.swift */; };
@@ -59,7 +57,6 @@
 
 /* Begin PBXFileReference section */
 		605625FED9E2D592EF208DF0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		605626393B98B63A4C7D0E46 /* Ghost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ghost.swift; sourceTree = "<group>"; };
 		60562669CEE1253A4A101E2A /* IsGhostInViewMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsGhostInViewMessage.swift; sourceTree = "<group>"; };
 		6056272997C9618DB2041738 /* HeartbeatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartbeatMessage.swift; sourceTree = "<group>"; };
 		60562773D515A68FE53039B3 /* VoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceController.swift; sourceTree = "<group>"; };
@@ -168,7 +165,6 @@
 				88965DDF1D595B57005CE998 /* SceneRendererDelegate.swift */,
 				8830E4C61D5A976C00BEEE78 /* GhostHuntSim-Bridging-Header.h */,
 				60562773D515A68FE53039B3 /* VoiceController.swift */,
-				605626393B98B63A4C7D0E46 /* Ghost.swift */,
 				60562D15DB35712DA2EC97F1 /* GhostController.swift */,
 				60562CA1A9B0E29C20AAA679 /* HUDController.swift */,
 				60562ECDD18BC73C2EA2B745 /* Messenger.swift */,
@@ -306,7 +302,6 @@
 				88965DE01D595B57005CE998 /* SceneRendererDelegate.swift in Sources */,
 				8807B5431D541ED500BA3EA5 /* AppDelegate.swift in Sources */,
 				60562AA5519320F22925344A /* VoiceController.swift in Sources */,
-				60562A48E29C26EBA6BD50B7 /* Ghost.swift in Sources */,
 				60562A9C01196E35B5ECAF91 /* GhostController.swift in Sources */,
 				6056262176DFB553F0309EA8 /* HUDController.swift in Sources */,
 				60562E5D5E8BFD6C15A9998A /* Messenger.swift in Sources */,
@@ -324,7 +319,6 @@
 			files = (
 				8807B55A1D541ED500BA3EA5 /* GhostHuntSimTests.swift in Sources */,
 				605620405675BC7486F5E924 /* VoiceController.swift in Sources */,
-				60562A8E394EF53E8EA2998D /* Ghost.swift in Sources */,
 				60562ECC8D04A3645F308A72 /* GhostController.swift in Sources */,
 				60562AB43265F69984E34A3F /* HUDController.swift in Sources */,
 				605623D2C847A6DEF897EA63 /* Messenger.swift in Sources */,

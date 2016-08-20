@@ -29,6 +29,8 @@
 		60562E5D5E8BFD6C15A9998A /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562ECDD18BC73C2EA2B745 /* Messenger.swift */; };
 		60562E7B8969E3D119B2B0FC /* HeartbeatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056272997C9618DB2041738 /* HeartbeatMessage.swift */; };
 		60562ECC8D04A3645F308A72 /* GhostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562D15DB35712DA2EC97F1 /* GhostController.swift */; };
+		8801C5051D67E36D007995C5 /* RejectoDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8801C5041D67E36D007995C5 /* RejectoDemo.framework */; };
+		8801C5061D67E36D007995C5 /* RejectoDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8801C5041D67E36D007995C5 /* RejectoDemo.framework */; };
 		8807B5431D541ED500BA3EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8807B5421D541ED500BA3EA5 /* AppDelegate.swift */; };
 		8807B5451D541ED500BA3EA5 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 8807B5441D541ED500BA3EA5 /* art.scnassets */; };
 		8807B5471D541ED500BA3EA5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8807B5461D541ED500BA3EA5 /* GameViewController.swift */; };
@@ -68,6 +70,7 @@
 		60562D15DB35712DA2EC97F1 /* GhostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GhostController.swift; sourceTree = "<group>"; };
 		60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityChangedMessage.swift; sourceTree = "<group>"; };
 		60562ECDD18BC73C2EA2B745 /* Messenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
+		8801C5041D67E36D007995C5 /* RejectoDemo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RejectoDemo.framework; sourceTree = "<group>"; };
 		8807B53F1D541ED500BA3EA5 /* GhostHuntSim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostHuntSim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8807B5421D541ED500BA3EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8807B5441D541ED500BA3EA5 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -93,6 +96,7 @@
 			files = (
 				88C2DF021D5A931B000D4B5C /* Slt.framework in Frameworks */,
 				88C2DF001D5A931B000D4B5C /* OpenEars.framework in Frameworks */,
+				8801C5051D67E36D007995C5 /* RejectoDemo.framework in Frameworks */,
 				60562C132E7C9BE3A62A93C3 /* AudioToolbox.framework in Frameworks */,
 				60562D029ED62D0FA6E17CE7 /* AVFoundation.framework in Frameworks */,
 			);
@@ -104,6 +108,7 @@
 			files = (
 				88C2DF031D5A931B000D4B5C /* Slt.framework in Frameworks */,
 				88C2DF011D5A931B000D4B5C /* OpenEars.framework in Frameworks */,
+				8801C5061D67E36D007995C5 /* RejectoDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +190,7 @@
 		88C2DEFA1D5A931B000D4B5C /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				8801C5041D67E36D007995C5 /* RejectoDemo.framework */,
 				88C2DEFB1D5A931B000D4B5C /* AcousticModelEnglish.bundle */,
 				88C2DEFC1D5A931B000D4B5C /* OpenEars.framework */,
 				88C2DEFD1D5A931B000D4B5C /* Slt.framework */,
@@ -456,6 +462,7 @@
 				);
 				INFOPLIST_FILE = GhostHuntSim/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = net.jessedouglas.GhostHuntSim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GhostHuntSim/GhostHuntSim-Bridging-Header.h";
@@ -473,6 +480,7 @@
 				);
 				INFOPLIST_FILE = GhostHuntSim/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = net.jessedouglas.GhostHuntSim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GhostHuntSim/GhostHuntSim-Bridging-Header.h";

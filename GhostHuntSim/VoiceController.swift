@@ -23,8 +23,12 @@ public class VoiceController: NSObject, OEEventsObserverDelegate {
 
 		let languageModelFileName = "GhostHuntSimLanguageModelFile"
 		let languageModelGenerator = OELanguageModelGenerator()
-		languageModelGenerator.generateLanguageModelFromArray(words,
+		// TODO: purchase full version of Rejecto
+		languageModelGenerator.generateRejectingLanguageModelFromArray(words,
 				withFilesNamed: languageModelFileName,
+				withOptionalExclusions: nil,
+				usingVowelsOnly: false,
+				withWeight: nil,
 				forAcousticModelAtPath: OEAcousticModel.pathToModel(_acousticModel))
 		_languageModelPath = languageModelGenerator.pathToSuccessfullyGeneratedLanguageModelWithRequestedName(languageModelFileName)
 		_dictionaryPath = languageModelGenerator.pathToSuccessfullyGeneratedDictionaryWithRequestedName(languageModelFileName)

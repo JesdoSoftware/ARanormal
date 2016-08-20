@@ -7,14 +7,17 @@ import Foundation
 
 public class VoiceController: NSObject, OEEventsObserverDelegate {
 
-	private let _acousticModel = "AcousticModelEnglish"
+	private let _messenger: Messenger
 
 	private let _openEarsEventsObserver: OEEventsObserver
+	private let _acousticModel = "AcousticModelEnglish"
 	private let _languageModelPath: String
 	private let _dictionaryPath: String
 
-	init(words: [String]) {
+	init(words: [String], messenger: Messenger) {
 		// TODO: check for/request permissions
+
+		_messenger = messenger
 
 		_openEarsEventsObserver = OEEventsObserver()
 
@@ -36,9 +39,8 @@ public class VoiceController: NSObject, OEEventsObserverDelegate {
 	}
 
 	public func pocketsphinxDidReceiveHypothesis(hypothesis: String, recognitionScore: String, utteranceID: String) {
-//        if hypothesis == currentWord {
-//            //do what you want here when the correct word is recognized
-//        }
+        _messenger.publishMessage(WordRecognizedMessage(word: hypothesis))
+
 		print("The received hypothesis is \(hypothesis) with a score of \(recognitionScore) and an ID of \(utteranceID)")
 	}
 

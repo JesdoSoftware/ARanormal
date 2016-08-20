@@ -34,6 +34,8 @@ public class HUDController: MessengerSubscriber {
 			} else {
 				increaseTemperature()
 			}
+		} else if let activityChangedMessage = message as? ActivityChangedMessage {
+			setEmfRating(activityChangedMessage.activity)
 		}
 	}
 
@@ -45,7 +47,7 @@ public class HUDController: MessengerSubscriber {
 		_temperatureNode.color = UIColor.orangeColor()
 	}
 
-	public func setEmfRating(emfRating: Double) {
+	private func setEmfRating(emfRating: Double) {
 		_emfNode.text = String(emfRating)
 	}
 }

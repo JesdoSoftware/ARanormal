@@ -24,9 +24,6 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		_voiceController = VoiceController(words: ["HELLO", "COOL", "HOW DID YOU DIE"])
-		_voiceController!.startListening()
-
 		startCapturingVideo()
 		let motionManager = createMotionManager()
 		let (sceneView, cameraNode, ghostNode, ghostPivotNode) = setUpSceneView()
@@ -36,8 +33,12 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 		let hudController = HUDController(sceneView: sceneView)
 		messenger.addSubscriber(hudController)
 
-		let ghostController = GhostController(ghostNode: ghostNode, ghostPivotNode: ghostPivotNode)
+		let ghostController = GhostController(ghostNode: ghostNode, ghostPivotNode: ghostPivotNode,
+				messenger: messenger)
 		messenger.addSubscriber(ghostController)
+
+		_voiceController = VoiceController(words: ["HELLO", "COOL", "HOW DID YOU DIE"], messenger: messenger)
+		_voiceController!.startListening()
 
 		_sceneRendererDelegate = SceneRendererDelegate(motionManager: motionManager, sceneView: sceneView,
 				cameraNode: cameraNode, ghostNode: ghostNode, messenger: messenger)

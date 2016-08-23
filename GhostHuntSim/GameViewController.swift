@@ -15,11 +15,11 @@ import SpriteKit
 
 class GameViewController: UIViewController, SCNSceneRendererDelegate {
 
-	private var _avCaptureSession: AVCaptureSession?
-	private var _avCaptureDeviceInput: AVCaptureDeviceInput?
-	private var _sceneRendererDelegate: SceneRendererDelegate?
+	private var avCaptureSession: AVCaptureSession?
+	private var avCaptureDeviceInput: AVCaptureDeviceInput?
+	private var sceneRendererDelegate: SceneRendererDelegate?
 
-	private var _voiceController: VoiceController?
+	private var voiceController: VoiceController?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -37,12 +37,12 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 				messenger: messenger)
 		messenger.addSubscriber(ghostController)
 
-		_voiceController = VoiceController(words: ["HELLO", "COOL", "HOW DID YOU DIE"], messenger: messenger)
-		_voiceController!.startListening()
+		voiceController = VoiceController(words: ["HELLO", "COOL", "HOW DID YOU DIE"], messenger: messenger)
+		voiceController!.startListening()
 
-		_sceneRendererDelegate = SceneRendererDelegate(motionManager: motionManager, sceneView: sceneView,
+		sceneRendererDelegate = SceneRendererDelegate(motionManager: motionManager, sceneView: sceneView,
 				cameraNode: cameraNode, ghostNode: ghostNode, messenger: messenger)
-		sceneView.delegate = _sceneRendererDelegate!
+		sceneView.delegate = sceneRendererDelegate!
 
 		// add a tap gesture recognizer
 		//let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
@@ -106,25 +106,25 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 	}
 
 	private func startCapturingVideo() {
-		_avCaptureSession = AVCaptureSession()
-		_avCaptureSession!.sessionPreset = AVCaptureSessionPresetMedium
+		avCaptureSession = AVCaptureSession()
+		avCaptureSession!.sessionPreset = AVCaptureSessionPresetMedium
 
 		let captureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
 		do {
-			_avCaptureDeviceInput = try AVCaptureDeviceInput(device: captureDevice)
-			_avCaptureSession!.addInput(_avCaptureDeviceInput)
+			avCaptureDeviceInput = try AVCaptureDeviceInput(device: captureDevice)
+			avCaptureSession!.addInput(avCaptureDeviceInput)
 		} catch {
 			// TODO: handle error
 		}
 
-		let previewLayer = AVCaptureVideoPreviewLayer(session: _avCaptureSession!)
+		let previewLayer = AVCaptureVideoPreviewLayer(session: avCaptureSession!)
 		previewLayer.frame = view.bounds
 		previewLayer.opaque = true
 		previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
 		previewLayer.connection?.videoOrientation = AVCaptureVideoOrientation.Portrait
 
 		view.layer.addSublayer(previewLayer)
-		_avCaptureSession!.startRunning()
+		avCaptureSession!.startRunning()
 	}
 
 	private func setUpSceneView() ->

@@ -9,17 +9,17 @@ import SceneKit
 
 public class HUDController: MessengerSubscriber {
 
-	private let _temperatureNode: SKSpriteNode
-	private let _emfNode: SKLabelNode
+	private let temperatureNode: SKSpriteNode
+	private let emfNode: SKLabelNode
 
 	init(sceneView: SCNView) {
 		let hudScene = SKScene(size: sceneView.bounds.size)
-		_temperatureNode = SKSpriteNode(color: UIColor.orangeColor(), size: CGSize(width:100, height:100))
-		hudScene.addChild(_temperatureNode)
+		temperatureNode = SKSpriteNode(color: UIColor.orangeColor(), size: CGSize(width:100, height:100))
+		hudScene.addChild(temperatureNode)
 
-		_emfNode = SKLabelNode(text: "0.0")
-		_emfNode.position = CGPoint(x: 50, y: 600)
-		hudScene.addChild(_emfNode)
+		emfNode = SKLabelNode(text: "0.0")
+		emfNode.position = CGPoint(x: 50, y: 600)
+		hudScene.addChild(emfNode)
 
 		sceneView.overlaySKScene = hudScene
 		sceneView.overlaySKScene!.hidden = false
@@ -40,14 +40,14 @@ public class HUDController: MessengerSubscriber {
 	}
 
 	private func decreaseTemperature() {
-		_temperatureNode.color = UIColor.blueColor()
+		temperatureNode.color = UIColor.blueColor()
 	}
 
 	private func increaseTemperature() {
-		_temperatureNode.color = UIColor.orangeColor()
+		temperatureNode.color = UIColor.orangeColor()
 	}
 
 	private func setEmfRating(emfRating: Double) {
-		_emfNode.text = String(emfRating)
+		emfNode.text = String(emfRating)
 	}
 }

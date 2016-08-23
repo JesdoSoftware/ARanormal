@@ -12,21 +12,21 @@ import CoreMotion
 
 class SceneRendererDelegate: NSObject, SCNSceneRendererDelegate {
 
-	private let _motionManager: CMMotionManager
-	private let _sceneView: SCNView
-	private let _cameraNode: SCNNode
-	private let _ghostNode: SCNNode
-	private let _messenger: Messenger
+	private let motionManager: CMMotionManager
+	private let sceneView: SCNView
+	private let cameraNode: SCNNode
+	private let ghostNode: SCNNode
+	private let messenger: Messenger
 
 	private var _lastHeartbeatTime: NSTimeInterval = 0
 
-	init(motionManager: CMMotionManager, sceneView: SCNView, cameraNode: SCNNode,
-	        ghostNode: SCNNode, messenger: Messenger) {
-		_motionManager = motionManager
-		_sceneView = sceneView
-		_cameraNode = cameraNode
-		_ghostNode = ghostNode
-		_messenger = messenger
+	init(motionManager mm: CMMotionManager, sceneView sv: SCNView, cameraNode cn: SCNNode,
+	        ghostNode gn: SCNNode, messenger m: Messenger) {
+		motionManager = mm
+		sceneView = sv
+		cameraNode = cn
+		ghostNode = gn
+		messenger = m
 	}
 
 	func renderer(renderer: SCNSceneRenderer, updateAtTime time: NSTimeInterval) {
@@ -38,7 +38,7 @@ class SceneRendererDelegate: NSObject, SCNSceneRendererDelegate {
 	private func updateCamera() {
 		let quaternion: SCNQuaternion
 
-		if let deviceMotion = _motionManager.deviceMotion {
+		if let deviceMotion = motionManager.deviceMotion {
 			let currentAttitude = deviceMotion.attitude
 			quaternion = SCNQuaternion(currentAttitude.quaternion.x,
 					currentAttitude.quaternion.y,
@@ -48,20 +48,20 @@ class SceneRendererDelegate: NSObject, SCNSceneRendererDelegate {
 		else {
 			quaternion = SCNQuaternion()
 		}
-		_cameraNode.orientation = quaternion
+		cameraNode.orientation = quaternion
 	}
 
 	private func publishIsGhostInViewMessage() {
-		if _sceneView.isNodeInsideFrustum(_ghostNode, withPointOfView: _sceneView.pointOfView!) {
-			_messenger.publishMessage(IsGhostInViewMessage(isInView: true))
+		if sceneView.isNodeInsideFrustum(ghostNode, withPointOfView: sceneView.pointOfView!) {
+			messenger.publishMessage(IsGhostInViewMessage(isInView: true))
 		} else {
-			_messenger.publishMessage(IsGhostInViewMessage(isInView: false))
+			messenger.publishMessage(IsGhostInViewMessage(isInView: false))
 		}
 	}
 
 	private func publishHeartbeatMessageForTime(time: NSTimeInterval) {
 		if time > _lastHeartbeatTime + 1 {
-			_messenger.publishMessage(HeartbeatMessage(time: time))
+			messenger.publishMessage(HeartbeatMessage(time: time))
 			_lastHeartbeatTime = time
 		}
 	}

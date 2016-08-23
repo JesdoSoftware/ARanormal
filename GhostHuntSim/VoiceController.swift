@@ -7,19 +7,19 @@ import Foundation
 
 public class VoiceController: NSObject, OEEventsObserverDelegate {
 
-	private let _messenger: Messenger
+	private let messenger: Messenger
 
-	private let _openEarsEventsObserver: OEEventsObserver
-	private let _acousticModel = "AcousticModelEnglish"
-	private let _languageModelPath: String
-	private let _dictionaryPath: String
+	private let openEarsEventsObserver: OEEventsObserver
+	private let acousticModel = "AcousticModelEnglish"
+	private let languageModelPath: String
+	private let dictionaryPath: String
 
-	init(words: [String], messenger: Messenger) {
+	init(words: [String], messenger m: Messenger) {
 		// TODO: check for/request permissions
 
-		_messenger = messenger
+		messenger = m
 
-		_openEarsEventsObserver = OEEventsObserver()
+		openEarsEventsObserver = OEEventsObserver()
 
 		let languageModelFileName = "GhostHuntSimLanguageModelFile"
 		let languageModelGenerator = OELanguageModelGenerator()
@@ -29,13 +29,13 @@ public class VoiceController: NSObject, OEEventsObserverDelegate {
 				withOptionalExclusions: nil,
 				usingVowelsOnly: false,
 				withWeight: nil,
-				forAcousticModelAtPath: OEAcousticModel.pathToModel(_acousticModel))
-		_languageModelPath = languageModelGenerator.pathToSuccessfullyGeneratedLanguageModelWithRequestedName(languageModelFileName)
-		_dictionaryPath = languageModelGenerator.pathToSuccessfullyGeneratedDictionaryWithRequestedName(languageModelFileName)
+				forAcousticModelAtPath: OEAcousticModel.pathToModel(acousticModel))
+		languageModelPath = languageModelGenerator.pathToSuccessfullyGeneratedLanguageModelWithRequestedName(languageModelFileName)
+		dictionaryPath = languageModelGenerator.pathToSuccessfullyGeneratedDictionaryWithRequestedName(languageModelFileName)
 
 		super.init()
 
-		_openEarsEventsObserver.delegate = self
+		openEarsEventsObserver.delegate = self
 	}
 
 	deinit {
@@ -43,7 +43,7 @@ public class VoiceController: NSObject, OEEventsObserverDelegate {
 	}
 
 	public func pocketsphinxDidReceiveHypothesis(hypothesis: String, recognitionScore: String, utteranceID: String) {
-        _messenger.publishMessage(WordRecognizedMessage(word: hypothesis))
+        messenger.publishMessage(WordRecognizedMessage(word: hypothesis))
 
 		print("The received hypothesis is \(hypothesis) with a score of \(recognitionScore) and an ID of \(utteranceID)")
 	}
@@ -75,9 +75,9 @@ public class VoiceController: NSObject, OEEventsObserverDelegate {
 	public func startListening() {
 		do {
 			try OEPocketsphinxController.sharedInstance().setActive(true)
-			OEPocketsphinxController.sharedInstance().startListeningWithLanguageModelAtPath(_languageModelPath,
-					dictionaryAtPath: _dictionaryPath,
-					acousticModelAtPath: OEAcousticModel.pathToModel(_acousticModel),
+			OEPocketsphinxController.sharedInstance().startListeningWithLanguageModelAtPath(languageModelPath,
+					dictionaryAtPath: dictionaryPath,
+					acousticModelAtPath: OEAcousticModel.pathToModel(acousticModel),
 					languageModelIsJSGF: false)
 		} catch { }
 	}

@@ -14,8 +14,8 @@ public class GhostController: MessengerSubscriber {
 	private let soundPivotNode: SCNNode
 	private let messenger: Messenger
 
-	private var _visibility: Double = 0.25
-	private var _activity: Double = 0
+	private var visibility: Double = 0.25
+	private var activity: Double = 0
 
 	init(ghostNode gn: SCNNode, ghostPivotNode gpn: SCNNode, soundNode sn: SCNNode, soundPivotNode spn: SCNNode,
 	        messenger m: Messenger) {
@@ -27,14 +27,14 @@ public class GhostController: MessengerSubscriber {
 	}
 
 	public func processMessage(message: AnyObject) {
-		ghostNode.opacity = CGFloat(_visibility)
+		ghostNode.opacity = CGFloat(visibility)
 
 		if message is HeartbeatMessage {
 			moveGhost()
 			playSound()
 		} else if let wordRecognizedMessage = message as? WordRecognizedMessage {
-			_activity += 1
-			messenger.publishMessage(ActivityChangedMessage(activity: _activity))
+			activity += 1
+			messenger.publishMessage(ActivityChangedMessage(activity: activity))
 		}
 	}
 

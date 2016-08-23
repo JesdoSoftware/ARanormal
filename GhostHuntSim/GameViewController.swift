@@ -72,6 +72,12 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 
 		let captureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
 		do {
+			try captureDevice.lockForConfiguration()
+//			captureDevice.setExposureModeCustomWithDuration(captureDevice.activeFormat.maxExposureDuration,
+//					ISO: captureDevice.activeFormat.maxISO,
+//					completionHandler: nil)
+			try captureDevice.setTorchModeOnWithLevel(0.1)
+			captureDevice.unlockForConfiguration()
 			avCaptureDeviceInput = try AVCaptureDeviceInput(device: captureDevice)
 			avCaptureSession!.addInput(avCaptureDeviceInput)
 		} catch {

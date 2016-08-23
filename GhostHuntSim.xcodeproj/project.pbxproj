@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		605620405675BC7486F5E924 /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562773D515A68FE53039B3 /* VoiceController.swift */; };
 		6056211772C8D1F5500741AC /* ActivityChangedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */; };
+		605623297C45AADBBAAFB6F4 /* knocking-angry.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562ED5EEC2972C2F116F98 /* knocking-angry.caf */; };
 		6056236C28D5D814B7E3CA71 /* HeartbeatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056272997C9618DB2041738 /* HeartbeatMessage.swift */; };
 		605623B68E9D337C30B47862 /* MessengerSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605628CC23613C9C84F7A3CA /* MessengerSubscriber.swift */; };
 		605623D2C847A6DEF897EA63 /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562ECDD18BC73C2EA2B745 /* Messenger.swift */; };
@@ -22,6 +23,7 @@
 		60562BD0791130FB839AF6C1 /* IsGhostInViewMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562669CEE1253A4A101E2A /* IsGhostInViewMessage.swift */; };
 		60562C132E7C9BE3A62A93C3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60562BB1A56A1433159F2F1E /* AudioToolbox.framework */; };
 		60562C19E05ABBC8C6710B34 /* WordRecognizedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605629A6C779E703759C0734 /* WordRecognizedMessage.swift */; };
+		60562C93275EBACBA8490BE7 /* knocking-angry.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562ED5EEC2972C2F116F98 /* knocking-angry.caf */; };
 		60562D029ED62D0FA6E17CE7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605625FED9E2D592EF208DF0 /* AVFoundation.framework */; };
 		60562D7F07B99EA257BECCD6 /* IsGhostInViewMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562669CEE1253A4A101E2A /* IsGhostInViewMessage.swift */; };
 		60562E5D5E8BFD6C15A9998A /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562ECDD18BC73C2EA2B745 /* Messenger.swift */; };
@@ -67,6 +69,7 @@
 		60562D15DB35712DA2EC97F1 /* GhostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GhostController.swift; sourceTree = "<group>"; };
 		60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityChangedMessage.swift; sourceTree = "<group>"; };
 		60562ECDD18BC73C2EA2B745 /* Messenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
+		60562ED5EEC2972C2F116F98 /* knocking-angry.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = "knocking-angry.caf"; sourceTree = "<group>"; };
 		8801C5041D67E36D007995C5 /* RejectoDemo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RejectoDemo.framework; sourceTree = "<group>"; };
 		8807B53F1D541ED500BA3EA5 /* GhostHuntSim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostHuntSim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8807B5421D541ED500BA3EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +135,14 @@
 			path = Messages;
 			sourceTree = "<group>";
 		};
+		60562B31EF21A8D498039298 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				60562ED5EEC2972C2F116F98 /* knocking-angry.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		8807B5361D541ED500BA3EA5 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +181,7 @@
 				60562ECDD18BC73C2EA2B745 /* Messenger.swift */,
 				605628CC23613C9C84F7A3CA /* MessengerSubscriber.swift */,
 				605629B2ECA281B3FBC56866 /* Messages */,
+				60562B31EF21A8D498039298 /* Sounds */,
 			);
 			path = GhostHuntSim;
 			sourceTree = "<group>";
@@ -280,6 +292,7 @@
 				8807B54C1D541ED500BA3EA5 /* Assets.xcassets in Resources */,
 				88C2DEFE1D5A931B000D4B5C /* AcousticModelEnglish.bundle in Resources */,
 				8807B54A1D541ED500BA3EA5 /* Main.storyboard in Resources */,
+				60562C93275EBACBA8490BE7 /* knocking-angry.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88C2DEFF1D5A931B000D4B5C /* AcousticModelEnglish.bundle in Resources */,
+				605623297C45AADBBAAFB6F4 /* knocking-angry.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

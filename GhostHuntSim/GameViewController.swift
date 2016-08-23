@@ -26,7 +26,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 
 		startCapturingVideo()
 		let motionManager = createMotionManager()
-		let (sceneView, cameraNode, ghostNode, ghostPivotNode) = setUpSceneView()
+		let (sceneView, cameraNode, ghostNode, ghostPivotNode, soundNode, soundPivotNode) = setUpSceneView()
 
 		let messenger = Messenger()
 
@@ -34,7 +34,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 		messenger.addSubscriber(hudController)
 
 		let ghostController = GhostController(ghostNode: ghostNode, ghostPivotNode: ghostPivotNode,
-				messenger: messenger)
+				soundNode: soundNode, soundPivotNode: soundPivotNode, messenger: messenger)
 		messenger.addSubscriber(ghostController)
 
 		voiceController = VoiceController(words: ["HELLO", "COOL", "HOW DID YOU DIE"], messenger: messenger)
@@ -43,46 +43,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 		sceneRendererDelegate = SceneRendererDelegate(motionManager: motionManager, sceneView: sceneView,
 				cameraNode: cameraNode, ghostNode: ghostNode, messenger: messenger)
 		sceneView.delegate = sceneRendererDelegate!
-
-		// add a tap gesture recognizer
-		//let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-		//scnView.addGestureRecognizer(tapGesture)
 	}
-
-//	func handleTap(gestureRecognize: UIGestureRecognizer) {
-//		// retrieve the SCNView
-//		let scnView = self.view as! SCNView
-//
-//		// check what nodes are tapped
-//		let p = gestureRecognize.locationInView(scnView)
-//		let hitResults = scnView.hitTest(p, options: nil)
-//		// check that we clicked on at least one object
-//		if hitResults.count > 0 {
-//			// retrieved the first clicked object
-//			let result: AnyObject! = hitResults[0]
-//
-//			// get its material
-//			let material = result.node!.geometry!.firstMaterial!
-//
-//			// highlight it
-//			SCNTransaction.begin()
-//			SCNTransaction.setAnimationDuration(0.5)
-//
-//			// on completion - unhighlight
-//			SCNTransaction.setCompletionBlock {
-//				SCNTransaction.begin()
-//				SCNTransaction.setAnimationDuration(0.5)
-//
-//				material.emission.contents = UIColor.blackColor()
-//
-//				SCNTransaction.commit()
-//			}
-//
-//			material.emission.contents = UIColor.redColor()
-//
-//			SCNTransaction.commit()
-//		}
-//	}
 
 	override func shouldAutorotate() -> Bool {
 		return false
@@ -128,7 +89,8 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 	}
 
 	private func setUpSceneView() ->
-			(sceneView: SCNView, cameraNode: SCNNode, ghostNode: SCNNode, ghostPivotNode: SCNNode) {
+			(sceneView: SCNView, cameraNode: SCNNode, ghostNode: SCNNode, ghostPivotNode: SCNNode, soundNode: SCNNode,
+			 soundPivotNode: SCNNode) {
 		// create a new scene
 		let scene = SCNScene()
 
@@ -155,13 +117,17 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 		scene.rootNode.addChildNode(ambientLightNode)
 
 		let orb = SCNSphere(radius: 2)
-		let orbNode = SCNNode(geometry: orb)
-		let orbPivotNode = SCNNode()
-		orbPivotNode.addChildNode(orbNode)
-		orbNode.position = SCNVector3Make(0, 50, 50)
-		scene.rootNode.addChildNode(orbPivotNode)
+		let ghostNode = SCNNode(geometry: orb)
+		let ghostPivotNode = SCNNode()
+		ghostPivotNode.addChildNode(ghostNode)
+		ghostNode.position = SCNVector3Make(0, 50, 50)
+		scene.rootNode.addChildNode(ghostPivotNode)
 
-//		orbPivotNode.runAction(SCNAction.repeatActionForever(SCNAction.rotateByX(0, y: 0, z: 2, duration: 1)))
+		let soundNode = SCNNode()
+		let soundPivotNode = SCNNode()
+		soundPivotNode.addChildNode(soundNode)
+		soundNode.position = SCNVector3Make(0, 50, 50)
+		scene.rootNode.addChildNode(soundPivotNode)
 
 		// retrieve the SCNView
 		let scnView = SCNView(frame: view.bounds)
@@ -179,7 +145,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 		scnView.backgroundColor = UIColor.clearColor()
 		scnView.playing = true
 
-		return (scnView, cameraNode, orbNode, orbPivotNode)
+		return (scnView, cameraNode, ghostNode, ghostPivotNode, soundNode, soundPivotNode)
 	}
 
 	private func createMotionManager() -> CMMotionManager {

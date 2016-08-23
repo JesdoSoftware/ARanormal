@@ -18,7 +18,7 @@ class SceneRendererDelegate: NSObject, SCNSceneRendererDelegate {
 	private let ghostNode: SCNNode
 	private let messenger: Messenger
 
-	private var _lastHeartbeatTime: NSTimeInterval = 0
+	private var lastHeartbeatTime: NSTimeInterval = 0
 
 	init(motionManager mm: CMMotionManager, sceneView sv: SCNView, cameraNode cn: SCNNode,
 	        ghostNode gn: SCNNode, messenger m: Messenger) {
@@ -60,9 +60,9 @@ class SceneRendererDelegate: NSObject, SCNSceneRendererDelegate {
 	}
 
 	private func publishHeartbeatMessageForTime(time: NSTimeInterval) {
-		if time > _lastHeartbeatTime + 1 {
+		if time > lastHeartbeatTime + 1 {
 			messenger.publishMessage(HeartbeatMessage(time: time))
-			_lastHeartbeatTime = time
+			lastHeartbeatTime = time
 		}
 	}
 }

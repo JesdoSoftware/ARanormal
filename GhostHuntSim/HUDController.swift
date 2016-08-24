@@ -9,17 +9,10 @@ import SceneKit
 
 public class HUDController: MessengerSubscriber {
 
-	private let temperatureNode: SKSpriteNode
-	private let emfNode: SKLabelNode
+	private let hudScene: HUDScene
 
 	init(sceneView: SCNView) {
-		let hudScene = SKScene(size: sceneView.bounds.size)
-		temperatureNode = SKSpriteNode(color: UIColor.orangeColor(), size: CGSize(width:100, height:100))
-		hudScene.addChild(temperatureNode)
-
-		emfNode = SKLabelNode(text: "0.0")
-		emfNode.position = CGPoint(x: 50, y: 600)
-		hudScene.addChild(emfNode)
+		hudScene = HUDScene(size: sceneView.bounds.size)
 
 		sceneView.overlaySKScene = hudScene
 		sceneView.overlaySKScene!.hidden = false
@@ -30,24 +23,12 @@ public class HUDController: MessengerSubscriber {
 	public func processMessage(message: AnyObject) {
 		if let isGhostInViewMessage = message as? IsGhostInViewMessage {
 			if isGhostInViewMessage.isInView {
-				decreaseTemperature()
+				hudScene.decreaseTemperature()
 			} else {
-				increaseTemperature()
+				hudScene.increaseTemperature()
 			}
 		} else if let activityChangedMessage = message as? ActivityChangedMessage {
-			setEmfRating(activityChangedMessage.activity)
+			hudScene.setEmfRating(activityChangedMessage.activity)
 		}
-	}
-
-	private func decreaseTemperature() {
-		temperatureNode.color = UIColor.blueColor()
-	}
-
-	private func increaseTemperature() {
-		temperatureNode.color = UIColor.orangeColor()
-	}
-
-	private func setEmfRating(emfRating: Double) {
-		emfNode.text = String(emfRating)
 	}
 }

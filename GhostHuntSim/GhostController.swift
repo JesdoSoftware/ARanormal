@@ -49,7 +49,7 @@ public class GhostController: MessengerSubscriber {
 	}
 
 	private func playSound() {
-		let rnd = (1...10).randomInt()
+		let rnd = (1...60).randomInt()
 		if rnd == 1 {
 			let rotation = (-2...2).randomInt()
 			soundPivotNode.removeAllActions()
@@ -62,7 +62,7 @@ public class GhostController: MessengerSubscriber {
 	}
 
 	private func flickerFlashlight() {
-		let rnd = (1...10).randomInt()
+		let rnd = (1...60).randomInt()
 		if rnd == 1 {
 			messenger.publishMessage(FlashlightMessage(isOn: false))
 

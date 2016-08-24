@@ -10,8 +10,8 @@ public class FlashlightController: MessengerSubscriber {
 
 	private let captureDevice: AVCaptureDevice
 
-	init(captureDevice cd: AVCaptureDevice) {
-		captureDevice = cd
+	init(captureDevice device: AVCaptureDevice) {
+		captureDevice = device
 	}
 
 	public func processMessage(message: AnyObject) {
@@ -40,9 +40,6 @@ public class FlashlightController: MessengerSubscriber {
 	private func turnOffFlashlight() {
 		do {
 			try captureDevice.lockForConfiguration()
-//			captureDevice.setExposureModeCustomWithDuration(captureDevice.activeFormat.maxExposureDuration,
-//					ISO: captureDevice.activeFormat.maxISO,
-//					completionHandler: nil)
 			captureDevice.torchMode = AVCaptureTorchMode.Off
 			captureDevice.unlockForConfiguration()
 		} catch {

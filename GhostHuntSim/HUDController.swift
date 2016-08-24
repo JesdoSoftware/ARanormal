@@ -10,9 +10,15 @@ import SceneKit
 public class HUDController: MessengerSubscriber {
 
 	private let hudScene: HUDScene
+	private let messenger: Messenger
 
-	init(sceneView: SCNView) {
+	private var isFlashlightOn: Bool = true
+
+	init(sceneView: SCNView, messenger m: Messenger) {
+		messenger = m
+
 		hudScene = HUDScene(size: sceneView.bounds.size)
+		hudScene.controller = self
 
 		sceneView.overlaySKScene = hudScene
 		sceneView.overlaySKScene!.hidden = false
@@ -30,5 +36,11 @@ public class HUDController: MessengerSubscriber {
 		} else if let activityChangedMessage = message as? ActivityChangedMessage {
 			hudScene.setEmfRating(activityChangedMessage.activity)
 		}
+	}
+
+	func toggleFlashlight() {
+		isFlashlightOn = !isFlashlightOn
+		messenger.publishMessage(FlashlightMessage(isOn: isFlashlightOn))
+		hudScene.setFlashlightIndicatorOn(isFlashlightOn)
 	}
 }

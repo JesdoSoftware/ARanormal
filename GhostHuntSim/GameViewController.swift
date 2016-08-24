@@ -30,7 +30,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 
 		let messenger = Messenger()
 
-		let hudController = HUDController(sceneView: sceneView)
+		let hudController = HUDController(sceneView: sceneView, messenger: messenger)
 		messenger.addSubscriber(hudController)
 
 		let ghostController = GhostController(ghostNode: ghostNode, ghostPivotNode: ghostPivotNode,

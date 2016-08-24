@@ -24,7 +24,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		startCapturingVideo()
+		let captureDevice = startCapturingVideo()
 		let motionManager = createMotionManager()
 		let (sceneView, cameraNode, ghostNode, ghostPivotNode, soundNode, soundPivotNode) = setUpSceneView()
 
@@ -36,6 +36,10 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 		let ghostController = GhostController(ghostNode: ghostNode, ghostPivotNode: ghostPivotNode,
 				soundNode: soundNode, soundPivotNode: soundPivotNode, messenger: messenger)
 		messenger.addSubscriber(ghostController)
+
+		let flashlightController = FlashlightController(captureDevice: captureDevice)
+		messenger.addSubscriber(flashlightController)
+		messenger.publishMessage(FlashlightMessage(isOn: true))
 
 		voiceController = VoiceController(words: ["HELLO", "COOL", "HOW DID YOU DIE"], messenger: messenger)
 		voiceController!.startListening()
@@ -66,18 +70,12 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 		// Release any cached data, images, etc that aren't in use.
 	}
 
-	private func startCapturingVideo() {
+	private func startCapturingVideo() -> AVCaptureDevice {
 		avCaptureSession = AVCaptureSession()
 		avCaptureSession!.sessionPreset = AVCaptureSessionPresetMedium
 
 		let captureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
 		do {
-			try captureDevice.lockForConfiguration()
-//			captureDevice.setExposureModeCustomWithDuration(captureDevice.activeFormat.maxExposureDuration,
-//					ISO: captureDevice.activeFormat.maxISO,
-//					completionHandler: nil)
-			try captureDevice.setTorchModeOnWithLevel(0.1)
-			captureDevice.unlockForConfiguration()
 			avCaptureDeviceInput = try AVCaptureDeviceInput(device: captureDevice)
 			avCaptureSession!.addInput(avCaptureDeviceInput)
 		} catch {
@@ -92,6 +90,8 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 
 		view.layer.addSublayer(previewLayer)
 		avCaptureSession!.startRunning()
+
+		return captureDevice
 	}
 
 	private func setUpSceneView() ->

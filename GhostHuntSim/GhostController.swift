@@ -32,6 +32,7 @@ public class GhostController: MessengerSubscriber {
 		if message is HeartbeatMessage {
 			moveGhost()
 			playSound()
+			flickerFlashlight()
 		} else if let wordRecognizedMessage = message as? WordRecognizedMessage {
 			activity += 1
 			messenger.publishMessage(ActivityChangedMessage(activity: activity))
@@ -39,26 +40,37 @@ public class GhostController: MessengerSubscriber {
 	}
 
 	private func moveGhost() {
-		let rnd = arc4random_uniform(10) + 1
+		let rnd = (1...10).randomInt()
 		if rnd == 1 {
-			let rotation = Int(arc4random_uniform(5)) - 2    // random number between -2 and 2
-
+			let rotation = (-2...2).randomInt()
 			ghostPivotNode.removeAllActions()
 			ghostPivotNode.runAction(SCNAction.rotateByX(0, y: 0, z: CGFloat(rotation), duration: 1))
 		}
 	}
 
 	private func playSound() {
-		let rnd = arc4random_uniform(10) + 1
+		let rnd = (1...10).randomInt()
 		if rnd == 1 {
-			let rotation = Int(arc4random_uniform(5)) - 2    // random number between -2 and 2
-
+			let rotation = (-2...2).randomInt()
 			soundPivotNode.removeAllActions()
 			soundPivotNode.runAction(SCNAction.rotateByX(0, y: 0, z: CGFloat(rotation), duration: 0))
 
 			let knockingSound = SCNAudioSource(fileNamed: "knocking-angry.caf")
 			knockingSound!.positional = true
 			soundNode.runAction(SCNAction.playAudioSource(knockingSound!, waitForCompletion: false))
+		}
+	}
+
+	private func flickerFlashlight() {
+		let rnd = (1...10).randomInt()
+		if rnd == 1 {
+			messenger.publishMessage(FlashlightMessage(isOn: false))
+
+			let delayRnd = (1...8).randomInt()
+			let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 / Double(delayRnd) * Double(NSEC_PER_SEC)))
+			dispatch_after(delayTime, dispatch_get_main_queue()) {
+				self.messenger.publishMessage(FlashlightMessage(isOn: true))
+			}
 		}
 	}
 }

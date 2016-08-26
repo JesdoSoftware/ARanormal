@@ -15,6 +15,7 @@ public class GhostController: MessengerSubscriber {
 	private let messenger: Messenger
 
 	private var soundManifestations: ManifestationSet! = nil
+	private var flashlightManifestations: ManifestationSet! = nil
 
 	private var visibility: Double = 0.25
 	private var activity: Double = 0
@@ -37,6 +38,14 @@ public class GhostController: MessengerSubscriber {
 				soundPivotNode: soundPivotNode)
 		soundManifestations = ManifestationSet(manifestations: [knockingSoundManifestation],
 				chancePerSixty: 1)
+
+		let flashlightFlickerManifestation = FlashlightFlickerManifestation(minimumActivityLevel: 1,
+				messenger: messenger)
+		let flashlightOffManifestation = FlashlightOffManifestation(minimumActivityLevel: 1,
+				messenger: messenger)
+		flashlightManifestations = ManifestationSet(
+				manifestations: [flashlightFlickerManifestation, flashlightOffManifestation],
+				chancePerSixty: 1)
 	}
 
 	public func processMessage(message: AnyObject) {
@@ -44,9 +53,8 @@ public class GhostController: MessengerSubscriber {
 
 		if message is HeartbeatMessage {
 			moveGhost()
-			playSound()
-			flickerFlashlight()
-			// TODO add method to randomly turn flashlight off
+			manifestSound()
+			manifestFlashlightEffect()
 		} else if let wordRecognizedMessage = message as? WordRecognizedMessage {
 			activity += 1
 			messenger.publishMessage(ActivityChangedMessage(activity: activity))
@@ -62,22 +70,15 @@ public class GhostController: MessengerSubscriber {
 		}
 	}
 
-	private func playSound() {
+	private func manifestSound() {
 		if let manifestation = soundManifestations.getManifestation(activity) {
 			manifestation.manifest()
 		}
 	}
 
-	private func flickerFlashlight() {
-		let rnd = (1...60).randomInt()
-		if rnd == 1 {
-			messenger.publishMessage(FlashlightMessage(isOn: false))
-
-			let delayRnd = (1...8).randomInt()
-			let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 / Double(delayRnd) * Double(NSEC_PER_SEC)))
-			dispatch_after(delayTime, dispatch_get_main_queue()) {
-				self.messenger.publishMessage(FlashlightMessage(isOn: true))
-			}
+	private func manifestFlashlightEffect() {
+		if let manifestation = flashlightManifestations.getManifestation(activity) {
+			manifestation.manifest()
 		}
 	}
 }

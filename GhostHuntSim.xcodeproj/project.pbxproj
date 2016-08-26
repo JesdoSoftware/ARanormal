@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		6056203DE6788414F8785DCE /* ManifestationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605624DBF877829699278989 /* ManifestationSet.swift */; };
 		605620405675BC7486F5E924 /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562773D515A68FE53039B3 /* VoiceController.swift */; };
+		605620916CECF9A0D42076CE /* FlashlightOffManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CD16816E5A25D1A54DE /* FlashlightOffManifestation.swift */; };
 		6056211772C8D1F5500741AC /* ActivityChangedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */; };
 		605621427EE37DF026668720 /* Manifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056229E60B803921D9DAD2A /* Manifestation.swift */; };
+		605621E51ED10750A7EEE5F8 /* FlashlightFlickerManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562E20B07571D77F948EEB /* FlashlightFlickerManifestation.swift */; };
 		605621ED6843F003FEC97876 /* SoundManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562C8D715D46CFF6A5963D /* SoundManifestation.swift */; };
 		605622AB577308BFC86ACD55 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605621CC4E8CE0C13A44598D /* ArrayExtensions.swift */; };
 		605623297C45AADBBAAFB6F4 /* knocking-angry.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562ED5EEC2972C2F116F98 /* knocking-angry.caf */; };
@@ -21,6 +23,7 @@
 		605624E34E7A3990EDC84D6D /* MessengerSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605628CC23613C9C84F7A3CA /* MessengerSubscriber.swift */; };
 		6056254ADA668CDFDD7DD4FB /* FlashlightMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562B54D397B4A2EB1A3AA9 /* FlashlightMessage.swift */; };
 		6056256DF78B63F231A079DE /* FlashlightMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562B54D397B4A2EB1A3AA9 /* FlashlightMessage.swift */; };
+		6056260E381841C34DDB8477 /* FlashlightOffManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CD16816E5A25D1A54DE /* FlashlightOffManifestation.swift */; };
 		6056262176DFB553F0309EA8 /* HUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CA1A9B0E29C20AAA679 /* HUDController.swift */; };
 		6056275A8E40AE9DF4135C2B /* ActivityChangedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */; };
 		605627A148768F0D8E5AC84F /* ManifestationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605624DBF877829699278989 /* ManifestationSet.swift */; };
@@ -33,6 +36,7 @@
 		60562B3CCA016F41777554F9 /* HUDScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056283C056A0BE010EEF02E /* HUDScene.swift */; };
 		60562B6DE0CC0621865C05B4 /* HUDScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056283C056A0BE010EEF02E /* HUDScene.swift */; };
 		60562BD0791130FB839AF6C1 /* IsGhostInViewMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562669CEE1253A4A101E2A /* IsGhostInViewMessage.swift */; };
+		60562C056050E1631F2097CB /* FlashlightFlickerManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562E20B07571D77F948EEB /* FlashlightFlickerManifestation.swift */; };
 		60562C132E7C9BE3A62A93C3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60562BB1A56A1433159F2F1E /* AudioToolbox.framework */; };
 		60562C19E05ABBC8C6710B34 /* WordRecognizedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605629A6C779E703759C0734 /* WordRecognizedMessage.swift */; };
 		60562C93275EBACBA8490BE7 /* knocking-angry.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562ED5EEC2972C2F116F98 /* knocking-angry.caf */; };
@@ -89,8 +93,10 @@
 		60562BB1A56A1433159F2F1E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		60562C8D715D46CFF6A5963D /* SoundManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManifestation.swift; sourceTree = "<group>"; };
 		60562CA1A9B0E29C20AAA679 /* HUDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDController.swift; sourceTree = "<group>"; };
+		60562CD16816E5A25D1A54DE /* FlashlightOffManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashlightOffManifestation.swift; sourceTree = "<group>"; };
 		60562D15DB35712DA2EC97F1 /* GhostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GhostController.swift; sourceTree = "<group>"; };
 		60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityChangedMessage.swift; sourceTree = "<group>"; };
+		60562E20B07571D77F948EEB /* FlashlightFlickerManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashlightFlickerManifestation.swift; sourceTree = "<group>"; };
 		60562ECDD18BC73C2EA2B745 /* Messenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
 		60562ED5EEC2972C2F116F98 /* knocking-angry.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = "knocking-angry.caf"; sourceTree = "<group>"; };
 		60562F0CD89A80026A10AE84 /* FlashlightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashlightController.swift; sourceTree = "<group>"; };
@@ -174,6 +180,8 @@
 				6056229E60B803921D9DAD2A /* Manifestation.swift */,
 				605624DBF877829699278989 /* ManifestationSet.swift */,
 				60562C8D715D46CFF6A5963D /* SoundManifestation.swift */,
+				60562E20B07571D77F948EEB /* FlashlightFlickerManifestation.swift */,
+				60562CD16816E5A25D1A54DE /* FlashlightOffManifestation.swift */,
 			);
 			path = Manifestations;
 			sourceTree = "<group>";
@@ -380,6 +388,8 @@
 				60562D307537A7C89FEBE65B /* RangeExtensions.swift in Sources */,
 				60562A10B764938AE9F53EF4 /* ArrayExtensions.swift in Sources */,
 				605621ED6843F003FEC97876 /* SoundManifestation.swift in Sources */,
+				60562C056050E1631F2097CB /* FlashlightFlickerManifestation.swift in Sources */,
+				6056260E381841C34DDB8477 /* FlashlightOffManifestation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +415,8 @@
 				6056244A20AB57B0598AA7DD /* RangeExtensions.swift in Sources */,
 				605622AB577308BFC86ACD55 /* ArrayExtensions.swift in Sources */,
 				60562DB548D9C2E5F1ED9351 /* SoundManifestation.swift in Sources */,
+				605621E51ED10750A7EEE5F8 /* FlashlightFlickerManifestation.swift in Sources */,
+				605620916CECF9A0D42076CE /* FlashlightOffManifestation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

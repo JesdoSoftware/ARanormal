@@ -25,8 +25,10 @@ public class ManifestationSet {
 		let rnd = (1...Int(round((60 / normalizedActivity)))).randomInt()
 		if rnd <= chancePerSixty {
 			let applicableManifestations = manifestations.filter({ $0.minimumActivityLevel <= activityLevel })
-			let manifestation = applicableManifestations.randomItem()
-			return manifestation
+			if applicableManifestations.count > 0 {
+				let manifestation = applicableManifestations.randomItem()
+				return manifestation
+			}
 		}
 		return nil
 	}

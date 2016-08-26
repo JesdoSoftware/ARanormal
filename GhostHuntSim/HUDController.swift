@@ -35,6 +35,9 @@ public class HUDController: MessengerSubscriber {
 			}
 		} else if let activityChangedMessage = message as? ActivityChangedMessage {
 			hudScene.setEmfRating(activityChangedMessage.activity)
+		} else if let flashlightMessage = message as? FlashlightMessage {
+			isFlashlightOn = flashlightMessage.isOn
+			hudScene.setFlashlightIndicatorOn(isFlashlightOn)
 		}
 	}
 

@@ -14,6 +14,8 @@ public class GhostController: MessengerSubscriber {
 	private let soundPivotNode: SCNNode
 	private let messenger: Messenger
 
+	private var soundManifestations: ManifestationSet! = nil
+
 	private var visibility: Double = 0.25
 	private var activity: Double = 0
 
@@ -24,6 +26,17 @@ public class GhostController: MessengerSubscriber {
 		soundNode = sn
 		soundPivotNode = spn
 		messenger = m
+
+		initializeManifestations()
+	}
+
+	private func initializeManifestations() {
+		let knockingSoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+				soundFileName: "knocking-angry.caf",
+				soundNode: soundNode,
+				soundPivotNode: soundPivotNode)
+		soundManifestations = ManifestationSet(manifestations: [knockingSoundManifestation],
+				chancePerSixty: 1)
 	}
 
 	public func processMessage(message: AnyObject) {
@@ -33,6 +46,7 @@ public class GhostController: MessengerSubscriber {
 			moveGhost()
 			playSound()
 			flickerFlashlight()
+			// TODO add method to randomly turn flashlight off
 		} else if let wordRecognizedMessage = message as? WordRecognizedMessage {
 			activity += 1
 			messenger.publishMessage(ActivityChangedMessage(activity: activity))
@@ -49,15 +63,8 @@ public class GhostController: MessengerSubscriber {
 	}
 
 	private func playSound() {
-		let rnd = (1...60).randomInt()
-		if rnd == 1 {
-			let rotation = (-2...2).randomInt()
-			soundPivotNode.removeAllActions()
-			soundPivotNode.runAction(SCNAction.rotateByX(0, y: 0, z: CGFloat(rotation), duration: 0))
-
-			let knockingSound = SCNAudioSource(fileNamed: "knocking-angry.caf")
-			knockingSound!.positional = true
-			soundNode.runAction(SCNAction.playAudioSource(knockingSound!, waitForCompletion: false))
+		if let manifestation = soundManifestations.getManifestation(activity) {
+			manifestation.manifest()
 		}
 	}
 

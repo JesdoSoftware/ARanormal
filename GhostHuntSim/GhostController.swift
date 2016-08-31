@@ -44,7 +44,7 @@ public class GhostController: MessengerSubscriber {
 		let flashlightOffManifestation = FlashlightOffManifestation(minimumActivityLevel: 1,
 				messenger: messenger)
 		flashlightManifestations = ManifestationSet(
-				manifestations: [flashlightFlickerManifestation, flashlightOffManifestation],
+				manifestations: [flashlightFlickerManifestation/*, flashlightOffManifestation*/],
 				chancePerSixty: 1)
 	}
 

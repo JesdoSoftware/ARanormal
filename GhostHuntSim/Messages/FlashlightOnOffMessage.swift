@@ -5,7 +5,7 @@
 
 import Foundation
 
-public class FlashlightMessage {
+public class FlashlightOnOffMessage {
 
 	public let isOn: Bool
 

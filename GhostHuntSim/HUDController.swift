@@ -35,7 +35,7 @@ public class HUDController: MessengerSubscriber {
 			}
 		} else if let activityChangedMessage = message as? ActivityChangedMessage {
 			hudScene.setEmfRating(activityChangedMessage.activity)
-		} else if let flashlightMessage = message as? FlashlightMessage {
+		} else if let flashlightMessage = message as? FlashlightOnOffMessage {
 			isFlashlightOn = flashlightMessage.isOn
 			hudScene.setFlashlightIndicatorOn(isFlashlightOn)
 		}
@@ -43,7 +43,7 @@ public class HUDController: MessengerSubscriber {
 
 	func toggleFlashlight() {
 		isFlashlightOn = !isFlashlightOn
-		messenger.publishMessage(FlashlightMessage(isOn: isFlashlightOn))
+		messenger.publishMessage(FlashlightOnOffMessage(isOn: isFlashlightOn))
 		hudScene.setFlashlightIndicatorOn(isFlashlightOn)
 	}
 }

@@ -20,6 +20,6 @@ public class FlashlightOffManifestation: Manifestation {
 	}
 
 	public func manifest() {
-		messenger.publishMessage(FlashlightMessage(isOn: false))
+		messenger.publishMessage(FlashlightOnOffMessage(isOn: false))
 	}
 }

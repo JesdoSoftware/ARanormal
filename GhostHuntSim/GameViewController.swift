@@ -39,7 +39,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 
 		let flashlightController = FlashlightController(captureDevice: captureDevice)
 		messenger.addSubscriber(flashlightController)
-		messenger.publishMessage(FlashlightMessage(isOn: true))
+		messenger.publishMessage(FlashlightOnOffMessage(isOn: true))
 
 		voiceController = VoiceController(words: ["HELLO", "COOL", "HOW DID YOU DIE"], messenger: messenger)
 		voiceController!.startListening()

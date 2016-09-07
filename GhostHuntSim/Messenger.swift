@@ -7,15 +7,15 @@ import Foundation
 
 public class Messenger {
 
-	private var subscribers: [MessengerSubscriber] = []
+    private var subscribers: [MessengerSubscriber] = []
 
-	public func addSubscriber(subscriber: MessengerSubscriber) {
-		subscribers.append(subscriber)
-	}
+    public func addSubscriber(subscriber: MessengerSubscriber) {
+        subscribers.append(subscriber)
+    }
 
-	public func publishMessage(message: AnyObject) {
-		for subscriber in subscribers {
-			subscriber.processMessage(message)
-		}
-	}
+    public func publishMessage(message: AnyObject) {
+        for subscriber in subscribers {
+            subscriber.processMessage(message)
+        }
+    }
 }

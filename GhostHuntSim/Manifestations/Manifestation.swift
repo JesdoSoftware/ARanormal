@@ -7,6 +7,6 @@ import Foundation
 
 public protocol Manifestation {
 
-	var minimumActivityLevel: Double { get }
-	func manifest()
+    var minimumActivityLevel: Double { get }
+    func manifest()
 }

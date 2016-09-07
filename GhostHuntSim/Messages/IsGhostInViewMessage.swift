@@ -7,9 +7,9 @@ import Foundation
 
 public class IsGhostInViewMessage {
 
-	public let isInView: Bool
+    public let isInView: Bool
 
-	init(isInView i: Bool) {
-		isInView = i
-	}
+    init(isInView: Bool) {
+        self.isInView = isInView
+    }
 }

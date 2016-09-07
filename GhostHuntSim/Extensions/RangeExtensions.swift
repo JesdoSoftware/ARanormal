@@ -7,18 +7,18 @@ import Foundation
 
 extension Range
 {
-	public func randomInt() -> Int
-	{
-		var offset = 0
+    public func randomInt() -> Int
+    {
+        var offset = 0
 
-		if (startIndex as! Int) < 0   // allow negative ranges
-		{
-			offset = abs(startIndex as! Int)
-		}
+        if (startIndex as! Int) < 0   // allow negative ranges
+        {
+            offset = abs(startIndex as! Int)
+        }
 
-		let mini = UInt32(startIndex as! Int + offset)
-		let maxi = UInt32(endIndex as! Int + offset)
+        let mini = UInt32(startIndex as! Int + offset)
+        let maxi = UInt32(endIndex as! Int + offset)
 
-		return Int(mini + arc4random_uniform(maxi - mini)) - offset
-	}
+        return Int(mini + arc4random_uniform(maxi - mini)) - offset
+    }
 }

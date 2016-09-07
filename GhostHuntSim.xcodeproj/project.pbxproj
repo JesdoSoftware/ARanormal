@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6056203DE6788414F8785DCE /* ManifestationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605624DBF877829699278989 /* ManifestationSet.swift */; };
 		605620405675BC7486F5E924 /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562773D515A68FE53039B3 /* VoiceController.swift */; };
+		60562059F13F04C3C4C2F810 /* OrbVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605623344E4B9138A09341E0 /* OrbVisibilityManifestation.swift */; };
 		605620916CECF9A0D42076CE /* FlashlightOffManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CD16816E5A25D1A54DE /* FlashlightOffManifestation.swift */; };
 		6056211772C8D1F5500741AC /* ActivityChangedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */; };
 		605621427EE37DF026668720 /* Manifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056229E60B803921D9DAD2A /* Manifestation.swift */; };
@@ -24,6 +25,7 @@
 		605624E34E7A3990EDC84D6D /* MessengerSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605628CC23613C9C84F7A3CA /* MessengerSubscriber.swift */; };
 		605624FCAE4A04A5A7D86E15 /* FlashlightFlickerMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562AD250A635B02342DCE1 /* FlashlightFlickerMessage.swift */; };
 		6056254ADA668CDFDD7DD4FB /* FlashlightOnOffMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562B54D397B4A2EB1A3AA9 /* FlashlightOnOffMessage.swift */; };
+		6056256193AACFD970E02174 /* OrbVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605623344E4B9138A09341E0 /* OrbVisibilityManifestation.swift */; };
 		6056256DF78B63F231A079DE /* FlashlightOnOffMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562B54D397B4A2EB1A3AA9 /* FlashlightOnOffMessage.swift */; };
 		6056260E381841C34DDB8477 /* FlashlightOffManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CD16816E5A25D1A54DE /* FlashlightOffManifestation.swift */; };
 		6056262176DFB553F0309EA8 /* HUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CA1A9B0E29C20AAA679 /* HUDController.swift */; };
@@ -83,6 +85,7 @@
 		605621CC4E8CE0C13A44598D /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		6056229E60B803921D9DAD2A /* Manifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manifestation.swift; sourceTree = "<group>"; };
 		6056230542FF6FE720625B99 /* RangeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeExtensions.swift; sourceTree = "<group>"; };
+		605623344E4B9138A09341E0 /* OrbVisibilityManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrbVisibilityManifestation.swift; sourceTree = "<group>"; };
 		605624DBF877829699278989 /* ManifestationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManifestationSet.swift; sourceTree = "<group>"; };
 		605625FED9E2D592EF208DF0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		60562669CEE1253A4A101E2A /* IsGhostInViewMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsGhostInViewMessage.swift; sourceTree = "<group>"; };
@@ -186,6 +189,7 @@
 				60562C8D715D46CFF6A5963D /* SoundManifestation.swift */,
 				60562E20B07571D77F948EEB /* FlashlightFlickerManifestation.swift */,
 				60562CD16816E5A25D1A54DE /* FlashlightOffManifestation.swift */,
+				605623344E4B9138A09341E0 /* OrbVisibilityManifestation.swift */,
 			);
 			path = Manifestations;
 			sourceTree = "<group>";
@@ -395,6 +399,7 @@
 				60562C056050E1631F2097CB /* FlashlightFlickerManifestation.swift in Sources */,
 				6056260E381841C34DDB8477 /* FlashlightOffManifestation.swift in Sources */,
 				60562482071FF8B1F33D20A2 /* FlashlightFlickerMessage.swift in Sources */,
+				6056256193AACFD970E02174 /* OrbVisibilityManifestation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +428,7 @@
 				605621E51ED10750A7EEE5F8 /* FlashlightFlickerManifestation.swift in Sources */,
 				605620916CECF9A0D42076CE /* FlashlightOffManifestation.swift in Sources */,
 				605624FCAE4A04A5A7D86E15 /* FlashlightFlickerMessage.swift in Sources */,
+				60562059F13F04C3C4C2F810 /* OrbVisibilityManifestation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

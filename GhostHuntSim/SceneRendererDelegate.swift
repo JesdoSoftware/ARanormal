@@ -12,57 +12,57 @@ import CoreMotion
 
 class SceneRendererDelegate: NSObject, SCNSceneRendererDelegate {
 
-	private let motionManager: CMMotionManager
-	private let sceneView: SCNView
-	private let cameraNode: SCNNode
-	private let ghostNode: SCNNode
-	private let messenger: Messenger
+    private let motionManager: CMMotionManager
+    private let sceneView: SCNView
+    private let cameraNode: SCNNode
+    private let ghostNode: SCNNode
+    private let messenger: Messenger
 
-	private var lastHeartbeatTime: NSTimeInterval = 0
+    private var lastHeartbeatTime: NSTimeInterval = 0
 
-	init(motionManager mm: CMMotionManager, sceneView sv: SCNView, cameraNode cn: SCNNode,
-	        ghostNode gn: SCNNode, messenger m: Messenger) {
-		motionManager = mm
-		sceneView = sv
-		cameraNode = cn
-		ghostNode = gn
-		messenger = m
-	}
+    init(motionManager: CMMotionManager, sceneView: SCNView, cameraNode: SCNNode, ghostNode: SCNNode,
+         messenger: Messenger) {
+        self.motionManager = motionManager
+        self.sceneView = sceneView
+        self.cameraNode = cameraNode
+        self.ghostNode = ghostNode
+        self.messenger = messenger
+    }
 
-	func renderer(renderer: SCNSceneRenderer, updateAtTime time: NSTimeInterval) {
-		updateCamera()
-		publishIsGhostInViewMessage()
-		publishHeartbeatMessageForTime(time)
-	}
+    func renderer(renderer: SCNSceneRenderer, updateAtTime time: NSTimeInterval) {
+        updateCamera()
+        publishIsGhostInViewMessage()
+        publishHeartbeatMessageForTime(time)
+    }
 
-	private func updateCamera() {
-		let quaternion: SCNQuaternion
+    private func updateCamera() {
+        let quaternion: SCNQuaternion
 
-		if let deviceMotion = motionManager.deviceMotion {
-			let currentAttitude = deviceMotion.attitude
-			quaternion = SCNQuaternion(currentAttitude.quaternion.x,
-					currentAttitude.quaternion.y,
-					currentAttitude.quaternion.z,
-					currentAttitude.quaternion.w)
-		}
-		else {
-			quaternion = SCNQuaternion()
-		}
-		cameraNode.orientation = quaternion
-	}
+        if let deviceMotion = motionManager.deviceMotion {
+            let currentAttitude = deviceMotion.attitude
+            quaternion = SCNQuaternion(currentAttitude.quaternion.x,
+                    currentAttitude.quaternion.y,
+                    currentAttitude.quaternion.z,
+                    currentAttitude.quaternion.w)
+        }
+        else {
+            quaternion = SCNQuaternion()
+        }
+        cameraNode.orientation = quaternion
+    }
 
-	private func publishIsGhostInViewMessage() {
-		if sceneView.isNodeInsideFrustum(ghostNode, withPointOfView: sceneView.pointOfView!) {
-			messenger.publishMessage(IsGhostInViewMessage(isInView: true))
-		} else {
-			messenger.publishMessage(IsGhostInViewMessage(isInView: false))
-		}
-	}
+    private func publishIsGhostInViewMessage() {
+        if sceneView.isNodeInsideFrustum(ghostNode, withPointOfView: sceneView.pointOfView!) {
+            messenger.publishMessage(IsGhostInViewMessage(isInView: true))
+        } else {
+            messenger.publishMessage(IsGhostInViewMessage(isInView: false))
+        }
+    }
 
-	private func publishHeartbeatMessageForTime(time: NSTimeInterval) {
-		if time > lastHeartbeatTime + 1 {
-			messenger.publishMessage(HeartbeatMessage(time: time))
-			lastHeartbeatTime = time
-		}
-	}
+    private func publishHeartbeatMessageForTime(time: NSTimeInterval) {
+        if time > lastHeartbeatTime + 1 {
+            messenger.publishMessage(HeartbeatMessage(time: time))
+            lastHeartbeatTime = time
+        }
+    }
 }

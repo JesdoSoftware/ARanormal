@@ -7,9 +7,9 @@ import Foundation
 
 public class FlashlightOnOffMessage {
 
-	public let isOn: Bool
+    public let isOn: Bool
 
-	init(isOn on: Bool) {
-		isOn = on
-	}
+    init(isOn: Bool) {
+        self.isOn = isOn
+    }
 }

@@ -7,29 +7,29 @@ import Foundation
 
 public class ManifestationSet {
 
-	private let manifestations: [Manifestation]
-	private let chancePerSixty: Int
+    private let manifestations: [Manifestation]
+    private let chancePerSixty: Int
 
-	init(manifestations m: [Manifestation], chancePerSixty chance: Int) {
-		manifestations = m
-		chancePerSixty = chance
-	}
+    init(manifestations: [Manifestation], chancePerSixty: Int) {
+        self.manifestations = manifestations
+        self.chancePerSixty = chancePerSixty
+    }
 
-	public func getManifestation(activityLevel: Double) -> Manifestation? {
-		let normalizedActivity: Double
-		if activityLevel == 0 {
-			normalizedActivity = 1
-		} else {
-			normalizedActivity = activityLevel
-		}
-		let rnd = (1...Int(round((60 / normalizedActivity)))).randomInt()
-		if rnd <= chancePerSixty {
-			let applicableManifestations = manifestations.filter({ $0.minimumActivityLevel <= activityLevel })
-			if applicableManifestations.count > 0 {
-				let manifestation = applicableManifestations.randomItem()
-				return manifestation
-			}
-		}
-		return nil
-	}
+    public func getManifestation(activityLevel: Double) -> Manifestation? {
+        let normalizedActivity: Double
+        if activityLevel == 0 {
+            normalizedActivity = 1
+        } else {
+            normalizedActivity = activityLevel
+        }
+        let rnd = (1...Int(round((60 / normalizedActivity)))).randomInt()
+        if rnd <= chancePerSixty {
+            let applicableManifestations = manifestations.filter({ $0.minimumActivityLevel <= activityLevel })
+            if applicableManifestations.count > 0 {
+                let manifestation = applicableManifestations.randomItem()
+                return manifestation
+            }
+        }
+        return nil
+    }
 }

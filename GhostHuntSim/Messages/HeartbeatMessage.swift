@@ -7,9 +7,9 @@ import Foundation
 
 public class HeartbeatMessage {
 
-	public let time: NSTimeInterval
+    public let time: NSTimeInterval
 
-	init(time t: NSTimeInterval) {
-		time = t
-	}
+    init(time: NSTimeInterval) {
+        self.time = time
+    }
 }

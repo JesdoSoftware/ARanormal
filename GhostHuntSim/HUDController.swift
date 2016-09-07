@@ -9,41 +9,41 @@ import SceneKit
 
 public class HUDController: MessengerSubscriber {
 
-	private let hudScene: HUDScene
-	private let messenger: Messenger
+    private let hudScene: HUDScene
+    private let messenger: Messenger
 
-	private var isFlashlightOn: Bool = true
+    private var isFlashlightOn: Bool = true
 
-	init(sceneView: SCNView, messenger m: Messenger) {
-		messenger = m
+    init(sceneView: SCNView, messenger: Messenger) {
+        self.messenger = messenger
 
-		hudScene = HUDScene(size: sceneView.bounds.size)
-		hudScene.controller = self
+        hudScene = HUDScene(size: sceneView.bounds.size)
+        hudScene.controller = self
 
-		sceneView.overlaySKScene = hudScene
-		sceneView.overlaySKScene!.hidden = false
-		sceneView.overlaySKScene!.scaleMode = SKSceneScaleMode.ResizeFill
-		sceneView.overlaySKScene!.userInteractionEnabled = true
-	}
+        sceneView.overlaySKScene = hudScene
+        sceneView.overlaySKScene!.hidden = false
+        sceneView.overlaySKScene!.scaleMode = SKSceneScaleMode.ResizeFill
+        sceneView.overlaySKScene!.userInteractionEnabled = true
+    }
 
-	public func processMessage(message: AnyObject) {
-		if let isGhostInViewMessage = message as? IsGhostInViewMessage {
-			if isGhostInViewMessage.isInView {
-				hudScene.decreaseTemperature()
-			} else {
-				hudScene.increaseTemperature()
-			}
-		} else if let activityChangedMessage = message as? ActivityChangedMessage {
-			hudScene.setEmfRating(activityChangedMessage.activity)
-		} else if let flashlightMessage = message as? FlashlightOnOffMessage {
-			isFlashlightOn = flashlightMessage.isOn
-			hudScene.setFlashlightIndicatorOn(isFlashlightOn)
-		}
-	}
+    public func processMessage(message: AnyObject) {
+        if let isGhostInViewMessage = message as? IsGhostInViewMessage {
+            if isGhostInViewMessage.isInView {
+                hudScene.decreaseTemperature()
+            } else {
+                hudScene.increaseTemperature()
+            }
+        } else if let activityChangedMessage = message as? ActivityChangedMessage {
+            hudScene.setEmfRating(activityChangedMessage.activity)
+        } else if let flashlightMessage = message as? FlashlightOnOffMessage {
+            isFlashlightOn = flashlightMessage.isOn
+            hudScene.setFlashlightIndicatorOn(isFlashlightOn)
+        }
+    }
 
-	func toggleFlashlight() {
-		isFlashlightOn = !isFlashlightOn
-		messenger.publishMessage(FlashlightOnOffMessage(isOn: isFlashlightOn))
-		hudScene.setFlashlightIndicatorOn(isFlashlightOn)
-	}
+    func toggleFlashlight() {
+        isFlashlightOn = !isFlashlightOn
+        messenger.publishMessage(FlashlightOnOffMessage(isOn: isFlashlightOn))
+        hudScene.setFlashlightIndicatorOn(isFlashlightOn)
+    }
 }

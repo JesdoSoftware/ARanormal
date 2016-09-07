@@ -7,9 +7,9 @@ import Foundation
 
 public class FlashlightFlickerMessage {
 
-	public let times: Int
+    public let times: Int
 
-	init(times t: Int) {
-		times = t
-	}
+    init(times: Int) {
+        self.times = times
+    }
 }

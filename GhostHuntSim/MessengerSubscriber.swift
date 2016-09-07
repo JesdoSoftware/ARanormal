@@ -7,5 +7,5 @@ import Foundation
 
 public protocol MessengerSubscriber {
 
-	func processMessage(message: AnyObject)
+    func processMessage(message: AnyObject)
 }

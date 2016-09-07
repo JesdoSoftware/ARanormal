@@ -7,9 +7,9 @@ import Foundation
 
 public class WordRecognizedMessage {
 
-	public let word: String
+    public let word: String
 
-	init(word w: String) {
-		word = w
-	}
+    init(word: String) {
+        self.word = word
+    }
 }

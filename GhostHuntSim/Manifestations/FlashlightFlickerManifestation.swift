@@ -7,20 +7,17 @@ import Foundation
 
 public class FlashlightFlickerManifestation: Manifestation {
 
-	private let minimum: Double
-	private let messenger: Messenger
+    private let messenger: Messenger
 
-	init(minimumActivityLevel: Double, messenger m: Messenger) {
-		minimum = minimumActivityLevel
-		messenger = m
-	}
+    init(minimumActivityLevel: Double, messenger: Messenger) {
+        self.minimumActivityLevel = minimumActivityLevel
+        self.messenger = messenger
+    }
 
-	public var minimumActivityLevel: Double {
-		return minimum
-	}
+    public var minimumActivityLevel: Double
 
-	public func manifest() {
-		let times = (1...3).randomInt()
-		messenger.publishMessage(FlashlightFlickerMessage(times: times))
-	}
+    public func manifest() {
+        let times = (1...3).randomInt()
+        messenger.publishMessage(FlashlightFlickerMessage(times: times))
+    }
 }

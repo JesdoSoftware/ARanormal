@@ -7,9 +7,9 @@ import Foundation
 
 public class ActivityChangedMessage {
 
-	public let activity: Double
+    public let activity: Double
 
-	init(activity a: Double) {
-		activity = a
-	}
+    init(activity: Double) {
+        self.activity = activity
+    }
 }

@@ -16,6 +16,7 @@ public class GhostController: MessengerSubscriber {
 
     private var soundManifestations: ManifestationSet! = nil
     private var flashlightManifestations: ManifestationSet! = nil
+    private var visibilityManifestations: ManifestationSet! = nil
 
     private var visibility: Double = 0.25
     private var activity: Double = 0
@@ -46,15 +47,18 @@ public class GhostController: MessengerSubscriber {
         flashlightManifestations = ManifestationSet(
                 manifestations: [flashlightFlickerManifestation, flashlightOffManifestation],
                 chancePerSixty: 1)
+
+        let orbVisibilityManifestation = OrbVisibilityManifestation(minimumActivityLevel: 1, ghostNode: ghostNode,
+                visibility: 0.25)
+        visibilityManifestations = ManifestationSet(manifestations: [orbVisibilityManifestation], chancePerSixty: 1)
     }
 
     public func processMessage(message: AnyObject) {
-        ghostNode.opacity = CGFloat(visibility)
-
         if message is HeartbeatMessage {
             moveGhost()
             manifestSound()
             manifestFlashlightEffect()
+            manifestVisibility()
         } else if let wordRecognizedMessage = message as? WordRecognizedMessage {
             activity += 1
             messenger.publishMessage(ActivityChangedMessage(activity: activity))
@@ -78,6 +82,12 @@ public class GhostController: MessengerSubscriber {
 
     private func manifestFlashlightEffect() {
         if let manifestation = flashlightManifestations.getManifestation(activity) {
+            manifestation.manifest()
+        }
+    }
+
+    private func manifestVisibility() {
+        if let manifestation = visibilityManifestations.getManifestation(activity) {
             manifestation.manifest()
         }
     }

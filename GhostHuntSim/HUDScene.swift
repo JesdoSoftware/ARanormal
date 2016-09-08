@@ -46,7 +46,7 @@ class HUDScene: SKScene {
     }
 
     func setEmfRating(emfRating: Double) {
-        emfNode.text = String(emfRating) + " mG"
+        emfNode.text = String(format: "%.1f", emfRating) + " mG"
     }
 
     func setFlashlightIndicatorOn(isOn: Bool) {

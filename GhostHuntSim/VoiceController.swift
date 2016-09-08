@@ -45,8 +45,7 @@ public class VoiceController: NSObject, OEEventsObserverDelegate {
     }
 
     public func pocketsphinxDidReceiveHypothesis(hypothesis: String, recognitionScore: String, utteranceID: String) {
-        messenger.publishMessage(WordRecognizedMessage(word: hypothesis))
-
+        messenger.publishMessage(PhraseRecognizedMessage(phrase: hypothesis))
         print("The received hypothesis is \(hypothesis) with a score of \(recognitionScore) and an ID of \(utteranceID)")
     }
 
@@ -59,6 +58,7 @@ public class VoiceController: NSObject, OEEventsObserverDelegate {
     }
 
     public func pocketsphinxDidDetectFinishedSpeech() {
+        messenger.publishMessage(UtteranceMessage())
         print("Pocketsphinx has detected a period of silence, concluding an utterance.")
     }
 

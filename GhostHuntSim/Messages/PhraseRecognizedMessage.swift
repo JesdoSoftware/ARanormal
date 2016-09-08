@@ -5,11 +5,11 @@
 
 import Foundation
 
-public class WordRecognizedMessage {
+public class PhraseRecognizedMessage {
 
-    public let word: String
+    public let phrase: String
 
-    init(word: String) {
-        self.word = word
+    init(phrase: String) {
+        self.phrase = phrase
     }
 }

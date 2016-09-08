@@ -13,6 +13,7 @@ public class GhostController: MessengerSubscriber {
     private let soundNode: SCNNode
     private let soundPivotNode: SCNNode
     private let messenger: Messenger
+    private let yesNoResponses: [YesNoResponse]
 
     private var soundManifestations: ManifestationSet! = nil
     private var flashlightManifestations: ManifestationSet! = nil
@@ -22,12 +23,13 @@ public class GhostController: MessengerSubscriber {
     private var activity: Double = 0
 
     init(ghostNode: SCNNode, ghostPivotNode: SCNNode, soundNode: SCNNode, soundPivotNode: SCNNode,
-            messenger: Messenger) {
+            messenger: Messenger, yesNoResponses: [YesNoResponse]) {
         self.ghostNode = ghostNode
         self.ghostPivotNode = ghostPivotNode
         self.soundNode = soundNode
         self.soundPivotNode = soundPivotNode
         self.messenger = messenger
+        self.yesNoResponses = yesNoResponses
 
         initializeManifestations()
     }
@@ -59,9 +61,11 @@ public class GhostController: MessengerSubscriber {
             manifestSound()
             manifestFlashlightEffect()
             manifestVisibility()
-        } else if let wordRecognizedMessage = message as? WordRecognizedMessage {
-            activity += 1
+        } else if message is UtteranceMessage {
+            activity += 0.05
             messenger.publishMessage(ActivityChangedMessage(activity: activity))
+        } else if let phraseRecognizedMessage = message as? PhraseRecognizedMessage {
+            respondToPhrase(phraseRecognizedMessage.phrase)
         }
     }
 
@@ -89,6 +93,15 @@ public class GhostController: MessengerSubscriber {
     private func manifestVisibility() {
         if let manifestation = visibilityManifestations.getManifestation(activity) {
             manifestation.manifest()
+        }
+    }
+
+    private func respondToPhrase(phrase: String) {
+        for yesNoResponse in yesNoResponses {
+            if let response = yesNoResponse.respondToPhrase(phrase) {
+                messenger.publishMessage(YesNoResponseMessage(response: response))
+                print("Yes/no response: \(response)")
+            }
         }
     }
 }

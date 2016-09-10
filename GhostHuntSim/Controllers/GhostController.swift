@@ -97,11 +97,14 @@ public class GhostController: MessengerSubscriber {
     }
 
     private func respondToPhrase(phrase: String) {
-        for yesNoResponse in yesNoResponses {
-            if let response = yesNoResponse.respondToPhrase(phrase) {
-                messenger.publishMessage(YesNoResponseMessage(response: response))
-                print("Yes/no response: \(response)")
+        // TODO: reinstate minimum activity level
+//        if activity > 3 {
+            for yesNoResponse in yesNoResponses {
+                if let response = yesNoResponse.respondToPhrase(phrase) {
+                    messenger.publishMessage(YesNoResponseMessage(response: response))
+                    print("Yes/no response: \(response)")
+                }
             }
-        }
+//        }
     }
 }

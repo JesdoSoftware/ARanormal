@@ -40,6 +40,8 @@ public class HUDController: MessengerSubscriber {
             hudScene.setFlashlightIndicatorOn(isFlashlightOn)
         } else if let yesNoResponseMessage = message as? YesNoResponseMessage {
             displayYesNoResponse(yesNoResponseMessage.response)
+        } else if let verbalResponseMessage = message as? VerbalResponseMessage {
+            displayVerbalResponse(verbalResponseMessage.response)
         }
     }
 
@@ -50,11 +52,20 @@ public class HUDController: MessengerSubscriber {
     }
 
     private func displayYesNoResponse(isYes: Bool) {
-        hudScene.setYesNoIndicator(isYes)
+        hudScene.indicateYesNoResponse(isYes)
 
         let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
         dispatch_after(delayTime, dispatch_get_main_queue()) {
             self.hudScene.clearYesNoIndicator()
+        }
+    }
+
+    private func displayVerbalResponse(response: String) {
+        hudScene.indicateVerbalResponse(response)
+
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            self.hudScene.clearVerbalResponseIndicator()
         }
     }
 }

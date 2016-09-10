@@ -14,6 +14,7 @@ class HUDScene: SKScene {
     private var emfIndicator: SKLabelNode! = nil
     private var flashlightButton: SKSpriteNode! = nil
     private var yesNoIndicator: SKLabelNode! = nil
+    private var verbalResponseIndicator: SKLabelNode! = nil
 
     override func didMoveToView(view: SKView) {
         temperatureIndicator = SKSpriteNode(color: UIColor.orangeColor(), size: CGSize(width:100, height:100))
@@ -30,6 +31,10 @@ class HUDScene: SKScene {
         yesNoIndicator = SKLabelNode(text: "")
         yesNoIndicator.position = CGPoint(x: 300, y: 300)
         addChild(yesNoIndicator)
+
+        verbalResponseIndicator = SKLabelNode(text: "")
+        verbalResponseIndicator.position = CGPoint(x: 300, y: 300)
+        addChild(verbalResponseIndicator)
     }
 
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -63,7 +68,7 @@ class HUDScene: SKScene {
         }
     }
 
-    func setYesNoIndicator(isYes: Bool) {
+    func indicateYesNoResponse(isYes: Bool) {
         if isYes {
             yesNoIndicator.text = "YES"
         } else {
@@ -73,5 +78,13 @@ class HUDScene: SKScene {
 
     func clearYesNoIndicator() {
         yesNoIndicator.text = ""
+    }
+
+    func indicateVerbalResponse(response: String) {
+        verbalResponseIndicator.text = response
+    }
+
+    func clearVerbalResponseIndicator() {
+        verbalResponseIndicator.text = ""
     }
 }

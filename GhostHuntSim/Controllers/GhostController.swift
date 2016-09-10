@@ -14,6 +14,7 @@ public class GhostController: MessengerSubscriber {
     private let soundPivotNode: SCNNode
     private let messenger: Messenger
     private let yesNoResponses: [YesNoResponse]
+    private let verbalResponses: [VerbalResponse]
 
     private var soundManifestations: ManifestationSet! = nil
     private var flashlightManifestations: ManifestationSet! = nil
@@ -23,13 +24,14 @@ public class GhostController: MessengerSubscriber {
     private var activity: Double = 0
 
     init(ghostNode: SCNNode, ghostPivotNode: SCNNode, soundNode: SCNNode, soundPivotNode: SCNNode,
-            messenger: Messenger, yesNoResponses: [YesNoResponse]) {
+            messenger: Messenger, yesNoResponses: [YesNoResponse], verbalResponses: [VerbalResponse]) {
         self.ghostNode = ghostNode
         self.ghostPivotNode = ghostPivotNode
         self.soundNode = soundNode
         self.soundPivotNode = soundPivotNode
         self.messenger = messenger
         self.yesNoResponses = yesNoResponses
+        self.verbalResponses = verbalResponses
 
         initializeManifestations()
     }
@@ -97,14 +99,20 @@ public class GhostController: MessengerSubscriber {
     }
 
     private func respondToPhrase(phrase: String) {
-        // TODO: reinstate minimum activity level
-//        if activity > 3 {
-            for yesNoResponse in yesNoResponses {
-                if let response = yesNoResponse.respondToPhrase(phrase) {
-                    messenger.publishMessage(YesNoResponseMessage(response: response))
-                    print("Yes/no response: \(response)")
-                }
+        // TODO: make chance of response based on activity level
+        for verbalResponse in verbalResponses {
+            if let response = verbalResponse.respondToPhrase(phrase) {
+                messenger.publishMessage(VerbalResponseMessage(response: response))
+                print("Verbal response: \(response)")
+
+                return
             }
-//        }
+        }
+        for yesNoResponse in yesNoResponses {
+            if let response = yesNoResponse.respondToPhrase(phrase) {
+                messenger.publishMessage(YesNoResponseMessage(response: response))
+                print("Yes/no response: \(response)")
+            }
+        }
     }
 }

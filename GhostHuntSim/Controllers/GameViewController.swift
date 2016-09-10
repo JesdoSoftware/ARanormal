@@ -6,6 +6,7 @@
 //  Copyright (c) 2016 Jesse Douglas. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import QuartzCore
 import SceneKit
@@ -38,21 +39,44 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
                 YesNoResponse(requiredWords: ["LIKE", "HERE"], response: false)
         ]
 
+        let verbalResponses = [
+                VerbalResponse(requiredWords: ["HOW", "YOU", "DIE"], response: "FIRE")
+        ]
+
         let ghostController = GhostController(ghostNode: ghostNode, ghostPivotNode: ghostPivotNode,
                 soundNode: soundNode, soundPivotNode: soundPivotNode, messenger: messenger,
-                yesNoResponses: yesNoResponses)
+                yesNoResponses: yesNoResponses, verbalResponses: verbalResponses)
         messenger.addSubscriber(ghostController)
 
         let flashlightController = FlashlightController(captureDevice: captureDevice)
         messenger.addSubscriber(flashlightController)
         messenger.publishMessage(FlashlightOnOffMessage(isOn: true))
 
-        voiceController = VoiceController(words: ["LEAVE", "LIKE", "HERE"], messenger: messenger)
+        let requiredWords = getRequiredWordsFromYesNoResponses(yesNoResponses, verbalResponses: verbalResponses)
+        voiceController = VoiceController(words: requiredWords, messenger: messenger)
         voiceController!.startListening()
 
         sceneRendererDelegate = SceneRendererDelegate(motionManager: motionManager, sceneView: sceneView,
                 cameraNode: cameraNode, ghostNode: ghostNode, messenger: messenger)
         sceneView.delegate = sceneRendererDelegate!
+    }
+
+    private func getRequiredWordsFromYesNoResponses(yesNoResponses: [YesNoResponse],
+                                                    verbalResponses:[VerbalResponse]) -> [String] {
+        var requiredWords = [String]()
+
+        for response in yesNoResponses {
+            for requiredWord in response.requiredWords {
+                requiredWords.append(requiredWord.uppercaseString)
+            }
+        }
+        for response in verbalResponses {
+            for requiredWord in response.requiredWords {
+                requiredWords.append(requiredWord.uppercaseString)
+            }
+        }
+
+        return requiredWords
     }
 
     override func shouldAutorotate() -> Bool {

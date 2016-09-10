@@ -10,21 +10,26 @@ class HUDScene: SKScene {
 
     var controller: HUDController?
 
-    private var temperatureNode: SKSpriteNode! = nil
-    private var emfNode: SKLabelNode! = nil
+    private var temperatureIndicator: SKSpriteNode! = nil
+    private var emfIndicator: SKLabelNode! = nil
     private var flashlightButton: SKSpriteNode! = nil
+    private var yesNoIndicator: SKLabelNode! = nil
 
     override func didMoveToView(view: SKView) {
-        temperatureNode = SKSpriteNode(color: UIColor.orangeColor(), size: CGSize(width:100, height:100))
-        addChild(temperatureNode)
+        temperatureIndicator = SKSpriteNode(color: UIColor.orangeColor(), size: CGSize(width:100, height:100))
+        addChild(temperatureIndicator)
 
-        emfNode = SKLabelNode(text: "0.0 mG")
-        emfNode.position = CGPoint(x: 50, y: 600)
-        addChild(emfNode)
+        emfIndicator = SKLabelNode(text: "0.0 mG")
+        emfIndicator.position = CGPoint(x: 50, y: 600)
+        addChild(emfIndicator)
 
         flashlightButton = SKSpriteNode(color: UIColor.yellowColor(), size: CGSize(width: 100, height: 100))
         flashlightButton.position = CGPoint(x: 300, y: 0)
         addChild(flashlightButton)
+
+        yesNoIndicator = SKLabelNode(text: "")
+        yesNoIndicator.position = CGPoint(x: 300, y: 300)
+        addChild(yesNoIndicator)
     }
 
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -38,15 +43,15 @@ class HUDScene: SKScene {
     }
 
     func decreaseTemperature() {
-        temperatureNode.color = UIColor.blueColor()
+        temperatureIndicator.color = UIColor.blueColor()
     }
 
     func increaseTemperature() {
-        temperatureNode.color = UIColor.orangeColor()
+        temperatureIndicator.color = UIColor.orangeColor()
     }
 
     func setEmfRating(emfRating: Double) {
-        emfNode.text = String(format: "%.1f", emfRating) + " mG"
+        emfIndicator.text = String(format: "%.1f", emfRating) + " mG"
     }
 
     func setFlashlightIndicatorOn(isOn: Bool) {
@@ -56,5 +61,17 @@ class HUDScene: SKScene {
         else {
             flashlightButton.color = UIColor.purpleColor()
         }
+    }
+
+    func setYesNoIndicator(isYes: Bool) {
+        if isYes {
+            yesNoIndicator.text = "YES"
+        } else {
+            yesNoIndicator.text = "NO"
+        }
+    }
+
+    func clearYesNoIndicator() {
+        yesNoIndicator.text = ""
     }
 }

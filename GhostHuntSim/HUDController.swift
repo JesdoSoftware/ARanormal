@@ -38,6 +38,8 @@ public class HUDController: MessengerSubscriber {
         } else if let flashlightMessage = message as? FlashlightOnOffMessage {
             isFlashlightOn = flashlightMessage.isOn
             hudScene.setFlashlightIndicatorOn(isFlashlightOn)
+        } else if let yesNoResponseMessage = message as? YesNoResponseMessage {
+            displayYesNoResponse(yesNoResponseMessage.response)
         }
     }
 
@@ -45,5 +47,14 @@ public class HUDController: MessengerSubscriber {
         isFlashlightOn = !isFlashlightOn
         messenger.publishMessage(FlashlightOnOffMessage(isOn: isFlashlightOn))
         hudScene.setFlashlightIndicatorOn(isFlashlightOn)
+    }
+
+    private func displayYesNoResponse(isYes: Bool) {
+        hudScene.setYesNoIndicator(isYes)
+
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            self.hudScene.clearYesNoIndicator()
+        }
     }
 }

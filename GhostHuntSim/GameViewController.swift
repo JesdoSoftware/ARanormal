@@ -34,8 +34,8 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         messenger.addSubscriber(hudController)
 
         let yesNoResponses = [
-                YesNoResponse(requiredWords: ["HUNGRY"], response: true),
-                YesNoResponse(requiredWords: ["SMART", "COURAGEOUS"], response: false)
+                YesNoResponse(requiredWords: ["LEAVE"], response: true),
+                YesNoResponse(requiredWords: ["LIKE", "HERE"], response: false)
         ]
 
         let ghostController = GhostController(ghostNode: ghostNode, ghostPivotNode: ghostPivotNode,
@@ -47,7 +47,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         messenger.addSubscriber(flashlightController)
         messenger.publishMessage(FlashlightOnOffMessage(isOn: true))
 
-        voiceController = VoiceController(words: ["HUNGRY", "SMART", "COURAGEOUS"], messenger: messenger)
+        voiceController = VoiceController(words: ["LEAVE", "LIKE", "HERE"], messenger: messenger)
         voiceController!.startListening()
 
         sceneRendererDelegate = SceneRendererDelegate(motionManager: motionManager, sceneView: sceneView,

@@ -5,6 +5,7 @@
 
 import Foundation
 import SceneKit
+import AVFoundation
 
 public class GhostController: MessengerSubscriber {
 
@@ -15,6 +16,7 @@ public class GhostController: MessengerSubscriber {
     private let messenger: Messenger
     private let yesNoResponses: [YesNoResponse]
     private let verbalResponses: [VerbalResponse]
+    private let speechSynthesizer: AVSpeechSynthesizer
 
     private var soundManifestations: ManifestationSet! = nil
     private var flashlightManifestations: ManifestationSet! = nil
@@ -32,6 +34,8 @@ public class GhostController: MessengerSubscriber {
         self.messenger = messenger
         self.yesNoResponses = yesNoResponses
         self.verbalResponses = verbalResponses
+
+        speechSynthesizer = AVSpeechSynthesizer()
 
         initializeManifestations()
     }
@@ -103,6 +107,7 @@ public class GhostController: MessengerSubscriber {
         for verbalResponse in verbalResponses {
             if let response = verbalResponse.respondToPhrase(phrase) {
                 messenger.publishMessage(VerbalResponseMessage(response: response))
+                utterPhrase(response)
                 print("Verbal response: \(response)")
 
                 return
@@ -114,5 +119,12 @@ public class GhostController: MessengerSubscriber {
                 print("Yes/no response: \(response)")
             }
         }
+    }
+
+    private func utterPhrase(phrase: String) {
+        let utterance = AVSpeechUtterance(string: phrase)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+
+        speechSynthesizer.speakUtterance(utterance)
     }
 }

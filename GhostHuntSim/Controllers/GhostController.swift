@@ -57,7 +57,7 @@ public class GhostController: MessengerSubscriber {
                 chancePerSixty: 1)
 
         let orbVisibilityManifestation = OrbVisibilityManifestation(minimumActivityLevel: 1, ghostNode: ghostNode,
-                visibility: 0.25)
+                visibility: 0.25, messenger: messenger)
         visibilityManifestations = ManifestationSet(manifestations: [orbVisibilityManifestation], chancePerSixty: 1)
     }
 

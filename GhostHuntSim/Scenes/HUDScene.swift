@@ -15,17 +15,19 @@ class HUDScene: SKScene {
     private var flashlightButton: SKSpriteNode! = nil
     private var yesNoIndicator: SKLabelNode! = nil
     private var verbalResponseIndicator: SKLabelNode! = nil
+    private var cameraButton: SKSpriteNode! = nil
 
     override func didMoveToView(view: SKView) {
-        temperatureIndicator = SKSpriteNode(color: UIColor.orangeColor(), size: CGSize(width:100, height:100))
-        addChild(temperatureIndicator)
-
         emfIndicator = SKLabelNode(text: "0.0 mG")
-        emfIndicator.position = CGPoint(x: 50, y: 600)
+        emfIndicator.position = CGPoint(x: 100, y: 600)
         addChild(emfIndicator)
 
+        temperatureIndicator = SKSpriteNode(color: UIColor.orangeColor(), size: CGSize(width:100, height:100))
+        temperatureIndicator.position = CGPoint(x: 300, y: 600)
+        addChild(temperatureIndicator)
+
         flashlightButton = SKSpriteNode(color: UIColor.yellowColor(), size: CGSize(width: 100, height: 100))
-        flashlightButton.position = CGPoint(x: 300, y: 0)
+        flashlightButton.position = CGPoint(x: 100, y: 100)
         addChild(flashlightButton)
 
         yesNoIndicator = SKLabelNode(text: "")
@@ -35,6 +37,10 @@ class HUDScene: SKScene {
         verbalResponseIndicator = SKLabelNode(text: "")
         verbalResponseIndicator.position = CGPoint(x: 300, y: 300)
         addChild(verbalResponseIndicator)
+
+        cameraButton = SKSpriteNode(color: UIColor.cyanColor(), size: CGSize(width: 100, height: 100))
+        cameraButton.position = CGPoint(x: 300, y: 100)
+        addChild(cameraButton)
     }
 
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -42,6 +48,8 @@ class HUDScene: SKScene {
             let location = touch.locationInNode(self)
             if flashlightButton.containsPoint(location) {
                 controller?.toggleFlashlight()
+            } else if cameraButton.containsPoint(location) {
+                controller?.takePicture()
             }
         }
         super.touchesEnded(touches, withEvent: event)

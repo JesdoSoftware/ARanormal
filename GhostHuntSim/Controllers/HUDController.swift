@@ -13,6 +13,8 @@ public class HUDController: MessengerSubscriber {
     private let messenger: Messenger
 
     private var isFlashlightOn: Bool = true
+    private var isGhostInView: Bool = false
+    private var isGhostVisible: Bool = false
 
     init(sceneView: SCNView, messenger: Messenger) {
         self.messenger = messenger
@@ -33,6 +35,7 @@ public class HUDController: MessengerSubscriber {
             } else {
                 hudScene.increaseTemperature()
             }
+            isGhostInView = isGhostInViewMessage.isInView
         } else if let activityChangedMessage = message as? ActivityChangedMessage {
             hudScene.setEmfRating(activityChangedMessage.activity)
         } else if let flashlightMessage = message as? FlashlightOnOffMessage {
@@ -42,6 +45,8 @@ public class HUDController: MessengerSubscriber {
             displayYesNoResponse(yesNoResponseMessage.response)
         } else if let verbalResponseMessage = message as? VerbalResponseMessage {
             displayVerbalResponse(verbalResponseMessage.response)
+        } else if let isGhostVisibleMessage = message as? IsGhostVisibleMessage {
+            isGhostVisible = isGhostVisibleMessage.isVisible
         }
     }
 
@@ -49,6 +54,10 @@ public class HUDController: MessengerSubscriber {
         isFlashlightOn = !isFlashlightOn
         messenger.publishMessage(FlashlightOnOffMessage(isOn: isFlashlightOn))
         hudScene.setFlashlightIndicatorOn(isFlashlightOn)
+    }
+
+    func takePicture() {
+
     }
 
     private func displayYesNoResponse(isYes: Bool) {

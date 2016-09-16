@@ -153,6 +153,8 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         scene.rootNode.addChildNode(ambientLightNode)
 
         let ghostNode = SCNNode()
+        ghostNode.geometry = SCNSphere(radius: 2)
+        ghostNode.opacity = 0
         let ghostPivotNode = SCNNode()
         ghostPivotNode.addChildNode(ghostNode)
         ghostNode.position = SCNVector3Make(0, 50, 50)
@@ -175,7 +177,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         scnView.allowsCameraControl = false
 
         // show statistics such as fps and timing information
-        scnView.showsStatistics = true
+        scnView.showsStatistics = false
 
         scnView.backgroundColor = UIColor.clearColor()
         scnView.playing = true

@@ -16,6 +16,8 @@ class HUDScene: SKScene {
     private var yesNoIndicator: SKLabelNode! = nil
     private var verbalResponseIndicator: SKLabelNode! = nil
     private var cameraButton: SKSpriteNode! = nil
+    private var scoreIndicator: SKLabelNode! = nil
+    private var score: Int = 0
 
     override func didMoveToView(view: SKView) {
         emfIndicator = SKLabelNode(text: "0.0 mG")
@@ -27,7 +29,7 @@ class HUDScene: SKScene {
         addChild(temperatureIndicator)
 
         flashlightButton = SKSpriteNode(color: UIColor.yellowColor(), size: CGSize(width: 100, height: 100))
-        flashlightButton.position = CGPoint(x: 100, y: 100)
+        flashlightButton.position = CGPoint(x: 100, y: 250)
         addChild(flashlightButton)
 
         yesNoIndicator = SKLabelNode(text: "")
@@ -39,8 +41,12 @@ class HUDScene: SKScene {
         addChild(verbalResponseIndicator)
 
         cameraButton = SKSpriteNode(color: UIColor.cyanColor(), size: CGSize(width: 100, height: 100))
-        cameraButton.position = CGPoint(x: 300, y: 100)
+        cameraButton.position = CGPoint(x: 100, y: 100)
         addChild(cameraButton)
+
+        scoreIndicator = SKLabelNode(text: "\(score)")
+        scoreIndicator.position = CGPoint(x: 300, y: 100)
+        addChild(scoreIndicator)
     }
 
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -94,5 +100,10 @@ class HUDScene: SKScene {
 
     func clearVerbalResponseIndicator() {
         verbalResponseIndicator.text = ""
+    }
+
+    func increaseScoreBy(amount: Int) {
+        score += amount
+        scoreIndicator.text = "\(score)"
     }
 }

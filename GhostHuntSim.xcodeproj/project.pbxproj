@@ -24,6 +24,7 @@
 		6056236C28D5D814B7E3CA71 /* HeartbeatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056272997C9618DB2041738 /* HeartbeatMessage.swift */; };
 		605623F8C5F8131DFD13C772 /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562C2C0309559CE33858BB /* VoiceController.swift */; };
 		6056244A20AB57B0598AA7DD /* RangeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056230542FF6FE720625B99 /* RangeExtensions.swift */; };
+		60562481CC4C3B2D47EEAD98 /* ScoreIncreasedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562E9A0FF175CCE9FB00E6 /* ScoreIncreasedMessage.swift */; };
 		60562482071FF8B1F33D20A2 /* FlashlightFlickerMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562AD250A635B02342DCE1 /* FlashlightFlickerMessage.swift */; };
 		605624B682373D7515282F8B /* UtteranceMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605629427B0562C227E51E27 /* UtteranceMessage.swift */; };
 		605624FCAE4A04A5A7D86E15 /* FlashlightFlickerMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562AD250A635B02342DCE1 /* FlashlightFlickerMessage.swift */; };
@@ -49,6 +50,7 @@
 		60562B3A76A55F9A4B17C24F /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562C2C0309559CE33858BB /* VoiceController.swift */; };
 		60562B6D8B6733899C041E15 /* GhostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562AF55525B869C4DF71E8 /* GhostController.swift */; };
 		60562BD0791130FB839AF6C1 /* IsGhostInViewMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562669CEE1253A4A101E2A /* IsGhostInViewMessage.swift */; };
+		60562C055A66A36384964020 /* ScoreIncreasedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562E9A0FF175CCE9FB00E6 /* ScoreIncreasedMessage.swift */; };
 		60562C056050E1631F2097CB /* FlashlightFlickerManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562E20B07571D77F948EEB /* FlashlightFlickerManifestation.swift */; };
 		60562C132E7C9BE3A62A93C3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60562BB1A56A1433159F2F1E /* AudioToolbox.framework */; };
 		60562C19E05ABBC8C6710B34 /* PhraseRecognizedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605629A6C779E703759C0734 /* PhraseRecognizedMessage.swift */; };
@@ -128,6 +130,7 @@
 		60562DADA770BFF0430140D4 /* Messenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
 		60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityChangedMessage.swift; sourceTree = "<group>"; };
 		60562E20B07571D77F948EEB /* FlashlightFlickerManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashlightFlickerManifestation.swift; sourceTree = "<group>"; };
+		60562E9A0FF175CCE9FB00E6 /* ScoreIncreasedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreIncreasedMessage.swift; sourceTree = "<group>"; };
 		60562ED5EEC2972C2F116F98 /* knocking-angry.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = "knocking-angry.caf"; sourceTree = "<group>"; };
 		8801C5041D67E36D007995C5 /* RejectoDemo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RejectoDemo.framework; sourceTree = "<group>"; };
 		8807B53F1D541ED500BA3EA5 /* GhostHuntSim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostHuntSim.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +206,7 @@
 				60562CEFA3DB6F0CB9E8991F /* YesNoResponseMessage.swift */,
 				605622E78844510E2C407ABB /* VerbalResponseMessage.swift */,
 				60562C846AA343C8F0CB0535 /* IsGhostVisibleMessage.swift */,
+				60562E9A0FF175CCE9FB00E6 /* ScoreIncreasedMessage.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -473,6 +477,7 @@
 				60562E4C819DBE57800A2E5E /* VerbalResponse.swift in Sources */,
 				60562C8BE20B507B2FF70B35 /* VerbalResponseMessage.swift in Sources */,
 				60562C7C3618018B68C57C7C /* IsGhostVisibleMessage.swift in Sources */,
+				60562C055A66A36384964020 /* ScoreIncreasedMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +514,7 @@
 				6056299132E1ECC9D33FAD4A /* VerbalResponse.swift in Sources */,
 				60562ED3C93C783598570BD8 /* VerbalResponseMessage.swift in Sources */,
 				605625DBABDDA961E261A3FA /* IsGhostVisibleMessage.swift in Sources */,
+				60562481CC4C3B2D47EEAD98 /* ScoreIncreasedMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

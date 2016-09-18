@@ -42,11 +42,13 @@ public class HUDController: MessengerSubscriber {
             isFlashlightOn = flashlightMessage.isOn
             hudScene.setFlashlightIndicatorOn(isFlashlightOn)
         } else if let yesNoResponseMessage = message as? YesNoResponseMessage {
-            displayYesNoResponse(yesNoResponseMessage.response)
+            handleYesNoResponse(yesNoResponseMessage.response)
         } else if let verbalResponseMessage = message as? VerbalResponseMessage {
-            displayVerbalResponse(verbalResponseMessage.response)
+            handleVerbalResponse(verbalResponseMessage.response)
         } else if let isGhostVisibleMessage = message as? IsGhostVisibleMessage {
             isGhostVisible = isGhostVisibleMessage.isVisible
+        } else if let scoreIncreasedMessage = message as? ScoreIncreasedMessage {
+            hudScene.increaseScoreBy(scoreIncreasedMessage.amount)
         }
     }
 
@@ -57,11 +59,14 @@ public class HUDController: MessengerSubscriber {
     }
 
     func takePicture() {
-
+        if isGhostInView && isGhostVisible {
+            messenger.publishMessage(ScoreIncreasedMessage(amount: 50))
+        }
     }
 
-    private func displayYesNoResponse(isYes: Bool) {
+    private func handleYesNoResponse(isYes: Bool) {
         hudScene.indicateYesNoResponse(isYes)
+        messenger.publishMessage(ScoreIncreasedMessage(amount: 5))
 
         let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
         dispatch_after(delayTime, dispatch_get_main_queue()) {
@@ -69,8 +74,9 @@ public class HUDController: MessengerSubscriber {
         }
     }
 
-    private func displayVerbalResponse(response: String) {
+    private func handleVerbalResponse(response: String) {
         hudScene.indicateVerbalResponse(response)
+        messenger.publishMessage(ScoreIncreasedMessage(amount: 10))
 
         let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
         dispatch_after(delayTime, dispatch_get_main_queue()) {

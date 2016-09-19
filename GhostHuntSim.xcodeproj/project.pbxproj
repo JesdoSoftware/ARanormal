@@ -133,7 +133,7 @@
 		60562E9A0FF175CCE9FB00E6 /* ScoreIncreasedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreIncreasedMessage.swift; sourceTree = "<group>"; };
 		60562ED5EEC2972C2F116F98 /* knocking-angry.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = "knocking-angry.caf"; sourceTree = "<group>"; };
 		8801C5041D67E36D007995C5 /* RejectoDemo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RejectoDemo.framework; sourceTree = "<group>"; };
-		8807B53F1D541ED500BA3EA5 /* GhostHuntSim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostHuntSim.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8807B53F1D541ED500BA3EA5 /* ARanormal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARanormal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8807B5421D541ED500BA3EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8807B5441D541ED500BA3EA5 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		8807B5491D541ED500BA3EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -286,7 +286,7 @@
 		8807B5401D541ED500BA3EA5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8807B53F1D541ED500BA3EA5 /* GhostHuntSim.app */,
+				8807B53F1D541ED500BA3EA5 /* ARanormal.app */,
 				8807B5551D541ED500BA3EA5 /* GhostHuntSimTests.xctest */,
 			);
 			name = Products;
@@ -351,7 +351,7 @@
 			);
 			name = GhostHuntSim;
 			productName = GhostHuntSim;
-			productReference = 8807B53F1D541ED500BA3EA5 /* GhostHuntSim.app */;
+			productReference = 8807B53F1D541ED500BA3EA5 /* ARanormal.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8807B5541D541ED500BA3EA5 /* GhostHuntSimTests */ = {
@@ -654,8 +654,8 @@
 				INFOPLIST_FILE = GhostHuntSim/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = net.jessedouglas.GhostHuntSim;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.jessedouglas.aranormal;
+				PRODUCT_NAME = ARanormal;
 				SWIFT_OBJC_BRIDGING_HEADER = "GhostHuntSim/GhostHuntSim-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
 			};
@@ -675,8 +675,8 @@
 				INFOPLIST_FILE = GhostHuntSim/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = net.jessedouglas.GhostHuntSim;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.jessedouglas.aranormal;
+				PRODUCT_NAME = ARanormal;
 				SWIFT_OBJC_BRIDGING_HEADER = "GhostHuntSim/GhostHuntSim-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
 			};

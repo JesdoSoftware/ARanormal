@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8807B53E1D541ED500BA3EA5"
-               BuildableName = "GhostHuntSim.app"
+               BuildableName = "ARanormal.app"
                BlueprintName = "GhostHuntSim"
                ReferencedContainer = "container:GhostHuntSim.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8807B53E1D541ED500BA3EA5"
-            BuildableName = "GhostHuntSim.app"
+            BuildableName = "ARanormal.app"
             BlueprintName = "GhostHuntSim"
             ReferencedContainer = "container:GhostHuntSim.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8807B53E1D541ED500BA3EA5"
-            BuildableName = "GhostHuntSim.app"
+            BuildableName = "ARanormal.app"
             BlueprintName = "GhostHuntSim"
             ReferencedContainer = "container:GhostHuntSim.xcodeproj">
          </BuildableReference>
@@ -85,7 +85,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8807B53E1D541ED500BA3EA5"
-            BuildableName = "GhostHuntSim.app"
+            BuildableName = "ARanormal.app"
             BlueprintName = "GhostHuntSim"
             ReferencedContainer = "container:GhostHuntSim.xcodeproj">
          </BuildableReference>

@@ -153,7 +153,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         scene.rootNode.addChildNode(ambientLightNode)
 
         let ghostNode = SCNNode()
-        ghostNode.geometry = SCNSphere(radius: 2)
+        ghostNode.geometry = SCNSphere(radius: 0)
         ghostNode.opacity = 0
         let ghostPivotNode = SCNNode()
         ghostPivotNode.addChildNode(ghostNode)

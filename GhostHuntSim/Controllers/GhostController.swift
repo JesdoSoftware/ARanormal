@@ -23,7 +23,7 @@ public class GhostController: MessengerSubscriber {
     private var visibilityManifestations: ManifestationSet! = nil
 
     private var visibility: Double = 0.25
-    private var activity: Double = 0
+    private var activity: Double = 1
 
     init(ghostNode: SCNNode, ghostPivotNode: SCNNode, soundNode: SCNNode, soundPivotNode: SCNNode,
             messenger: Messenger, yesNoResponses: [YesNoResponse], verbalResponses: [VerbalResponse]) {
@@ -58,7 +58,11 @@ public class GhostController: MessengerSubscriber {
 
         let orbVisibilityManifestation = OrbVisibilityManifestation(minimumActivityLevel: 1, ghostNode: ghostNode,
                 visibility: 0.25, messenger: messenger)
-        visibilityManifestations = ManifestationSet(manifestations: [orbVisibilityManifestation], chancePerSixty: 1)
+        let mistVisibilityManifestation = MistVisibilityManifestation(minimumActivityLevel: 1, ghostNode: ghostNode,
+                visibility: 0.25, messenger: messenger)
+        visibilityManifestations = ManifestationSet(
+                manifestations: [orbVisibilityManifestation, mistVisibilityManifestation],
+                chancePerSixty: 30)
     }
 
     public func processMessage(message: AnyObject) {

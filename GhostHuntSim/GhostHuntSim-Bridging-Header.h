@@ -10,7 +10,7 @@
 #define GhostHuntSim_Bridging_Header_h
 
 #import <OpenEars/OELanguageModelGenerator.h>
-#import <RejectoDemo/OELanguageModelGenerator+Rejecto.h>
+#import <Rejecto/OELanguageModelGenerator+Rejecto.h>
 #import <OpenEars/OEAcousticModel.h>
 #import <OpenEars/OEPocketsphinxController.h>
 #import <OpenEars/OEAcousticModel.h>

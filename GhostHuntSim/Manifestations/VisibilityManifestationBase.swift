@@ -25,7 +25,7 @@ public class VisibilityManifestationBase: Manifestation {
     public var minimumActivityLevel: Double
 
     func doSetGeometry() { }
-    func doUnsetGeometry() {}
+    func doUnsetGeometry() { }
 
     public func manifest() {
         messenger.publishMessage(IsGhostVisibleMessage(isVisible: true))

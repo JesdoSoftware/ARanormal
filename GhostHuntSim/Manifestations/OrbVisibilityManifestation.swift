@@ -11,8 +11,4 @@ public class OrbVisibilityManifestation: VisibilityManifestationBase {
     override func doSetGeometry() {
         ghostNode.geometry = SCNSphere(radius: 2)
     }
-
-    override func doUnsetGeometry() {
-        ghostNode.geometry = SCNSphere(radius: 0)
-    }
 }

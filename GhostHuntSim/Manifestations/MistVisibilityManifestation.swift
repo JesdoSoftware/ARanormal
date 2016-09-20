@@ -9,6 +9,8 @@ import SceneKit
 public class MistVisibilityManifestation: VisibilityManifestationBase {
 
     override func doSetGeometry() {
+        ghostNode.geometry = SCNSphere(radius: 0)
+
         let particleSystem = SCNParticleSystem(named: "Mist.scnp", inDirectory: nil)!
         ghostNode.addParticleSystem(particleSystem)
     }

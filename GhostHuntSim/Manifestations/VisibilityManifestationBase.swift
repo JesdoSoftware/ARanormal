@@ -44,9 +44,8 @@ public class VisibilityManifestationBase: Manifestation {
             SCNTransaction.begin()
             SCNTransaction.setAnimationDuration(self.fadeDuration)
             self.ghostNode.opacity = 0
-            SCNTransaction.commit()
-
             self.doUnsetGeometry()
+            SCNTransaction.commit()
         }
     }
 }

@@ -60,8 +60,10 @@ public class GhostController: MessengerSubscriber {
                 visibility: 0.25, messenger: messenger)
         let mistVisibilityManifestation = MistVisibilityManifestation(minimumActivityLevel: 1, ghostNode: ghostNode,
                 visibility: 0.25, messenger: messenger)
+        let shadowVisibilityManifestation = ShadowVisibilityManifestation(minimumActivityLevel: 1, ghostNode: ghostNode,
+                visibility: 0.25, messenger: messenger)
         visibilityManifestations = ManifestationSet(
-                manifestations: [orbVisibilityManifestation, mistVisibilityManifestation],
+                manifestations: [orbVisibilityManifestation, mistVisibilityManifestation, shadowVisibilityManifestation],
                 chancePerSixty: 1)
     }
 

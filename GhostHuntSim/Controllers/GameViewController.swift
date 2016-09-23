@@ -158,6 +158,8 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         let ghostPivotNode = SCNNode()
         ghostPivotNode.addChildNode(ghostNode)
         ghostNode.position = SCNVector3Make(0, 50, 50)
+        ghostNode.eulerAngles = SCNVector3Make(0, 0, 3.14159)
+        ghostNode.constraints = [SCNLookAtConstraint(target: cameraNode)]
         scene.rootNode.addChildNode(ghostPivotNode)
 
         let soundNode = SCNNode()

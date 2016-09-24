@@ -41,12 +41,7 @@ public class GhostController: MessengerSubscriber {
     }
 
     private func initializeManifestations() {
-        let knockingSoundManifestation = SoundManifestation(minimumActivityLevel: 1,
-                soundFileName: "knocking-angry.caf",
-                soundNode: soundNode,
-                soundPivotNode: soundPivotNode)
-        soundManifestations = ManifestationSet(manifestations: [knockingSoundManifestation],
-                chancePerSixty: 1)
+        initializeSoundManifestations()
 
         let flashlightFlickerManifestation = FlashlightFlickerManifestation(minimumActivityLevel: 1,
                 messenger: messenger)
@@ -66,6 +61,195 @@ public class GhostController: MessengerSubscriber {
                 manifestations: [orbVisibilityManifestation,
                                  shadowVisibilityManifestation,
                                  eyesVisibilityManifestation],
+                chancePerSixty: 1)
+    }
+
+    private func initializeSoundManifestations() {
+        let knocking1SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "knocking-angry.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let crash1SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Crash1.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let crash2SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Crash2.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let crash3SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Crash3.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let crash4SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Crash4.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let crash5SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Crash5.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let footsteps1SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Footsteps1.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let footsteps2SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Footsteps2.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let footsteps3SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Footsteps3.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let footsteps4SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Footsteps4.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let footsteps5SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Footsteps5.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let giggling1SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Giggling1.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let giggling2SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Giggling2.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let giggling3SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Giggling3.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let growling1SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Growling1.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let growling2SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Growling2.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let growling3SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Growling3.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let growling4SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Growling4.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let growling5SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Growling5.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let knocking2SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Knocking2.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let knocking3SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Knocking3.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let knocking4SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Knocking4.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let knocking5SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Knocking5.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let scratching1SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Scratching1.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let scratching2SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Scratching2.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let scratching3SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Scratching3.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let scratching4SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Scratching4.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let screaming1SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Screaming1.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let screaming2SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Screaming2.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let screaming3SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Screaming3.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let screaming4SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Screaming4.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let screaming5SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Screaming5.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let whispering1SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Whispering1.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let whispering2SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Whispering2.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let whispering3SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Whispering3.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let whispering4SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Whispering4.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let whispering5SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Whispering5.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        soundManifestations = ManifestationSet(manifestations: [knocking1SoundManifestation,
+                                                                crash1SoundManifestation,
+                                                                crash2SoundManifestation,
+                                                                crash3SoundManifestation,
+                                                                crash4SoundManifestation,
+                                                                crash5SoundManifestation,
+                                                                footsteps1SoundManifestation,
+                                                                footsteps2SoundManifestation,
+                                                                footsteps3SoundManifestation,
+                                                                footsteps4SoundManifestation,
+                                                                footsteps5SoundManifestation,
+                                                                giggling1SoundManifestation,
+                                                                giggling2SoundManifestation,
+                                                                giggling3SoundManifestation,
+                                                                growling1SoundManifestation,
+                                                                growling2SoundManifestation,
+                                                                growling3SoundManifestation,
+                                                                growling4SoundManifestation,
+                                                                growling5SoundManifestation,
+                                                                knocking2SoundManifestation,
+                                                                knocking3SoundManifestation,
+                                                                knocking4SoundManifestation,
+                                                                knocking5SoundManifestation,
+                                                                scratching1SoundManifestation,
+                                                                scratching2SoundManifestation,
+                                                                scratching3SoundManifestation,
+                                                                scratching4SoundManifestation,
+                                                                screaming1SoundManifestation,
+                                                                screaming2SoundManifestation,
+                                                                screaming3SoundManifestation,
+                                                                screaming4SoundManifestation,
+                                                                screaming5SoundManifestation,
+                                                                whispering1SoundManifestation,
+                                                                whispering2SoundManifestation,
+                                                                whispering3SoundManifestation,
+                                                                whispering4SoundManifestation,
+                                                                whispering5SoundManifestation],
                 chancePerSixty: 1)
     }
 

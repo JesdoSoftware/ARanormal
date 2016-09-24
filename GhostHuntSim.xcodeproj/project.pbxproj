@@ -7,56 +7,116 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6056203427827B2652384B28 /* Growling2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605626C347C07137C94B634A /* Growling2.caf */; };
 		6056203DE6788414F8785DCE /* ManifestationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605624DBF877829699278989 /* ManifestationSet.swift */; };
 		60562059F13F04C3C4C2F810 /* OrbVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605623344E4B9138A09341E0 /* OrbVisibilityManifestation.swift */; };
+		6056208CE3972FB9126AA6E9 /* Whispering3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562AA97297778CC3A8C339 /* Whispering3.caf */; };
 		605620916CECF9A0D42076CE /* FlashlightOffManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CD16816E5A25D1A54DE /* FlashlightOffManifestation.swift */; };
+		605620923431C2F2C0D813B9 /* Whispering4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605627FE9810F2CC8459533A /* Whispering4.caf */; };
 		605620A214B70036D075BA02 /* Ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 605623AFEBF9DE966FC4F9C8 /* Ghost.png */; };
 		605620C1419837F52FBA9C0D /* GhostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562AF55525B869C4DF71E8 /* GhostController.swift */; };
+		605620E5DD4346B465DEAF51 /* Screaming5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562B75390ADFFFF9E2FBED /* Screaming5.caf */; };
+		605620FAADEDC471092A2C99 /* Footsteps3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605626479EB5EFCC236181F0 /* Footsteps3.caf */; };
 		6056211772C8D1F5500741AC /* ActivityChangedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */; };
+		60562120B6EC7FB3435DBEA1 /* Footsteps2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605629F12D801FD2FB07E3E7 /* Footsteps2.caf */; };
+		6056212BD1E0ABA8B5C661FB /* Crash4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605627787069715E3039F3B6 /* Crash4.caf */; };
+		605621382E7C3740EC90541B /* Growling1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605627A4E7466C6C9C9DDDD3 /* Growling1.caf */; };
+		6056213EC13195DB068C314F /* Scratching1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562CA806DD49A563F2D4AD /* Scratching1.caf */; };
 		605621427EE37DF026668720 /* Manifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056229E60B803921D9DAD2A /* Manifestation.swift */; };
+		6056214E061CC91250503D8A /* Screaming3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562FEE23C602CB0A3D0100 /* Screaming3.caf */; };
 		60562174042389842EE190F0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562C3B53347366CACB3E77 /* GameViewController.swift */; };
 		605621E51ED10750A7EEE5F8 /* FlashlightFlickerManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562E20B07571D77F948EEB /* FlashlightFlickerManifestation.swift */; };
 		605621ED6843F003FEC97876 /* SoundManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562C8D715D46CFF6A5963D /* SoundManifestation.swift */; };
+		60562212E6AE82F18890EE33 /* Growling5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562BE9D4318BB873AE6890 /* Growling5.caf */; };
+		6056222BCBBF8B02ED11B249 /* Growling1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605627A4E7466C6C9C9DDDD3 /* Growling1.caf */; };
 		60562282CFD515F53F6B462F /* FlashlightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562387327536ED28DA3483 /* FlashlightController.swift */; };
 		6056228A8E019F235FE5675A /* YesNoResponseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CEFA3DB6F0CB9E8991F /* YesNoResponseMessage.swift */; };
+		6056228E16CFAA8BB6E3A7A5 /* Growling5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562BE9D4318BB873AE6890 /* Growling5.caf */; };
 		605622AB577308BFC86ACD55 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605621CC4E8CE0C13A44598D /* ArrayExtensions.swift */; };
+		605622C4A4D0F480170F9A9F /* Giggling2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605629740569E5A5211662D8 /* Giggling2.caf */; };
 		605622D9EB02A5B672178222 /* YesNoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056209311D7A242E2433B21 /* YesNoResponse.swift */; };
+		605622EA0E7F2667FD093687 /* Knocking5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056280CF31A525E57949E66 /* Knocking5.caf */; };
+		605622ED391A20C08161AE6D /* Screaming4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056220F9CF50FEB4394EC3B /* Screaming4.caf */; };
+		605622F806A01CE536610D7B /* Whispering3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562AA97297778CC3A8C339 /* Whispering3.caf */; };
+		60562305CFE34906C3080009 /* Scratching4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562E6F0D4B54D531259741 /* Scratching4.caf */; };
+		605623076B4FA9C9072678D6 /* Footsteps5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056240D0E8F4DC0B95311E7 /* Footsteps5.caf */; };
 		605623297C45AADBBAAFB6F4 /* knocking-angry.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562ED5EEC2972C2F116F98 /* knocking-angry.caf */; };
 		6056236C28D5D814B7E3CA71 /* HeartbeatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056272997C9618DB2041738 /* HeartbeatMessage.swift */; };
+		6056236E2F0C94E1C4D26226 /* Knocking2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056208456EBD67CB968A825 /* Knocking2.caf */; };
+		6056236FBC295A7478A2A69A /* Knocking3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056201B8E2B33134C8A83DD /* Knocking3.caf */; };
+		605623A0649B5D4E003D3140 /* Scratching1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562CA806DD49A563F2D4AD /* Scratching1.caf */; };
+		605623A216D3A956258E0733 /* Giggling3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562940336CAA16068085CF /* Giggling3.caf */; };
+		605623A51AC7F9F69D6A4E02 /* Whispering2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562A4BB9A33393A1E0AF5F /* Whispering2.caf */; };
+		605623C95EE0DD5EB5516E19 /* Crash1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056257F4F79F024EFC1152E /* Crash1.caf */; };
 		605623F8C5F8131DFD13C772 /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562C2C0309559CE33858BB /* VoiceController.swift */; };
 		6056244A20AB57B0598AA7DD /* RangeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056230542FF6FE720625B99 /* RangeExtensions.swift */; };
 		60562481CC4C3B2D47EEAD98 /* ScoreIncreasedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562E9A0FF175CCE9FB00E6 /* ScoreIncreasedMessage.swift */; };
 		60562482071FF8B1F33D20A2 /* FlashlightFlickerMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562AD250A635B02342DCE1 /* FlashlightFlickerMessage.swift */; };
+		605624989161E04F606EF23E /* Crash2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562BAACA793105F49FCF2D /* Crash2.caf */; };
 		6056249FC937F24BC62BFCEF /* Eyes.png in Resources */ = {isa = PBXBuildFile; fileRef = 605628B8E5C15DF095E40E7C /* Eyes.png */; };
+		605624A269CF77DB7AA380B6 /* Whispering1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605621D3FC30731B702C16D8 /* Whispering1.caf */; };
 		605624B682373D7515282F8B /* UtteranceMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605629427B0562C227E51E27 /* UtteranceMessage.swift */; };
+		605624F10C20C36B14A6F874 /* Scratching2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562307B6CB39AC338A555C /* Scratching2.caf */; };
 		605624FCAE4A04A5A7D86E15 /* FlashlightFlickerMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562AD250A635B02342DCE1 /* FlashlightFlickerMessage.swift */; };
 		6056251C58988E6F751022C7 /* HUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605622E9F3484EA52865F6BF /* HUDController.swift */; };
+		6056252B7201D0DE2A6C1366 /* Screaming1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056224320F9DEB85451FB71 /* Screaming1.caf */; };
+		6056253F07B4D57D7A62CAE3 /* Crash2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562BAACA793105F49FCF2D /* Crash2.caf */; };
 		6056254ADA668CDFDD7DD4FB /* FlashlightOnOffMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562B54D397B4A2EB1A3AA9 /* FlashlightOnOffMessage.swift */; };
 		60562556C4C0A95318AF2316 /* Eyes.png in Resources */ = {isa = PBXBuildFile; fileRef = 605628B8E5C15DF095E40E7C /* Eyes.png */; };
 		6056256193AACFD970E02174 /* OrbVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605623344E4B9138A09341E0 /* OrbVisibilityManifestation.swift */; };
 		6056256DF78B63F231A079DE /* FlashlightOnOffMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562B54D397B4A2EB1A3AA9 /* FlashlightOnOffMessage.swift */; };
+		60562578806E7A3B1959A622 /* Knocking4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605622F17632C95A35B463F0 /* Knocking4.caf */; };
 		6056258524199E4AE60948CE /* ShadowVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605627BC1BA2944CD45034A3 /* ShadowVisibilityManifestation.swift */; };
+		6056259BEC85D553D6826200 /* Crash5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605626CA52D83E726790BA63 /* Crash5.caf */; };
 		605625DBABDDA961E261A3FA /* IsGhostVisibleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562C846AA343C8F0CB0535 /* IsGhostVisibleMessage.swift */; };
 		605625F31136E7C522DD3BBF /* Ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 605623AFEBF9DE966FC4F9C8 /* Ghost.png */; };
 		6056260E381841C34DDB8477 /* FlashlightOffManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CD16816E5A25D1A54DE /* FlashlightOffManifestation.swift */; };
 		60562616F462630F81391868 /* HUDScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605625179DF0ADF6269E4D4E /* HUDScene.swift */; };
+		6056261BF25471DD2B787AA6 /* Growling3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562866AD14E750C290316A /* Growling3.caf */; };
+		6056261C86F9A447C38C20DA /* Crash4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605627787069715E3039F3B6 /* Crash4.caf */; };
+		60562626A8671F64519DCE76 /* Crash1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056257F4F79F024EFC1152E /* Crash1.caf */; };
 		6056266550797DBED3B8799A /* UtteranceMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605629427B0562C227E51E27 /* UtteranceMessage.swift */; };
 		60562676C6DCC695B65E4A0E /* YesNoResponseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CEFA3DB6F0CB9E8991F /* YesNoResponseMessage.swift */; };
 		60562684FBEE30C528DE7793 /* ResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562483CFE3F10C515D0B38 /* ResponseBase.swift */; };
+		605626E7B894E7E440B03A0E /* Screaming2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605629938D6167F0E5848F0C /* Screaming2.caf */; };
+		605626EB01B88009F7B0A66D /* Footsteps4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562D7E47178F18FA167582 /* Footsteps4.caf */; };
+		605626F668BC3FC4BEDFED4F /* Crash3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056203C7CB8100C739B74B4 /* Crash3.caf */; };
 		6056275A8E40AE9DF4135C2B /* ActivityChangedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */; };
+		6056278646EF0E3453730372 /* Whispering2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562A4BB9A33393A1E0AF5F /* Whispering2.caf */; };
 		605627A148768F0D8E5AC84F /* ManifestationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605624DBF877829699278989 /* ManifestationSet.swift */; };
+		605627C7A532D765C9C4C4EA /* Crash3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056203C7CB8100C739B74B4 /* Crash3.caf */; };
+		6056280A010B8BF424F5600E /* Footsteps5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056240D0E8F4DC0B95311E7 /* Footsteps5.caf */; };
+		6056280CF6BD84F6DDEF5D54 /* Knocking3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056201B8E2B33134C8A83DD /* Knocking3.caf */; };
+		6056281CBC322416FFF7BA6B /* Footsteps2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605629F12D801FD2FB07E3E7 /* Footsteps2.caf */; };
 		60562822E194C0C9A383E201 /* FigureVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562F2D4AE1537C5C72DA5B /* FigureVisibilityManifestation.swift */; };
+		605628359B935E111D9062EC /* Knocking5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056280CF31A525E57949E66 /* Knocking5.caf */; };
+		60562860EBE1C06E634467D0 /* Growling4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562B3E7A84F37C9EA7EBE1 /* Growling4.caf */; };
 		605628BE1FF9C736180152E1 /* MistVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056271C0CCDA59E35E6A345 /* MistVisibilityManifestation.swift */; };
 		605628D5F7E6D18A6466C81A /* VisibilityManifestationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DCB7C6B6EBC29DD7A19 /* VisibilityManifestationBase.swift */; };
+		6056291A2DFD19D5912730DA /* Screaming2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605629938D6167F0E5848F0C /* Screaming2.caf */; };
+		6056292C6A6A92E79A0BC2A3 /* Growling4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562B3E7A84F37C9EA7EBE1 /* Growling4.caf */; };
 		605629429B39A24BD76C6AC5 /* HUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605622E9F3484EA52865F6BF /* HUDController.swift */; };
+		60562947619992D4E51A9E14 /* Footsteps4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562D7E47178F18FA167582 /* Footsteps4.caf */; };
+		6056297193474550075E7E31 /* Footsteps3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605626479EB5EFCC236181F0 /* Footsteps3.caf */; };
 		6056298F9E549B866376E700 /* PhraseRecognizedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605629A6C779E703759C0734 /* PhraseRecognizedMessage.swift */; };
 		6056299132E1ECC9D33FAD4A /* VerbalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562114179444D0D7B12D34 /* VerbalResponse.swift */; };
+		605629CF9AD34A6D948A3AEA /* Whispering4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605627FE9810F2CC8459533A /* Whispering4.caf */; };
 		605629D55E97ED61209C26EE /* FigureVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562F2D4AE1537C5C72DA5B /* FigureVisibilityManifestation.swift */; };
 		60562A000C6254D04D772957 /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DADA770BFF0430140D4 /* Messenger.swift */; };
+		60562A05F8DEEE9D9ABB323B /* Footsteps1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605627E8C1ECDF2198997B91 /* Footsteps1.caf */; };
 		60562A10B764938AE9F53EF4 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605621CC4E8CE0C13A44598D /* ArrayExtensions.swift */; };
+		60562A2799B9138E57CA2B45 /* Screaming1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056224320F9DEB85451FB71 /* Screaming1.caf */; };
+		60562A34E396BE02E625F6FE /* Footsteps1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605627E8C1ECDF2198997B91 /* Footsteps1.caf */; };
+		60562A58382250E3A3A18A78 /* Whispering5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605623A2F0F56080DF5241BF /* Whispering5.caf */; };
+		60562A5B9D176EC9D82BDF40 /* Scratching4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562E6F0D4B54D531259741 /* Scratching4.caf */; };
 		60562A5DE8F0FD9FD1F4EB9A /* MessengerSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605628283F75E118B52D0033 /* MessengerSubscriber.swift */; };
+		60562A7386FECBC6F0963B29 /* Knocking2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056208456EBD67CB968A825 /* Knocking2.caf */; };
+		60562A7AC2529004759BDCB1 /* Growling2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605626C347C07137C94B634A /* Growling2.caf */; };
 		60562AC1A9A5F299338B8AD9 /* HUDScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605625179DF0ADF6269E4D4E /* HUDScene.swift */; };
+		60562AD9FAE9529340746782 /* Giggling1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562166C76ED5051A7E67D3 /* Giggling1.caf */; };
+		60562ADD48CADCC9B6B34B13 /* Giggling2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605629740569E5A5211662D8 /* Giggling2.caf */; };
 		60562B3A76A55F9A4B17C24F /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562C2C0309559CE33858BB /* VoiceController.swift */; };
+		60562B40D33360C06DD98809 /* Screaming4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056220F9CF50FEB4394EC3B /* Screaming4.caf */; };
 		60562B6D8B6733899C041E15 /* GhostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562AF55525B869C4DF71E8 /* GhostController.swift */; };
 		60562B7CBDCD38E7EACE8921 /* ShadowVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605627BC1BA2944CD45034A3 /* ShadowVisibilityManifestation.swift */; };
 		60562BD0791130FB839AF6C1 /* IsGhostInViewMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562669CEE1253A4A101E2A /* IsGhostInViewMessage.swift */; };
@@ -67,9 +127,12 @@
 		60562C19E05ABBC8C6710B34 /* PhraseRecognizedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605629A6C779E703759C0734 /* PhraseRecognizedMessage.swift */; };
 		60562C6762F56ABAC2A68D30 /* FlashlightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562387327536ED28DA3483 /* FlashlightController.swift */; };
 		60562C7C3618018B68C57C7C /* IsGhostVisibleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562C846AA343C8F0CB0535 /* IsGhostVisibleMessage.swift */; };
+		60562C88749560C2EA7AA0FE /* Screaming3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562FEE23C602CB0A3D0100 /* Screaming3.caf */; };
 		60562C8BE20B507B2FF70B35 /* VerbalResponseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605622E78844510E2C407ABB /* VerbalResponseMessage.swift */; };
 		60562C93275EBACBA8490BE7 /* knocking-angry.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562ED5EEC2972C2F116F98 /* knocking-angry.caf */; };
+		60562CA82E49616A94AC4A2D /* Whispering5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605623A2F0F56080DF5241BF /* Whispering5.caf */; };
 		60562D029ED62D0FA6E17CE7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605625FED9E2D592EF208DF0 /* AVFoundation.framework */; };
+		60562D12438064DD786B3889 /* Scratching3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562CE98BE9B5CCCABA4078 /* Scratching3.caf */; };
 		60562D1A9C418DE5A8DF320F /* ResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562483CFE3F10C515D0B38 /* ResponseBase.swift */; };
 		60562D2A5CBCFAC86477EC9F /* MessengerSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605628283F75E118B52D0033 /* MessengerSubscriber.swift */; };
 		60562D307537A7C89FEBE65B /* RangeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056230542FF6FE720625B99 /* RangeExtensions.swift */; };
@@ -78,10 +141,19 @@
 		60562DB5FCB9463A058C4FF7 /* YesNoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056209311D7A242E2433B21 /* YesNoResponse.swift */; };
 		60562E1EEA3522AEFEE9E4C0 /* Manifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056229E60B803921D9DAD2A /* Manifestation.swift */; };
 		60562E4C819DBE57800A2E5E /* VerbalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562114179444D0D7B12D34 /* VerbalResponse.swift */; };
+		60562E5816A8EC53C8C3561D /* Giggling3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562940336CAA16068085CF /* Giggling3.caf */; };
+		60562E6241132BCC9684C12F /* Knocking4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605622F17632C95A35B463F0 /* Knocking4.caf */; };
 		60562E7B8969E3D119B2B0FC /* HeartbeatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056272997C9618DB2041738 /* HeartbeatMessage.swift */; };
 		60562ED3C93C783598570BD8 /* VerbalResponseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605622E78844510E2C407ABB /* VerbalResponseMessage.swift */; };
 		60562F0A76BF4184C83E0DE7 /* VisibilityManifestationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DCB7C6B6EBC29DD7A19 /* VisibilityManifestationBase.swift */; };
+		60562F3338D9846452334260 /* Scratching3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562CE98BE9B5CCCABA4078 /* Scratching3.caf */; };
+		60562F36939E2D6A84B20800 /* Growling3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562866AD14E750C290316A /* Growling3.caf */; };
 		60562F42E04420EBC7D032FE /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DADA770BFF0430140D4 /* Messenger.swift */; };
+		60562F99A592FC22AF452327 /* Whispering1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605621D3FC30731B702C16D8 /* Whispering1.caf */; };
+		60562FA4E56EBA03B8E22FE5 /* Screaming5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562B75390ADFFFF9E2FBED /* Screaming5.caf */; };
+		60562FB164FF4DCC14F9B699 /* Crash5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605626CA52D83E726790BA63 /* Crash5.caf */; };
+		60562FBEDBC7A2A53B19C6C2 /* Scratching2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562307B6CB39AC338A555C /* Scratching2.caf */; };
+		60562FE10C6EB84DE44D2AE1 /* Giggling1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562166C76ED5051A7E67D3 /* Giggling1.caf */; };
 		60562FE1788D77780CF5BFD5 /* SceneRendererDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605622B8995D5AD941755FEF /* SceneRendererDelegate.swift */; };
 		8807B5431D541ED500BA3EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8807B5421D541ED500BA3EA5 /* AppDelegate.swift */; };
 		8807B5451D541ED500BA3EA5 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 8807B5441D541ED500BA3EA5 /* art.scnassets */; };
@@ -116,46 +188,82 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6056201B8E2B33134C8A83DD /* Knocking3.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Knocking3.caf; sourceTree = "<group>"; };
+		6056203C7CB8100C739B74B4 /* Crash3.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Crash3.caf; sourceTree = "<group>"; };
+		6056208456EBD67CB968A825 /* Knocking2.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Knocking2.caf; sourceTree = "<group>"; };
 		6056209311D7A242E2433B21 /* YesNoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YesNoResponse.swift; sourceTree = "<group>"; };
 		60562114179444D0D7B12D34 /* VerbalResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbalResponse.swift; sourceTree = "<group>"; };
+		60562166C76ED5051A7E67D3 /* Giggling1.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Giggling1.caf; sourceTree = "<group>"; };
 		605621CC4E8CE0C13A44598D /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		605621D3FC30731B702C16D8 /* Whispering1.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Whispering1.caf; sourceTree = "<group>"; };
+		6056220F9CF50FEB4394EC3B /* Screaming4.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Screaming4.caf; sourceTree = "<group>"; };
+		6056224320F9DEB85451FB71 /* Screaming1.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Screaming1.caf; sourceTree = "<group>"; };
 		6056229E60B803921D9DAD2A /* Manifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manifestation.swift; sourceTree = "<group>"; };
 		605622B8995D5AD941755FEF /* SceneRendererDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneRendererDelegate.swift; sourceTree = "<group>"; };
 		605622E78844510E2C407ABB /* VerbalResponseMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbalResponseMessage.swift; sourceTree = "<group>"; };
 		605622E9F3484EA52865F6BF /* HUDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDController.swift; sourceTree = "<group>"; };
+		605622F17632C95A35B463F0 /* Knocking4.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Knocking4.caf; sourceTree = "<group>"; };
 		6056230542FF6FE720625B99 /* RangeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeExtensions.swift; sourceTree = "<group>"; };
+		60562307B6CB39AC338A555C /* Scratching2.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Scratching2.caf; sourceTree = "<group>"; };
 		605623344E4B9138A09341E0 /* OrbVisibilityManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrbVisibilityManifestation.swift; sourceTree = "<group>"; };
 		60562387327536ED28DA3483 /* FlashlightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashlightController.swift; sourceTree = "<group>"; };
+		605623A2F0F56080DF5241BF /* Whispering5.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Whispering5.caf; sourceTree = "<group>"; };
 		605623AFEBF9DE966FC4F9C8 /* Ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ghost.png; sourceTree = "<group>"; };
+		6056240D0E8F4DC0B95311E7 /* Footsteps5.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Footsteps5.caf; sourceTree = "<group>"; };
 		60562483CFE3F10C515D0B38 /* ResponseBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseBase.swift; sourceTree = "<group>"; };
 		605624DBF877829699278989 /* ManifestationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManifestationSet.swift; sourceTree = "<group>"; };
 		605625179DF0ADF6269E4D4E /* HUDScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDScene.swift; sourceTree = "<group>"; };
+		6056257F4F79F024EFC1152E /* Crash1.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Crash1.caf; sourceTree = "<group>"; };
 		605625FED9E2D592EF208DF0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		605626479EB5EFCC236181F0 /* Footsteps3.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Footsteps3.caf; sourceTree = "<group>"; };
 		60562669CEE1253A4A101E2A /* IsGhostInViewMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsGhostInViewMessage.swift; sourceTree = "<group>"; };
+		605626C347C07137C94B634A /* Growling2.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Growling2.caf; sourceTree = "<group>"; };
+		605626CA52D83E726790BA63 /* Crash5.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Crash5.caf; sourceTree = "<group>"; };
 		6056271C0CCDA59E35E6A345 /* MistVisibilityManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MistVisibilityManifestation.swift; sourceTree = "<group>"; };
 		6056272997C9618DB2041738 /* HeartbeatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartbeatMessage.swift; sourceTree = "<group>"; };
+		605627787069715E3039F3B6 /* Crash4.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Crash4.caf; sourceTree = "<group>"; };
+		605627A4E7466C6C9C9DDDD3 /* Growling1.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Growling1.caf; sourceTree = "<group>"; };
 		605627BC1BA2944CD45034A3 /* ShadowVisibilityManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowVisibilityManifestation.swift; sourceTree = "<group>"; };
+		605627E8C1ECDF2198997B91 /* Footsteps1.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Footsteps1.caf; sourceTree = "<group>"; };
+		605627FE9810F2CC8459533A /* Whispering4.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Whispering4.caf; sourceTree = "<group>"; };
+		6056280CF31A525E57949E66 /* Knocking5.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Knocking5.caf; sourceTree = "<group>"; };
 		605628283F75E118B52D0033 /* MessengerSubscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerSubscriber.swift; sourceTree = "<group>"; };
+		60562866AD14E750C290316A /* Growling3.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Growling3.caf; sourceTree = "<group>"; };
 		605628B8E5C15DF095E40E7C /* Eyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eyes.png; sourceTree = "<group>"; };
+		60562940336CAA16068085CF /* Giggling3.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Giggling3.caf; sourceTree = "<group>"; };
 		605629427B0562C227E51E27 /* UtteranceMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtteranceMessage.swift; sourceTree = "<group>"; };
+		605629740569E5A5211662D8 /* Giggling2.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Giggling2.caf; sourceTree = "<group>"; };
+		605629938D6167F0E5848F0C /* Screaming2.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Screaming2.caf; sourceTree = "<group>"; };
 		605629A6C779E703759C0734 /* PhraseRecognizedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhraseRecognizedMessage.swift; sourceTree = "<group>"; };
+		605629F12D801FD2FB07E3E7 /* Footsteps2.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Footsteps2.caf; sourceTree = "<group>"; };
+		60562A4BB9A33393A1E0AF5F /* Whispering2.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Whispering2.caf; sourceTree = "<group>"; };
+		60562AA97297778CC3A8C339 /* Whispering3.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Whispering3.caf; sourceTree = "<group>"; };
 		60562AD250A635B02342DCE1 /* FlashlightFlickerMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashlightFlickerMessage.swift; sourceTree = "<group>"; };
 		60562AF55525B869C4DF71E8 /* GhostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GhostController.swift; sourceTree = "<group>"; };
+		60562B3E7A84F37C9EA7EBE1 /* Growling4.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Growling4.caf; sourceTree = "<group>"; };
 		60562B54D397B4A2EB1A3AA9 /* FlashlightOnOffMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashlightOnOffMessage.swift; sourceTree = "<group>"; };
+		60562B75390ADFFFF9E2FBED /* Screaming5.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Screaming5.caf; sourceTree = "<group>"; };
+		60562BAACA793105F49FCF2D /* Crash2.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Crash2.caf; sourceTree = "<group>"; };
 		60562BB1A56A1433159F2F1E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		60562BE9D4318BB873AE6890 /* Growling5.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Growling5.caf; sourceTree = "<group>"; };
 		60562C2C0309559CE33858BB /* VoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceController.swift; sourceTree = "<group>"; };
 		60562C3B53347366CACB3E77 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		60562C846AA343C8F0CB0535 /* IsGhostVisibleMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsGhostVisibleMessage.swift; sourceTree = "<group>"; };
 		60562C8D715D46CFF6A5963D /* SoundManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManifestation.swift; sourceTree = "<group>"; };
+		60562CA806DD49A563F2D4AD /* Scratching1.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Scratching1.caf; sourceTree = "<group>"; };
 		60562CD16816E5A25D1A54DE /* FlashlightOffManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashlightOffManifestation.swift; sourceTree = "<group>"; };
+		60562CE98BE9B5CCCABA4078 /* Scratching3.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Scratching3.caf; sourceTree = "<group>"; };
 		60562CEFA3DB6F0CB9E8991F /* YesNoResponseMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YesNoResponseMessage.swift; sourceTree = "<group>"; };
+		60562D7E47178F18FA167582 /* Footsteps4.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Footsteps4.caf; sourceTree = "<group>"; };
 		60562DADA770BFF0430140D4 /* Messenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
 		60562DCB7C6B6EBC29DD7A19 /* VisibilityManifestationBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibilityManifestationBase.swift; sourceTree = "<group>"; };
 		60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityChangedMessage.swift; sourceTree = "<group>"; };
 		60562E20B07571D77F948EEB /* FlashlightFlickerManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashlightFlickerManifestation.swift; sourceTree = "<group>"; };
+		60562E6F0D4B54D531259741 /* Scratching4.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Scratching4.caf; sourceTree = "<group>"; };
 		60562E9A0FF175CCE9FB00E6 /* ScoreIncreasedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreIncreasedMessage.swift; sourceTree = "<group>"; };
 		60562ED5EEC2972C2F116F98 /* knocking-angry.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = "knocking-angry.caf"; sourceTree = "<group>"; };
 		60562F2D4AE1537C5C72DA5B /* FigureVisibilityManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FigureVisibilityManifestation.swift; sourceTree = "<group>"; };
+		60562FEE23C602CB0A3D0100 /* Screaming3.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Screaming3.caf; sourceTree = "<group>"; };
 		8807B53F1D541ED500BA3EA5 /* ARanormal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARanormal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8807B5421D541ED500BA3EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8807B5441D541ED500BA3EA5 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -273,6 +381,42 @@
 			isa = PBXGroup;
 			children = (
 				60562ED5EEC2972C2F116F98 /* knocking-angry.caf */,
+				605627787069715E3039F3B6 /* Crash4.caf */,
+				60562BAACA793105F49FCF2D /* Crash2.caf */,
+				605626CA52D83E726790BA63 /* Crash5.caf */,
+				6056257F4F79F024EFC1152E /* Crash1.caf */,
+				6056203C7CB8100C739B74B4 /* Crash3.caf */,
+				60562D7E47178F18FA167582 /* Footsteps4.caf */,
+				605626479EB5EFCC236181F0 /* Footsteps3.caf */,
+				605629F12D801FD2FB07E3E7 /* Footsteps2.caf */,
+				6056240D0E8F4DC0B95311E7 /* Footsteps5.caf */,
+				605627E8C1ECDF2198997B91 /* Footsteps1.caf */,
+				605629740569E5A5211662D8 /* Giggling2.caf */,
+				60562166C76ED5051A7E67D3 /* Giggling1.caf */,
+				60562940336CAA16068085CF /* Giggling3.caf */,
+				605627A4E7466C6C9C9DDDD3 /* Growling1.caf */,
+				605626C347C07137C94B634A /* Growling2.caf */,
+				60562B3E7A84F37C9EA7EBE1 /* Growling4.caf */,
+				60562BE9D4318BB873AE6890 /* Growling5.caf */,
+				60562866AD14E750C290316A /* Growling3.caf */,
+				6056280CF31A525E57949E66 /* Knocking5.caf */,
+				6056201B8E2B33134C8A83DD /* Knocking3.caf */,
+				6056208456EBD67CB968A825 /* Knocking2.caf */,
+				605622F17632C95A35B463F0 /* Knocking4.caf */,
+				60562307B6CB39AC338A555C /* Scratching2.caf */,
+				60562E6F0D4B54D531259741 /* Scratching4.caf */,
+				60562CA806DD49A563F2D4AD /* Scratching1.caf */,
+				60562CE98BE9B5CCCABA4078 /* Scratching3.caf */,
+				60562B75390ADFFFF9E2FBED /* Screaming5.caf */,
+				6056224320F9DEB85451FB71 /* Screaming1.caf */,
+				605629938D6167F0E5848F0C /* Screaming2.caf */,
+				6056220F9CF50FEB4394EC3B /* Screaming4.caf */,
+				60562FEE23C602CB0A3D0100 /* Screaming3.caf */,
+				60562A4BB9A33393A1E0AF5F /* Whispering2.caf */,
+				605621D3FC30731B702C16D8 /* Whispering1.caf */,
+				605627FE9810F2CC8459533A /* Whispering4.caf */,
+				60562AA97297778CC3A8C339 /* Whispering3.caf */,
+				605623A2F0F56080DF5241BF /* Whispering5.caf */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -484,6 +628,42 @@
 				8844819E1D94A81500784249 /* Shadow.scnp in Resources */,
 				605625F31136E7C522DD3BBF /* Ghost.png in Resources */,
 				6056249FC937F24BC62BFCEF /* Eyes.png in Resources */,
+				6056261C86F9A447C38C20DA /* Crash4.caf in Resources */,
+				6056253F07B4D57D7A62CAE3 /* Crash2.caf in Resources */,
+				6056259BEC85D553D6826200 /* Crash5.caf in Resources */,
+				605623C95EE0DD5EB5516E19 /* Crash1.caf in Resources */,
+				605626F668BC3FC4BEDFED4F /* Crash3.caf in Resources */,
+				605626EB01B88009F7B0A66D /* Footsteps4.caf in Resources */,
+				605620FAADEDC471092A2C99 /* Footsteps3.caf in Resources */,
+				60562120B6EC7FB3435DBEA1 /* Footsteps2.caf in Resources */,
+				605623076B4FA9C9072678D6 /* Footsteps5.caf in Resources */,
+				60562A05F8DEEE9D9ABB323B /* Footsteps1.caf in Resources */,
+				60562ADD48CADCC9B6B34B13 /* Giggling2.caf in Resources */,
+				60562AD9FAE9529340746782 /* Giggling1.caf in Resources */,
+				605623A216D3A956258E0733 /* Giggling3.caf in Resources */,
+				6056222BCBBF8B02ED11B249 /* Growling1.caf in Resources */,
+				60562A7AC2529004759BDCB1 /* Growling2.caf in Resources */,
+				60562860EBE1C06E634467D0 /* Growling4.caf in Resources */,
+				60562212E6AE82F18890EE33 /* Growling5.caf in Resources */,
+				60562F36939E2D6A84B20800 /* Growling3.caf in Resources */,
+				605628359B935E111D9062EC /* Knocking5.caf in Resources */,
+				6056236FBC295A7478A2A69A /* Knocking3.caf in Resources */,
+				60562A7386FECBC6F0963B29 /* Knocking2.caf in Resources */,
+				60562578806E7A3B1959A622 /* Knocking4.caf in Resources */,
+				605624F10C20C36B14A6F874 /* Scratching2.caf in Resources */,
+				60562305CFE34906C3080009 /* Scratching4.caf in Resources */,
+				605623A0649B5D4E003D3140 /* Scratching1.caf in Resources */,
+				60562D12438064DD786B3889 /* Scratching3.caf in Resources */,
+				60562FA4E56EBA03B8E22FE5 /* Screaming5.caf in Resources */,
+				6056252B7201D0DE2A6C1366 /* Screaming1.caf in Resources */,
+				605626E7B894E7E440B03A0E /* Screaming2.caf in Resources */,
+				60562B40D33360C06DD98809 /* Screaming4.caf in Resources */,
+				6056214E061CC91250503D8A /* Screaming3.caf in Resources */,
+				605623A51AC7F9F69D6A4E02 /* Whispering2.caf in Resources */,
+				605624A269CF77DB7AA380B6 /* Whispering1.caf in Resources */,
+				605620923431C2F2C0D813B9 /* Whispering4.caf in Resources */,
+				6056208CE3972FB9126AA6E9 /* Whispering3.caf in Resources */,
+				60562CA82E49616A94AC4A2D /* Whispering5.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +678,42 @@
 				881EFE011D90CB66008D8B79 /* smoke.png in Resources */,
 				605620A214B70036D075BA02 /* Ghost.png in Resources */,
 				60562556C4C0A95318AF2316 /* Eyes.png in Resources */,
+				6056212BD1E0ABA8B5C661FB /* Crash4.caf in Resources */,
+				605624989161E04F606EF23E /* Crash2.caf in Resources */,
+				60562FB164FF4DCC14F9B699 /* Crash5.caf in Resources */,
+				60562626A8671F64519DCE76 /* Crash1.caf in Resources */,
+				605627C7A532D765C9C4C4EA /* Crash3.caf in Resources */,
+				60562947619992D4E51A9E14 /* Footsteps4.caf in Resources */,
+				6056297193474550075E7E31 /* Footsteps3.caf in Resources */,
+				6056281CBC322416FFF7BA6B /* Footsteps2.caf in Resources */,
+				6056280A010B8BF424F5600E /* Footsteps5.caf in Resources */,
+				60562A34E396BE02E625F6FE /* Footsteps1.caf in Resources */,
+				605622C4A4D0F480170F9A9F /* Giggling2.caf in Resources */,
+				60562FE10C6EB84DE44D2AE1 /* Giggling1.caf in Resources */,
+				60562E5816A8EC53C8C3561D /* Giggling3.caf in Resources */,
+				605621382E7C3740EC90541B /* Growling1.caf in Resources */,
+				6056203427827B2652384B28 /* Growling2.caf in Resources */,
+				6056292C6A6A92E79A0BC2A3 /* Growling4.caf in Resources */,
+				6056228E16CFAA8BB6E3A7A5 /* Growling5.caf in Resources */,
+				6056261BF25471DD2B787AA6 /* Growling3.caf in Resources */,
+				605622EA0E7F2667FD093687 /* Knocking5.caf in Resources */,
+				6056280CF6BD84F6DDEF5D54 /* Knocking3.caf in Resources */,
+				6056236E2F0C94E1C4D26226 /* Knocking2.caf in Resources */,
+				60562E6241132BCC9684C12F /* Knocking4.caf in Resources */,
+				60562FBEDBC7A2A53B19C6C2 /* Scratching2.caf in Resources */,
+				60562A5B9D176EC9D82BDF40 /* Scratching4.caf in Resources */,
+				6056213EC13195DB068C314F /* Scratching1.caf in Resources */,
+				60562F3338D9846452334260 /* Scratching3.caf in Resources */,
+				605620E5DD4346B465DEAF51 /* Screaming5.caf in Resources */,
+				60562A2799B9138E57CA2B45 /* Screaming1.caf in Resources */,
+				6056291A2DFD19D5912730DA /* Screaming2.caf in Resources */,
+				605622ED391A20C08161AE6D /* Screaming4.caf in Resources */,
+				60562C88749560C2EA7AA0FE /* Screaming3.caf in Resources */,
+				6056278646EF0E3453730372 /* Whispering2.caf in Resources */,
+				60562F99A592FC22AF452327 /* Whispering1.caf in Resources */,
+				605629CF9AD34A6D948A3AEA /* Whispering4.caf in Resources */,
+				605622F806A01CE536610D7B /* Whispering3.caf in Resources */,
+				60562A58382250E3A3A18A78 /* Whispering5.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

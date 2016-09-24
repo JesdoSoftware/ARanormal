@@ -8,10 +8,25 @@ import SceneKit
 
 public class FigureVisibilityManifestation: VisibilityManifestationBase {
 
+    private let filename: String
+    private let width: CGFloat
+    private let height: CGFloat
+
+    init(minimumActivityLevel: Double, ghostNode: SCNNode, visibility: Double, messenger: Messenger,
+            filename: String, width: CGFloat, height: CGFloat) {
+        self.filename = filename
+        self.width = width
+        self.height = height
+
+        super.init(minimumActivityLevel: minimumActivityLevel, ghostNode: ghostNode, visibility: visibility,
+                messenger: messenger)
+    }
+
     override func doSetGeometry() {
-        let box = SCNBox(width: 12, height: 24, length: 1, chamferRadius: 0)
+        let box = SCNBox(width: width, height: height, length: 1, chamferRadius: 0)
+
         let material = SCNMaterial()
-        material.diffuse.contents = "Ghost.png"
+        material.diffuse.contents = filename
         box.firstMaterial = material
 
         ghostNode.geometry = box

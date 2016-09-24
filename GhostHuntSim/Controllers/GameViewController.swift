@@ -88,11 +88,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
     }
 
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return .AllButUpsideDown
-        } else {
-            return .All
-        }
+        return .Portrait
     }
 
     override func didReceiveMemoryWarning() {
@@ -127,30 +123,12 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
     private func setUpSceneView() ->
             (sceneView: SCNView, cameraNode: SCNNode, ghostNode: SCNNode, ghostPivotNode: SCNNode, soundNode: SCNNode,
              soundPivotNode: SCNNode) {
-        // create a new scene
         let scene = SCNScene()
 
-        // create and add a camera to the scene
         let cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
         scene.rootNode.addChildNode(cameraNode)
-
-        // place the camera
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 0)
-
-        // create and add a light to the scene
-        let lightNode = SCNNode()
-        lightNode.light = SCNLight()
-        lightNode.light!.type = SCNLightTypeOmni
-        lightNode.position = SCNVector3(x: 0, y: 10, z: 10)
-        scene.rootNode.addChildNode(lightNode)
-
-        // create and add an ambient light to the scene
-        let ambientLightNode = SCNNode()
-        ambientLightNode.light = SCNLight()
-        ambientLightNode.light!.type = SCNLightTypeAmbient
-        ambientLightNode.light!.color = UIColor.darkGrayColor()
-        scene.rootNode.addChildNode(ambientLightNode)
 
         let ghostNode = SCNNode()
         ghostNode.geometry = SCNSphere(radius: 0)
@@ -168,21 +146,14 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         soundNode.position = SCNVector3Make(0, 50, 50)
         scene.rootNode.addChildNode(soundPivotNode)
 
-        // retrieve the SCNView
         let scnView = SCNView(frame: view.bounds)
-        view.addSubview(scnView)
-
-        // set the scene to the view
         scnView.scene = scene
-
-        // allows the user to manipulate the camera
-        scnView.allowsCameraControl = false
-
-        // show statistics such as fps and timing information
-        scnView.showsStatistics = false
-
         scnView.backgroundColor = UIColor.clearColor()
         scnView.playing = true
+        view.addSubview(scnView)
+
+        scnView.allowsCameraControl = false
+        scnView.showsStatistics = false
 
         return (scnView, cameraNode, ghostNode, ghostPivotNode, soundNode, soundPivotNode)
     }

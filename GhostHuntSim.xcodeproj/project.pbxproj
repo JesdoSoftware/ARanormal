@@ -10,6 +10,7 @@
 		6056203DE6788414F8785DCE /* ManifestationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605624DBF877829699278989 /* ManifestationSet.swift */; };
 		60562059F13F04C3C4C2F810 /* OrbVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605623344E4B9138A09341E0 /* OrbVisibilityManifestation.swift */; };
 		605620916CECF9A0D42076CE /* FlashlightOffManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CD16816E5A25D1A54DE /* FlashlightOffManifestation.swift */; };
+		605620A214B70036D075BA02 /* Ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 605623AFEBF9DE966FC4F9C8 /* Ghost.png */; };
 		605620C1419837F52FBA9C0D /* GhostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562AF55525B869C4DF71E8 /* GhostController.swift */; };
 		6056211772C8D1F5500741AC /* ActivityChangedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */; };
 		605621427EE37DF026668720 /* Manifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056229E60B803921D9DAD2A /* Manifestation.swift */; };
@@ -26,14 +27,17 @@
 		6056244A20AB57B0598AA7DD /* RangeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056230542FF6FE720625B99 /* RangeExtensions.swift */; };
 		60562481CC4C3B2D47EEAD98 /* ScoreIncreasedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562E9A0FF175CCE9FB00E6 /* ScoreIncreasedMessage.swift */; };
 		60562482071FF8B1F33D20A2 /* FlashlightFlickerMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562AD250A635B02342DCE1 /* FlashlightFlickerMessage.swift */; };
+		6056249FC937F24BC62BFCEF /* Eyes.png in Resources */ = {isa = PBXBuildFile; fileRef = 605628B8E5C15DF095E40E7C /* Eyes.png */; };
 		605624B682373D7515282F8B /* UtteranceMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605629427B0562C227E51E27 /* UtteranceMessage.swift */; };
 		605624FCAE4A04A5A7D86E15 /* FlashlightFlickerMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562AD250A635B02342DCE1 /* FlashlightFlickerMessage.swift */; };
 		6056251C58988E6F751022C7 /* HUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605622E9F3484EA52865F6BF /* HUDController.swift */; };
 		6056254ADA668CDFDD7DD4FB /* FlashlightOnOffMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562B54D397B4A2EB1A3AA9 /* FlashlightOnOffMessage.swift */; };
+		60562556C4C0A95318AF2316 /* Eyes.png in Resources */ = {isa = PBXBuildFile; fileRef = 605628B8E5C15DF095E40E7C /* Eyes.png */; };
 		6056256193AACFD970E02174 /* OrbVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605623344E4B9138A09341E0 /* OrbVisibilityManifestation.swift */; };
 		6056256DF78B63F231A079DE /* FlashlightOnOffMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562B54D397B4A2EB1A3AA9 /* FlashlightOnOffMessage.swift */; };
 		6056258524199E4AE60948CE /* ShadowVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605627BC1BA2944CD45034A3 /* ShadowVisibilityManifestation.swift */; };
 		605625DBABDDA961E261A3FA /* IsGhostVisibleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562C846AA343C8F0CB0535 /* IsGhostVisibleMessage.swift */; };
+		605625F31136E7C522DD3BBF /* Ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 605623AFEBF9DE966FC4F9C8 /* Ghost.png */; };
 		6056260E381841C34DDB8477 /* FlashlightOffManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CD16816E5A25D1A54DE /* FlashlightOffManifestation.swift */; };
 		60562616F462630F81391868 /* HUDScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605625179DF0ADF6269E4D4E /* HUDScene.swift */; };
 		6056266550797DBED3B8799A /* UtteranceMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605629427B0562C227E51E27 /* UtteranceMessage.swift */; };
@@ -65,7 +69,6 @@
 		60562C7C3618018B68C57C7C /* IsGhostVisibleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562C846AA343C8F0CB0535 /* IsGhostVisibleMessage.swift */; };
 		60562C8BE20B507B2FF70B35 /* VerbalResponseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605622E78844510E2C407ABB /* VerbalResponseMessage.swift */; };
 		60562C93275EBACBA8490BE7 /* knocking-angry.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562ED5EEC2972C2F116F98 /* knocking-angry.caf */; };
-		60562CA35F0A1CB0402E9662 /* Ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 60562F67699337199117EF81 /* Ghost.png */; };
 		60562D029ED62D0FA6E17CE7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605625FED9E2D592EF208DF0 /* AVFoundation.framework */; };
 		60562D1A9C418DE5A8DF320F /* ResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562483CFE3F10C515D0B38 /* ResponseBase.swift */; };
 		60562D2A5CBCFAC86477EC9F /* MessengerSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605628283F75E118B52D0033 /* MessengerSubscriber.swift */; };
@@ -74,7 +77,6 @@
 		60562DB548D9C2E5F1ED9351 /* SoundManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562C8D715D46CFF6A5963D /* SoundManifestation.swift */; };
 		60562DB5FCB9463A058C4FF7 /* YesNoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056209311D7A242E2433B21 /* YesNoResponse.swift */; };
 		60562E1EEA3522AEFEE9E4C0 /* Manifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056229E60B803921D9DAD2A /* Manifestation.swift */; };
-		60562E4068EA3B3A6BA44107 /* Ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 60562F67699337199117EF81 /* Ghost.png */; };
 		60562E4C819DBE57800A2E5E /* VerbalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562114179444D0D7B12D34 /* VerbalResponse.swift */; };
 		60562E7B8969E3D119B2B0FC /* HeartbeatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056272997C9618DB2041738 /* HeartbeatMessage.swift */; };
 		60562ED3C93C783598570BD8 /* VerbalResponseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605622E78844510E2C407ABB /* VerbalResponseMessage.swift */; };
@@ -124,6 +126,7 @@
 		6056230542FF6FE720625B99 /* RangeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeExtensions.swift; sourceTree = "<group>"; };
 		605623344E4B9138A09341E0 /* OrbVisibilityManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrbVisibilityManifestation.swift; sourceTree = "<group>"; };
 		60562387327536ED28DA3483 /* FlashlightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashlightController.swift; sourceTree = "<group>"; };
+		605623AFEBF9DE966FC4F9C8 /* Ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ghost.png; sourceTree = "<group>"; };
 		60562483CFE3F10C515D0B38 /* ResponseBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseBase.swift; sourceTree = "<group>"; };
 		605624DBF877829699278989 /* ManifestationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManifestationSet.swift; sourceTree = "<group>"; };
 		605625179DF0ADF6269E4D4E /* HUDScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDScene.swift; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 		6056272997C9618DB2041738 /* HeartbeatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartbeatMessage.swift; sourceTree = "<group>"; };
 		605627BC1BA2944CD45034A3 /* ShadowVisibilityManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowVisibilityManifestation.swift; sourceTree = "<group>"; };
 		605628283F75E118B52D0033 /* MessengerSubscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerSubscriber.swift; sourceTree = "<group>"; };
+		605628B8E5C15DF095E40E7C /* Eyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eyes.png; sourceTree = "<group>"; };
 		605629427B0562C227E51E27 /* UtteranceMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtteranceMessage.swift; sourceTree = "<group>"; };
 		605629A6C779E703759C0734 /* PhraseRecognizedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhraseRecognizedMessage.swift; sourceTree = "<group>"; };
 		60562AD250A635B02342DCE1 /* FlashlightFlickerMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashlightFlickerMessage.swift; sourceTree = "<group>"; };
@@ -152,7 +156,6 @@
 		60562E9A0FF175CCE9FB00E6 /* ScoreIncreasedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreIncreasedMessage.swift; sourceTree = "<group>"; };
 		60562ED5EEC2972C2F116F98 /* knocking-angry.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = "knocking-angry.caf"; sourceTree = "<group>"; };
 		60562F2D4AE1537C5C72DA5B /* FigureVisibilityManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FigureVisibilityManifestation.swift; sourceTree = "<group>"; };
-		60562F67699337199117EF81 /* Ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ghost.png; sourceTree = "<group>"; };
 		8807B53F1D541ED500BA3EA5 /* ARanormal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARanormal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8807B5421D541ED500BA3EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8807B5441D541ED500BA3EA5 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -211,7 +214,8 @@
 		6056233689507E3C170B8B52 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				60562F67699337199117EF81 /* Ghost.png */,
+				605623AFEBF9DE966FC4F9C8 /* Ghost.png */,
+				605628B8E5C15DF095E40E7C /* Eyes.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -478,7 +482,8 @@
 				8807B54A1D541ED500BA3EA5 /* Main.storyboard in Resources */,
 				60562C93275EBACBA8490BE7 /* knocking-angry.caf in Resources */,
 				8844819E1D94A81500784249 /* Shadow.scnp in Resources */,
-				60562E4068EA3B3A6BA44107 /* Ghost.png in Resources */,
+				605625F31136E7C522DD3BBF /* Ghost.png in Resources */,
+				6056249FC937F24BC62BFCEF /* Eyes.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +496,8 @@
 				605623297C45AADBBAAFB6F4 /* knocking-angry.caf in Resources */,
 				8844819F1D94A81500784249 /* Shadow.scnp in Resources */,
 				881EFE011D90CB66008D8B79 /* smoke.png in Resources */,
-				60562CA35F0A1CB0402E9662 /* Ghost.png in Resources */,
+				605620A214B70036D075BA02 /* Ghost.png in Resources */,
+				60562556C4C0A95318AF2316 /* Eyes.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

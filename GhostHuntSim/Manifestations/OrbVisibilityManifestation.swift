@@ -9,6 +9,11 @@ import SceneKit
 public class OrbVisibilityManifestation: VisibilityManifestationBase {
 
     override func doSetGeometry() {
-        ghostNode.geometry = SCNSphere(radius: 2)
+        let sphere = SCNSphere(radius: 1)
+
+        sphere.firstMaterial = SCNMaterial()
+        sphere.firstMaterial!.emission.contents = UIColor.darkGrayColor()
+
+        ghostNode.geometry = sphere
     }
 }

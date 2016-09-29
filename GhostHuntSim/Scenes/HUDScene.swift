@@ -10,6 +10,15 @@ class HUDScene: SKScene {
 
     var controller: HUDController?
 
+    private let temperatureHighTexture = SKTexture(imageNamed: "basic1-164_temperature_high.png")
+    private let temperatureLowTexture = SKTexture(imageNamed: "basic1-165_temperature_low.png")
+    private let flashlightOnTexture = SKTexture(imageNamed: "basic2-175_light_bulb_on.png")
+    private let flashlightOffTexture = SKTexture(imageNamed: "basic2-174_light_bulb.png")
+    private let cameraTexture = SKTexture(imageNamed: "basic1-097_camera_photography.png")
+    private let emfGaugeTexture = SKTexture(imageNamed: "basic2-293_dashboard_gauge.png")
+    private let yesNoTexture = SKTexture(imageNamed: "basic2-072_thumbs_up_like.png")
+    private let itcTexture = SKTexture(imageNamed: "basic2-001_comment_bubble_chat.png")
+
     private var temperatureIndicator: SKSpriteNode! = nil
     private var emfIndicator: SKLabelNode! = nil
     private var flashlightButton: SKSpriteNode! = nil
@@ -20,32 +29,56 @@ class HUDScene: SKScene {
     private var score: Int = 0
 
     override func didMoveToView(view: SKView) {
+        let emfIcon = SKSpriteNode(texture: emfGaugeTexture)
+        emfIcon.position = CGPoint(x: 50, y: 617)
+        addChild(emfIcon)
         emfIndicator = SKLabelNode(text: "0.0 mG")
-        emfIndicator.position = CGPoint(x: 100, y: 600)
+        emfIndicator.position = CGPoint(x: 125, y: 617)
+        emfIndicator.fontName = "Helvetica-Bold"
+        emfIndicator.fontSize = 24
+        emfIndicator.verticalAlignmentMode = .Center
         addChild(emfIndicator)
 
-        temperatureIndicator = SKSpriteNode(color: UIColor.orangeColor(), size: CGSize(width:100, height:100))
-        temperatureIndicator.position = CGPoint(x: 300, y: 600)
+        temperatureIndicator = SKSpriteNode(texture: temperatureHighTexture)
+        temperatureIndicator.position = CGPoint(x: 325, y: 617)
         addChild(temperatureIndicator)
 
-        flashlightButton = SKSpriteNode(color: UIColor.yellowColor(), size: CGSize(width: 100, height: 100))
-        flashlightButton.position = CGPoint(x: 100, y: 250)
+        flashlightButton = SKSpriteNode(texture: flashlightOnTexture)
+        flashlightButton.position = CGPoint(x: 75, y: 200)
         addChild(flashlightButton)
 
+        let yesNoIcon = SKSpriteNode(texture: yesNoTexture)
+        yesNoIcon.position = CGPoint(x: 325, y: 542)
+        addChild(yesNoIcon)
+
+        let itcIcon = SKSpriteNode(texture: itcTexture)
+        itcIcon.position = CGPoint(x: 325, y: 467)
+        addChild(itcIcon)
+
         yesNoIndicator = SKLabelNode(text: "")
-        yesNoIndicator.position = CGPoint(x: 300, y: 300)
+        yesNoIndicator.position = CGPoint(x: 188, y: 334)
+        yesNoIndicator.fontName = "Helvetica-BoldOblique"
+        yesNoIndicator.fontSize = 40
+        yesNoIndicator.verticalAlignmentMode = .Center
         addChild(yesNoIndicator)
 
         verbalResponseIndicator = SKLabelNode(text: "")
-        verbalResponseIndicator.position = CGPoint(x: 300, y: 300)
+        verbalResponseIndicator.position = CGPoint(x: 188, y: 334)
+        verbalResponseIndicator.fontName = "Helvetica-BoldOblique"
+        verbalResponseIndicator.fontSize = 40
+        verbalResponseIndicator.verticalAlignmentMode = .Center
         addChild(verbalResponseIndicator)
 
-        cameraButton = SKSpriteNode(color: UIColor.cyanColor(), size: CGSize(width: 100, height: 100))
-        cameraButton.position = CGPoint(x: 100, y: 100)
+        cameraButton = SKSpriteNode(texture: cameraTexture)
+        cameraButton.position = CGPoint(x: 75, y: 75)
         addChild(cameraButton)
 
-        scoreIndicator = SKLabelNode(text: "\(score)")
-        scoreIndicator.position = CGPoint(x: 300, y: 100)
+        scoreIndicator = SKLabelNode(text: "$\(score)")
+        scoreIndicator.position = CGPoint(x: 300, y: 75)
+        scoreIndicator.fontName = "Helvetica-Bold"
+        scoreIndicator.fontSize = 24
+        scoreIndicator.horizontalAlignmentMode = .Center
+        scoreIndicator.verticalAlignmentMode = .Center
         addChild(scoreIndicator)
     }
 
@@ -62,11 +95,11 @@ class HUDScene: SKScene {
     }
 
     func decreaseTemperature() {
-        temperatureIndicator.color = UIColor.blueColor()
+        temperatureIndicator.texture = temperatureLowTexture
     }
 
     func increaseTemperature() {
-        temperatureIndicator.color = UIColor.orangeColor()
+        temperatureIndicator.texture = temperatureHighTexture
     }
 
     func setEmfRating(emfRating: Double) {
@@ -75,10 +108,10 @@ class HUDScene: SKScene {
 
     func setFlashlightIndicatorOn(isOn: Bool) {
         if isOn {
-            flashlightButton.color = UIColor.yellowColor()
+            flashlightButton.texture = flashlightOnTexture
         }
         else {
-            flashlightButton.color = UIColor.purpleColor()
+            flashlightButton.texture = flashlightOffTexture
         }
     }
 
@@ -104,6 +137,6 @@ class HUDScene: SKScene {
 
     func increaseScoreBy(amount: Int) {
         score += amount
-        scoreIndicator.text = "\(score)"
+        scoreIndicator.text = "$\(score)"
     }
 }

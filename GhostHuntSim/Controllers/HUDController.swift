@@ -19,7 +19,7 @@ public class HUDController: MessengerSubscriber {
     init(sceneView: SCNView, messenger: Messenger) {
         self.messenger = messenger
 
-        hudScene = HUDScene(size: sceneView.bounds.size)
+        hudScene = HUDScene()
         hudScene.controller = self
 
         sceneView.overlaySKScene = hudScene

@@ -24,6 +24,7 @@ public class GhostController: MessengerSubscriber {
 
     private var visibility: Double = 0.25
     private var activity: Double = 0
+    private var height: CGFloat = 0
 
     init(ghostNode: SCNNode, ghostPivotNode: SCNNode, soundNode: SCNNode, soundPivotNode: SCNNode,
             messenger: Messenger, yesNoResponses: [YesNoResponse], verbalResponses: [VerbalResponse]) {
@@ -270,9 +271,19 @@ public class GhostController: MessengerSubscriber {
     private func moveGhost() {
         let rnd = (1...10).randomInt()
         if rnd == 1 {
-            let rotation = (-2...2).randomInt()
+            var newHeight = CGFloat((-3...3).randomInt()) / 3
+            if newHeight > 1 {
+                newHeight = 1
+            } else if newHeight < 0 {
+                newHeight = 0
+            }
+            let xRotation = newHeight - height
+            let zRotation = CGFloat((-2...2).randomInt())
+
             ghostPivotNode.removeAllActions()
-            ghostPivotNode.runAction(SCNAction.rotateByX(0, y: 0, z: CGFloat(rotation), duration: 1))
+            ghostPivotNode.runAction(SCNAction.rotateByX(xRotation, y: 0, z: zRotation, duration: 1))
+
+            height = newHeight
         }
     }
 

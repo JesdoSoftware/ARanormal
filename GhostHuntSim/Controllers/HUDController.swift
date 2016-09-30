@@ -59,6 +59,13 @@ public class HUDController: MessengerSubscriber {
     }
 
     func takePicture() {
+        hudScene.runAction(SKAction.playSoundFileNamed("Shutter.caf", waitForCompletion: false))
+        hudScene.setCameraEnabled(false)
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            self.hudScene.setCameraEnabled(true)
+        }
+
         if isGhostInView && isGhostVisible {
             messenger.publishMessage(ScoreIncreasedMessage(amount: 50))
         }

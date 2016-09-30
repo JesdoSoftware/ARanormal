@@ -15,6 +15,7 @@ class HUDScene: SKScene {
     private let flashlightOnTexture = SKTexture(imageNamed: "basic2-175_light_bulb_on.png")
     private let flashlightOffTexture = SKTexture(imageNamed: "basic2-174_light_bulb.png")
     private let cameraTexture = SKTexture(imageNamed: "basic1-097_camera_photography.png")
+    private let cameraDisabledTexture = SKTexture(imageNamed: "basic1-097_camera_photography_disabled.png")
     private let emfGaugeTexture = SKTexture(imageNamed: "basic2-293_dashboard_gauge.png")
     private let yesNoTexture = SKTexture(imageNamed: "basic2-072_thumbs_up_like.png")
     private let itcTexture = SKTexture(imageNamed: "basic2-001_comment_bubble_chat.png")
@@ -27,6 +28,7 @@ class HUDScene: SKScene {
     private var cameraButton: SKSpriteNode! = nil
     private var scoreIndicator: SKLabelNode! = nil
     private var score: Int = 0
+    private var isCameraEnabled = true
 
     override func didMoveToView(view: SKView) {
         let emfIcon = SKSpriteNode(texture: emfGaugeTexture)
@@ -87,7 +89,7 @@ class HUDScene: SKScene {
             let location = touch.locationInNode(self)
             if flashlightButton.containsPoint(location) {
                 controller?.toggleFlashlight()
-            } else if cameraButton.containsPoint(location) {
+            } else if isCameraEnabled && cameraButton.containsPoint(location) {
                 controller?.takePicture()
             }
         }
@@ -138,5 +140,15 @@ class HUDScene: SKScene {
     func increaseScoreBy(amount: Int) {
         score += amount
         scoreIndicator.text = "$\(score)"
+    }
+
+    func setCameraEnabled(isEnabled: Bool) {
+        isCameraEnabled = isEnabled
+
+        if isEnabled == false {
+            cameraButton.texture = cameraDisabledTexture
+        } else {
+            cameraButton.texture = cameraTexture
+        }
     }
 }

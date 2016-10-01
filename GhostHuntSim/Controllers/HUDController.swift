@@ -16,7 +16,10 @@ public class HUDController: MessengerSubscriber {
     private var isFlashlightOn: Bool = true
     private var isGhostInView: Bool = false
     private var isGhostVisible: Bool = false
+
     private var shutterSoundPlayer: AVAudioPlayer? = nil
+    private var dingSoundPlayer: AVAudioPlayer? = nil
+    private var buzzerSoundPlayer: AVAudioPlayer? = nil
 
     init(sceneView: SCNView, messenger: Messenger) {
         self.messenger = messenger
@@ -29,10 +32,24 @@ public class HUDController: MessengerSubscriber {
         sceneView.overlaySKScene!.scaleMode = SKSceneScaleMode.ResizeFill
         sceneView.overlaySKScene!.userInteractionEnabled = true
 
-        let url = NSBundle.mainBundle().URLForResource("Shutter", withExtension: "caf")
+        var url = NSBundle.mainBundle().URLForResource("Shutter", withExtension: "caf")
         do {
             shutterSoundPlayer = try AVAudioPlayer(contentsOfURL: url!)
             shutterSoundPlayer!.prepareToPlay()
+        } catch {
+            // TODO handle error
+        }
+        url = NSBundle.mainBundle().URLForResource("Ding", withExtension: "caf")
+        do {
+            dingSoundPlayer = try AVAudioPlayer(contentsOfURL: url!)
+            dingSoundPlayer!.prepareToPlay()
+        } catch {
+            // TODO handle error
+        }
+        url = NSBundle.mainBundle().URLForResource("Buzzer", withExtension: "caf")
+        do {
+            buzzerSoundPlayer = try AVAudioPlayer(contentsOfURL: url!)
+            buzzerSoundPlayer!.prepareToPlay()
         } catch {
             // TODO handle error
         }
@@ -83,6 +100,12 @@ public class HUDController: MessengerSubscriber {
 
     private func handleYesNoResponse(isYes: Bool) {
         hudScene.indicateYesNoResponse(isYes)
+        if isYes {
+            dingSoundPlayer?.play()
+        } else {
+            buzzerSoundPlayer?.play()
+        }
+
         messenger.publishMessage(ScoreIncreasedMessage(amount: 5))
 
         let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))

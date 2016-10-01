@@ -12,17 +12,17 @@ public class HUDController: MessengerSubscriber {
 
     private let hudScene: HUDScene
     private let messenger: Messenger
+    private let speechSynthesizer: AVSpeechSynthesizer
 
     private var isFlashlightOn: Bool = true
     private var isGhostInView: Bool = false
     private var isGhostVisible: Bool = false
 
     private var shutterSoundPlayer: AVAudioPlayer? = nil
-    private var dingSoundPlayer: AVAudioPlayer? = nil
-    private var buzzerSoundPlayer: AVAudioPlayer? = nil
 
     init(sceneView: SCNView, messenger: Messenger) {
         self.messenger = messenger
+        speechSynthesizer = AVSpeechSynthesizer()
 
         hudScene = HUDScene()
         hudScene.controller = self
@@ -32,24 +32,10 @@ public class HUDController: MessengerSubscriber {
         sceneView.overlaySKScene!.scaleMode = SKSceneScaleMode.ResizeFill
         sceneView.overlaySKScene!.userInteractionEnabled = true
 
-        var url = NSBundle.mainBundle().URLForResource("Shutter", withExtension: "caf")
+        let url = NSBundle.mainBundle().URLForResource("Shutter", withExtension: "caf")
         do {
             shutterSoundPlayer = try AVAudioPlayer(contentsOfURL: url!)
             shutterSoundPlayer!.prepareToPlay()
-        } catch {
-            // TODO handle error
-        }
-        url = NSBundle.mainBundle().URLForResource("Ding", withExtension: "caf")
-        do {
-            dingSoundPlayer = try AVAudioPlayer(contentsOfURL: url!)
-            dingSoundPlayer!.prepareToPlay()
-        } catch {
-            // TODO handle error
-        }
-        url = NSBundle.mainBundle().URLForResource("Buzzer", withExtension: "caf")
-        do {
-            buzzerSoundPlayer = try AVAudioPlayer(contentsOfURL: url!)
-            buzzerSoundPlayer!.prepareToPlay()
         } catch {
             // TODO handle error
         }
@@ -94,19 +80,19 @@ public class HUDController: MessengerSubscriber {
         }
 
         if isGhostInView && isGhostVisible {
-            messenger.publishMessage(ScoreIncreasedMessage(amount: 50))
+            messenger.publishMessage(ScoreIncreasedMessage(amount: 1000))
         }
     }
 
     private func handleYesNoResponse(isYes: Bool) {
         hudScene.indicateYesNoResponse(isYes)
-        if isYes {
-            dingSoundPlayer?.play()
-        } else {
-            buzzerSoundPlayer?.play()
-        }
+        messenger.publishMessage(ScoreIncreasedMessage(amount: 100))
 
-        messenger.publishMessage(ScoreIncreasedMessage(amount: 5))
+        if isYes == true {
+            utterPhrase("YES")
+        } else {
+            utterPhrase("NO")
+        }
 
         let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
         dispatch_after(delayTime, dispatch_get_main_queue()) {
@@ -116,11 +102,20 @@ public class HUDController: MessengerSubscriber {
 
     private func handleVerbalResponse(response: String) {
         hudScene.indicateVerbalResponse(response)
-        messenger.publishMessage(ScoreIncreasedMessage(amount: 10))
+        messenger.publishMessage(ScoreIncreasedMessage(amount: 500))
+
+        utterPhrase(response)
 
         let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
         dispatch_after(delayTime, dispatch_get_main_queue()) {
             self.hudScene.clearVerbalResponseIndicator()
         }
+    }
+
+    private func utterPhrase(phrase: String) {
+        let utterance = AVSpeechUtterance(string: phrase)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+
+        speechSynthesizer.speakUtterance(utterance)
     }
 }

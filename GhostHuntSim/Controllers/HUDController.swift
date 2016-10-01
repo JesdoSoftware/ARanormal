@@ -6,6 +6,7 @@
 import Foundation
 import SpriteKit
 import SceneKit
+import AVFoundation
 
 public class HUDController: MessengerSubscriber {
 
@@ -15,6 +16,7 @@ public class HUDController: MessengerSubscriber {
     private var isFlashlightOn: Bool = true
     private var isGhostInView: Bool = false
     private var isGhostVisible: Bool = false
+    private var shutterSoundPlayer: AVAudioPlayer? = nil
 
     init(sceneView: SCNView, messenger: Messenger) {
         self.messenger = messenger
@@ -26,6 +28,14 @@ public class HUDController: MessengerSubscriber {
         sceneView.overlaySKScene!.hidden = false
         sceneView.overlaySKScene!.scaleMode = SKSceneScaleMode.ResizeFill
         sceneView.overlaySKScene!.userInteractionEnabled = true
+
+        let url = NSBundle.mainBundle().URLForResource("Shutter", withExtension: "caf")
+        do {
+            shutterSoundPlayer = try AVAudioPlayer(contentsOfURL: url!)
+            shutterSoundPlayer!.prepareToPlay()
+        } catch {
+            // TODO handle error
+        }
     }
 
     public func processMessage(message: AnyObject) {
@@ -59,7 +69,7 @@ public class HUDController: MessengerSubscriber {
     }
 
     func takePicture() {
-        hudScene.runAction(SKAction.playSoundFileNamed("Shutter.caf", waitForCompletion: false))
+        shutterSoundPlayer?.play()
         hudScene.setCameraEnabled(false)
         let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
         dispatch_after(delayTime, dispatch_get_main_queue()) {

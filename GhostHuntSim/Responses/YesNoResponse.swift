@@ -16,6 +16,7 @@ public class YesNoResponse: ResponseBase {
 
     public func respondToPhrase(phrase: String) -> Bool? {
         if shouldRespondToPhrase(phrase) {
+            hasResponded = true
             return response
         }
         return nil

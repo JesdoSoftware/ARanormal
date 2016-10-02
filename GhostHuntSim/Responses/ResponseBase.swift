@@ -8,12 +8,18 @@ import Foundation
 public class ResponseBase {
 
     public let requiredWords: [String]
+    var hasResponded: Bool = false
 
     init(requiredWords: [String]) {
         self.requiredWords = requiredWords
     }
 
     public func shouldRespondToPhrase(phrase: String) -> Bool {
+        if hasResponded
+        {
+            return false
+        }
+
         let phraseWords = phrase.componentsSeparatedByString(" ")
         for requiredWord in requiredWords {
             if !phraseWords.contains(requiredWord) {

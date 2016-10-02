@@ -16,6 +16,7 @@ public class VerbalResponse: ResponseBase {
 
     public func respondToPhrase(phrase: String) -> String? {
         if shouldRespondToPhrase(phrase) {
+            hasResponded = true
             return response
         }
         return nil

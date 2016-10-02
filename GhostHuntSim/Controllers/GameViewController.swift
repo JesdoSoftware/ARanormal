@@ -34,14 +34,9 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         let hudController = HUDController(sceneView: sceneView, messenger: messenger)
         messenger.addSubscriber(hudController)
 
-        let yesNoResponses = [
-                YesNoResponse(requiredWords: ["LEAVE"], response: true),
-                YesNoResponse(requiredWords: ["LIKE", "HERE"], response: false)
-        ]
+        let yesNoResponses = getYesNoResponses()
 
-        let verbalResponses = [
-                VerbalResponse(requiredWords: ["HOW", "YOU", "DIE"], response: "FIRE")
-        ]
+        let verbalResponses = getVerbalResponses()
 
         let ghostController = GhostController(ghostNode: ghostNode, ghostPivotNode: ghostPivotNode,
                 soundNode: soundNode, soundPivotNode: soundPivotNode, messenger: messenger,
@@ -164,5 +159,107 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         motionManager.startDeviceMotionUpdatesUsingReferenceFrame(CMAttitudeReferenceFrame.XTrueNorthZVertical)
 
         return motionManager
+    }
+
+    private func getYesNoResponses() -> [YesNoResponse] {
+        let yesNoResponses = [
+                YesNoResponse(requiredWords: ["ARE", "SPIRITS", "HERE"], response: true),
+                YesNoResponse(requiredWords: ["ARE", "GHOSTS", "HERE"], response: true),
+                YesNoResponse(requiredWords: ["LIKE", "HERE"], response: false),
+                YesNoResponse(requiredWords: ["BORED"], response: true),
+                YesNoResponse(requiredWords: ["WIFE", "AFFAIR"], response: false),
+                YesNoResponse(requiredWords: ["MARY", "AFFAIR"], response: false),
+                YesNoResponse(requiredWords: ["WIFE", "SLEEP", "WITH", "BROTHER"], response: false),
+                YesNoResponse(requiredWords: ["MARY", "SLEEP", "WITH", "BROTHER"], response: false),
+                YesNoResponse(requiredWords: ["WIFE", "SLEEP", "WITH", "LUKE"], response: false),
+                YesNoResponse(requiredWords: ["MARY", "SLEEP", "WITH", "LUKE"], response: false),
+                YesNoResponse(requiredWords: ["WIFE", "SEX", "WITH", "BROTHER"], response: false),
+                YesNoResponse(requiredWords: ["MARY", "SEX", "WITH", "BROTHER"], response: false),
+                YesNoResponse(requiredWords: ["WIFE", "SEX", "WITH", "LUKE"], response: false),
+                YesNoResponse(requiredWords: ["MARY", "SEX", "WITH", "LUKE"], response: false),
+                YesNoResponse(requiredWords: ["BROTHER", "WANT", "WIFE"], response: true),
+                YesNoResponse(requiredWords: ["LUKE", "WANT", "WIFE"], response: true),
+                YesNoResponse(requiredWords: ["LUKE", "WANT", "MARY"], response: true),
+                YesNoResponse(requiredWords: ["BROTHER", "LOVE", "WIFE"], response: true),
+                YesNoResponse(requiredWords: ["LUKE", "LOVE", "WIFE"], response: true),
+                YesNoResponse(requiredWords: ["LUKE", "LOVE", "MARY"], response: true),
+                YesNoResponse(requiredWords: ["BROTHER", "MARRIED"], response: true),
+                YesNoResponse(requiredWords: ["LUKE", "MARRIED"], response: true),
+                YesNoResponse(requiredWords: ["ARE", "IN", "HEAVEN"], response: false),
+                YesNoResponse(requiredWords: ["ARE", "IN", "HELL"], response: false),
+                YesNoResponse(requiredWords: ["ARE", "IN", "LIMBO"], response: true),
+                YesNoResponse(requiredWords: ["ARE", "IN", "PURGATORY"], response: true),
+                YesNoResponse(requiredWords: ["ARE", "ARE", "TRAPPED"], response: true),
+                YesNoResponse(requiredWords: ["WANT", "LEAVE"], response: true),
+                YesNoResponse(requiredWords: ["REVENGE", "BROTHER"], response: true),
+                YesNoResponse(requiredWords: ["REVENGE", "LUKE"], response: true),
+                YesNoResponse(requiredWords: ["BROTHER", "KILL", "WIFE"], response: true),
+                YesNoResponse(requiredWords: ["LUKE", "KILL", "WIFE"], response: true),
+                YesNoResponse(requiredWords: ["LUKE", "KILL", "MARY"], response: true),
+                YesNoResponse(requiredWords: ["ARE", "ALONE"], response: false),
+                YesNoResponse(requiredWords: ["ARE", "OTHER", "HERE"], response: true),
+                YesNoResponse(requiredWords: ["ARE", "OTHERS", "HERE"], response: true),
+                YesNoResponse(requiredWords: ["DID", "KILL", "BROTHER"], response: false),
+                YesNoResponse(requiredWords: ["IS", "BROTHER", "ALIVE"], response: false),
+                YesNoResponse(requiredWords: ["IS", "LUKE", "ALIVE"], response: false),
+                YesNoResponse(requiredWords: ["ARE", "HUMAN"], response: true),
+                YesNoResponse(requiredWords: ["DOES", "HEAVEN", "EXIST"], response: true),
+                YesNoResponse(requiredWords: ["DOES", "HELL", "EXIST"], response: true),
+                YesNoResponse(requiredWords: ["DOES", "GOD", "EXIST"], response: true),
+                YesNoResponse(requiredWords: ["DOES", "JESUS", "EXIST"], response: true),
+                YesNoResponse(requiredWords: ["IS", "WIFE", "HERE"], response: false),
+                YesNoResponse(requiredWords: ["IS", "MARY", "HERE"], response: false),
+                YesNoResponse(requiredWords: ["IS", "BROTHER", "HERE"], response: false),
+                YesNoResponse(requiredWords: ["IS", "LUKE", "HERE"], response: false),
+                YesNoResponse(requiredWords: ["FORGIVE", "BROTHER"], response: false),
+                YesNoResponse(requiredWords: ["FORGIVE", "LUKE"], response: false),
+                YesNoResponse(requiredWords: ["DO", "MISS", "WIFE"], response: true),
+                YesNoResponse(requiredWords: ["DO", "MISS", "MARY"], response: true),
+                YesNoResponse(requiredWords: ["DO", "LOVE", "WIFE"], response: true),
+                YesNoResponse(requiredWords: ["DO", "LOVE", "MARY"], response: true),
+                YesNoResponse(requiredWords: ["DO", "HATE", "BROTHER"], response: true),
+                YesNoResponse(requiredWords: ["DO", "HATE", "LUKE"], response: true),
+                YesNoResponse(requiredWords: ["WATCHING", "ME"], response: true),
+        ]
+
+        return yesNoResponses
+    }
+
+    private func getVerbalResponses() -> [VerbalResponse] {
+        let verbalResponses = [
+                VerbalResponse(requiredWords: ["HOW", "DIE"], response: "BROTHER"),
+                VerbalResponse(requiredWords: ["WHAT", "BROTHER", "DO"], response: "STABBED"),
+                VerbalResponse(requiredWords: ["WHAT", "LUKE", "DO"], response: "STABBED"),
+                VerbalResponse(requiredWords: ["WHY", "BROTHER"], response: "WANTED WIFE"),
+                VerbalResponse(requiredWords: ["WHY", "HERE"], response: "TRAPPED"),
+                VerbalResponse(requiredWords: ["WHY", "DON'T", "LEAVE"], response: "REVENGE"),
+                VerbalResponse(requiredWords: ["WHAT", "FIRST", "NAME"], response: "JOHN"),
+                VerbalResponse(requiredWords: ["WHAT", "WIFE", "NAME"], response: "MARY"),
+                VerbalResponse(requiredWords: ["WHAT", "BROTHER", "NAME"], response: "LUKE"),
+                VerbalResponse(requiredWords: ["WHAT", "YOUR", "NAME"], response: "SMITH"),
+                VerbalResponse(requiredWords: ["WHEN", "LEAVE"], response: "AFTER REVENGE"),
+                VerbalResponse(requiredWords: ["WHAT", "KEEP", "HERE"], response: "REVENGE"),
+                VerbalResponse(requiredWords: ["WHO", "REVENGE"], response: "BROTHER"),
+                VerbalResponse(requiredWords: ["MAN", "OR", "WOMAN"], response: "MAN"),
+                VerbalResponse(requiredWords: ["HOW", "MANY", "HERE"], response: "MANY"),
+                VerbalResponse(requiredWords: ["HOW", "LONG", "HERE"], response: "AGES"),
+                VerbalResponse(requiredWords: ["HOW", "BROTHER", "DIE"], response: "FIRE"),
+                VerbalResponse(requiredWords: ["HOW", "LUKE", "DIE"], response: "FIRE"),
+                VerbalResponse(requiredWords: ["WHAT", "HAPPENED", "BROTHER"], response: "FIRE"),
+                VerbalResponse(requiredWords: ["WHAT", "HAPPENED", "LUKE"], response: "FIRE"),
+                VerbalResponse(requiredWords: ["WHAT", "DEATH", "LIKE"], response: "DARK"),
+                VerbalResponse(requiredWords: ["WHERE", "WIFE"], response: "HEAVEN"),
+                VerbalResponse(requiredWords: ["WHERE", "MARY"], response: "HEAVEN"),
+                VerbalResponse(requiredWords: ["WHERE", "BROTHER"], response: "HELL"),
+                VerbalResponse(requiredWords: ["WHERE", "LUKE"], response: "HELL"),
+                VerbalResponse(requiredWords: ["WHAT", "JOB"], response: "FARMER"),
+                VerbalResponse(requiredWords: ["WHAT", "OCCUPATION"], response: "FARMER"),
+                VerbalResponse(requiredWords: ["WHAT", "DO", "FOR", "LIVING"], response: "FARMER"),
+                VerbalResponse(requiredWords: ["WHO", "ELSE", "HERE"], response: "DARK ONES"),
+                VerbalResponse(requiredWords: ["WHAT", "DARK", "ONES", "WANT"], response: "YOU"),
+                VerbalResponse(requiredWords: ["WHY", "DARK", "ONES", "HERE"], response: "WANT YOU"),
+        ]
+
+        return verbalResponses
     }
 }

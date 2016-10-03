@@ -323,7 +323,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
         darkOneNode.geometry = box
         darkOneNode.opacity = 0.5
         darkOneNode.position = position
-        darkOneNode.eulerAngles = SCNVector3Make(0, 0, 3.14159)
+        darkOneNode.eulerAngles = SCNVector3Make(1.570795, 0, 0)
         darkOneNode.constraints = [SCNLookAtConstraint(target: cameraNode)]
 
         return darkOneNode

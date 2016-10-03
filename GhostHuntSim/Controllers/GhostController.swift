@@ -9,6 +9,8 @@ import AVFoundation
 
 public class GhostController: MessengerSubscriber {
 
+    public var isActive: Bool = true
+
     private let ghostNode: SCNNode
     private let ghostPivotNode: SCNNode
     private let soundNode: SCNNode
@@ -202,6 +204,10 @@ public class GhostController: MessengerSubscriber {
     }
 
     public func processMessage(message: AnyObject) {
+        if !isActive {
+            return
+        }
+
         if message is HeartbeatMessage {
             moveGhost()
             manifestSound()

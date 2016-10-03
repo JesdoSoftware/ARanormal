@@ -50,7 +50,7 @@ public class HUDController: MessengerSubscriber {
             }
             isGhostInView = isGhostInViewMessage.isInView
         } else if let activityChangedMessage = message as? ActivityChangedMessage {
-            hudScene.setEmfRating(activityChangedMessage.activity)
+            setEmfRatingTo(activityChangedMessage.activity)
         } else if let flashlightMessage = message as? FlashlightOnOffMessage {
             isFlashlightOn = flashlightMessage.isOn
             hudScene.setFlashlightIndicatorOn(isFlashlightOn)
@@ -62,6 +62,15 @@ public class HUDController: MessengerSubscriber {
             isGhostVisible = isGhostVisibleMessage.isVisible
         } else if let scoreIncreasedMessage = message as? ScoreIncreasedMessage {
             hudScene.increaseScoreBy(scoreIncreasedMessage.amount)
+        }
+    }
+
+    private func setEmfRatingTo(amount: Double) {
+        hudScene.setEmfRating(amount)
+
+        // TODO set game over activity limit
+        if (amount >= 10) {
+            messenger.publishMessage(GameOverMessage(score: hudScene.getScore()))
         }
     }
 

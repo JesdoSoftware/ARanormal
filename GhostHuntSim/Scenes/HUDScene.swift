@@ -137,6 +137,10 @@ class HUDScene: SKScene {
         verbalResponseIndicator.text = ""
     }
 
+    func getScore() -> Int {
+        return score
+    }
+
     func increaseScoreBy(amount: Int) {
         score += amount
         scoreIndicator.text = "$\(score)"

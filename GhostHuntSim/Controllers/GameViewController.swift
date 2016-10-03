@@ -14,13 +14,22 @@ import CoreMotion
 import AVFoundation
 import SpriteKit
 
-class GameViewController: UIViewController, SCNSceneRendererDelegate {
+class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerSubscriber {
 
     private var avCaptureSession: AVCaptureSession?
     private var avCaptureDeviceInput: AVCaptureDeviceInput?
+    private var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     private var sceneRendererDelegate: SceneRendererDelegate?
-
+    private var sceneView: SCNView?
+    private var cameraNode: SCNNode?
+    private var ghostController: GhostController?
     private var voiceController: VoiceController?
+
+    private var darkOneSoundPlayer1: AVAudioPlayer? = nil
+    private var darkOneSoundPlayer2: AVAudioPlayer? = nil
+    private var darkOneSoundPlayer3: AVAudioPlayer? = nil
+    private var darkOneSoundPlayer4: AVAudioPlayer? = nil
+    private var darkOneSoundPlayer5: AVAudioPlayer? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +37,11 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         let captureDevice = startCapturingVideo()
         let motionManager = createMotionManager()
         let (sceneView, cameraNode, ghostNode, ghostPivotNode, soundNode, soundPivotNode) = setUpSceneView()
+        self.sceneView = sceneView
+        self.cameraNode = cameraNode
 
         let messenger = Messenger()
+        messenger.addSubscriber(self)
 
         let hudController = HUDController(sceneView: sceneView, messenger: messenger)
         messenger.addSubscriber(hudController)
@@ -38,10 +50,10 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 
         let verbalResponses = getVerbalResponses()
 
-        let ghostController = GhostController(ghostNode: ghostNode, ghostPivotNode: ghostPivotNode,
+        ghostController = GhostController(ghostNode: ghostNode, ghostPivotNode: ghostPivotNode,
                 soundNode: soundNode, soundPivotNode: soundPivotNode, messenger: messenger,
                 yesNoResponses: yesNoResponses, verbalResponses: verbalResponses)
-        messenger.addSubscriber(ghostController)
+        messenger.addSubscriber(ghostController!)
 
         let flashlightController = FlashlightController(captureDevice: captureDevice)
         messenger.addSubscriber(flashlightController)
@@ -103,16 +115,21 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
             // TODO: handle error
         }
 
-        let previewLayer = AVCaptureVideoPreviewLayer(session: avCaptureSession!)
-        previewLayer.frame = view.bounds
-        previewLayer.opaque = true
-        previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-        previewLayer.connection?.videoOrientation = AVCaptureVideoOrientation.Portrait
+        cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: avCaptureSession!)
+        cameraPreviewLayer!.frame = view.bounds
+        cameraPreviewLayer!.opaque = true
+        cameraPreviewLayer!.videoGravity = AVLayerVideoGravityResizeAspectFill
+        cameraPreviewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.Portrait
 
-        view.layer.addSublayer(previewLayer)
+        view.layer.addSublayer(cameraPreviewLayer!)
         avCaptureSession!.startRunning()
 
         return captureDevice
+    }
+
+    private func stopCapturingVideo() {
+        avCaptureSession!.stopRunning()
+        cameraPreviewLayer!.removeFromSuperlayer()
     }
 
     private func setUpSceneView() ->
@@ -261,5 +278,68 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         ]
 
         return verbalResponses
+    }
+
+    func processMessage(message: AnyObject) {
+        if let gameOverMessage = message as? GameOverMessage {
+            ghostController?.isActive = false
+
+            stopCapturingVideo()
+
+            let darkOneNode1 = createDarkOneNode(SCNVector3Make(0, 50, 0))
+            sceneView!.scene!.rootNode.addChildNode(darkOneNode1)
+            let darkOneNode2 = createDarkOneNode(SCNVector3Make(0, -50, 0))
+            sceneView!.scene!.rootNode.addChildNode(darkOneNode2)
+            let darkOneNode3 = createDarkOneNode(SCNVector3Make(50, 0, 0))
+            sceneView!.scene!.rootNode.addChildNode(darkOneNode3)
+            let darkOneNode4 = createDarkOneNode(SCNVector3Make(-50, 0, 0))
+            sceneView!.scene!.rootNode.addChildNode(darkOneNode4)
+            let darkOneNode5 = createDarkOneNode(SCNVector3Make(25, -25, 0))
+            sceneView!.scene!.rootNode.addChildNode(darkOneNode5)
+            let darkOneNode6 = createDarkOneNode(SCNVector3Make(-25, 25, 0))
+            sceneView!.scene!.rootNode.addChildNode(darkOneNode6)
+
+            darkOneSoundPlayer1 = createDarkOneSoundPlayer("Roar1")
+            darkOneSoundPlayer1!.play()
+            darkOneSoundPlayer2 = createDarkOneSoundPlayer("Roar2")
+            darkOneSoundPlayer2!.play()
+            darkOneSoundPlayer3 = createDarkOneSoundPlayer("Roar3")
+            darkOneSoundPlayer3!.play()
+            darkOneSoundPlayer4 = createDarkOneSoundPlayer("Roar4")
+            darkOneSoundPlayer4!.play()
+            darkOneSoundPlayer5 = createDarkOneSoundPlayer("Roar5")
+            darkOneSoundPlayer5!.play()
+        }
+    }
+
+    private func createDarkOneNode(position: SCNVector3) -> SCNNode {
+        let darkOneNode = SCNNode()
+
+        let box = SCNBox(width: 12, height: 24, length: 1, chamferRadius: 0)
+        let material = SCNMaterial()
+        material.diffuse.contents = "Eyes.png"
+        box.firstMaterial = material
+
+        darkOneNode.geometry = box
+        darkOneNode.opacity = 0.5
+        darkOneNode.position = position
+        darkOneNode.eulerAngles = SCNVector3Make(0, 0, 3.14159)
+        darkOneNode.constraints = [SCNLookAtConstraint(target: cameraNode)]
+
+        return darkOneNode
+    }
+
+    private func createDarkOneSoundPlayer(filename: String) -> AVAudioPlayer? {
+        var audioPlayer: AVAudioPlayer? = nil
+
+        let url = NSBundle.mainBundle().URLForResource(filename, withExtension: "caf")
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL: url!)
+            audioPlayer!.prepareToPlay()
+        } catch {
+            // TODO handle error
+        }
+
+        return audioPlayer
     }
 }

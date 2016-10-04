@@ -140,7 +140,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
         let cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
         scene.rootNode.addChildNode(cameraNode)
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 0)
+        cameraNode.position = SCNVector3Make(0, 0, 0)
 
         let ghostNode = SCNNode()
         ghostNode.geometry = SCNSphere(radius: 0)
@@ -148,7 +148,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
         let ghostPivotNode = SCNNode()
         ghostPivotNode.addChildNode(ghostNode)
         ghostNode.position = SCNVector3Make(0, 50, 0)
-        ghostNode.eulerAngles = SCNVector3Make(0, 0, 3.14159)
+        ghostNode.eulerAngles = SCNVector3Make(0, 0, 3.14159)       // HACK
         ghostNode.constraints = [SCNLookAtConstraint(target: cameraNode)]
         scene.rootNode.addChildNode(ghostPivotNode)
 
@@ -286,17 +286,18 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
 
             stopCapturingVideo()
 
-            let darkOneNode1 = createDarkOneNode(SCNVector3Make(0, 50, 0))
+            let darkOneNode1 = createDarkOneNode(SCNVector3Make(0, 35, 0))
+            darkOneNode1.eulerAngles = SCNVector3Make(1.570795, 0, 3.14159)     // HACK
             sceneView!.scene!.rootNode.addChildNode(darkOneNode1)
-            let darkOneNode2 = createDarkOneNode(SCNVector3Make(0, -50, 0))
+            let darkOneNode2 = createDarkOneNode(SCNVector3Make(35, 25, 0))
             sceneView!.scene!.rootNode.addChildNode(darkOneNode2)
-            let darkOneNode3 = createDarkOneNode(SCNVector3Make(50, 0, 0))
+            let darkOneNode3 = createDarkOneNode(SCNVector3Make(35, -25, 0))
             sceneView!.scene!.rootNode.addChildNode(darkOneNode3)
-            let darkOneNode4 = createDarkOneNode(SCNVector3Make(-50, 0, 0))
+            let darkOneNode4 = createDarkOneNode(SCNVector3Make(0, -35, 0))
             sceneView!.scene!.rootNode.addChildNode(darkOneNode4)
-            let darkOneNode5 = createDarkOneNode(SCNVector3Make(25, -25, 0))
+            let darkOneNode5 = createDarkOneNode(SCNVector3Make(-35, -25, 0))
             sceneView!.scene!.rootNode.addChildNode(darkOneNode5)
-            let darkOneNode6 = createDarkOneNode(SCNVector3Make(-25, 25, 0))
+            let darkOneNode6 = createDarkOneNode(SCNVector3Make(-35, 25, 0))
             sceneView!.scene!.rootNode.addChildNode(darkOneNode6)
 
             darkOneSoundPlayer1 = createDarkOneSoundPlayer("Roar1")

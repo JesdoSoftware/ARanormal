@@ -296,6 +296,12 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
             darkOneNodes.append(createDarkOneNode(SCNVector3Make(0, -35, 0)))
             darkOneNodes.append(createDarkOneNode(SCNVector3Make(-35, -25, 0)))
             darkOneNodes.append(createDarkOneNode(SCNVector3Make(-35, 25, 0)))
+            darkOneNodes.append(createDarkOneNode(SCNVector3Make(15, 50, 0)))
+            darkOneNodes.append(createDarkOneNode(SCNVector3Make(15, -50, 0)))
+            darkOneNodes.append(createDarkOneNode(SCNVector3Make(-15, -50, 0)))
+            darkOneNodes.append(createDarkOneNode(SCNVector3Make(-15, 50, 0)))
+            darkOneNodes.append(createDarkOneNode(SCNVector3Make(40, 0, 0)))
+            darkOneNodes.append(createDarkOneNode(SCNVector3Make(-40, 0, 0)))
             darkOneNodes.forEach { (let darkOneNode : SCNNode) -> () in
                 sceneView!.scene!.rootNode.addChildNode(darkOneNode)
             }

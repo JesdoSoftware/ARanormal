@@ -63,10 +63,8 @@ public class FlashlightController: MessengerSubscriber {
             self.turnOffFlashlight()
 
             let delayRnd = (1...8).randomInt()
-            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 / Double(delayRnd) * Double(NSEC_PER_SEC)))
-            dispatch_after(delayTime, dispatch_get_main_queue()) {
+            dispatchAfterSeconds(1.0 / Double(delayRnd)) {
                 self.turnOnFlashlight()
-
                 if times > 1 {
                     let nextFlickerTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.25 * Double(NSEC_PER_SEC)))
                     dispatch_after(nextFlickerTime, dispatch_get_main_queue()) {

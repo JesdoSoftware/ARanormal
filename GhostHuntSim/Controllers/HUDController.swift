@@ -69,7 +69,7 @@ public class HUDController: MessengerSubscriber {
         hudScene.setEmfRating(amount)
 
         // TODO set game over activity limit
-        if (amount >= 10) {
+        if (amount >= 0.2) {
             messenger.publishMessage(GameOverMessage(score: hudScene.getScore()))
         }
     }
@@ -83,8 +83,7 @@ public class HUDController: MessengerSubscriber {
     func takePicture() {
         shutterSoundPlayer?.play()
         hudScene.setCameraEnabled(false)
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+        dispatchAfterSeconds(1) {
             self.hudScene.setCameraEnabled(true)
         }
 
@@ -103,8 +102,7 @@ public class HUDController: MessengerSubscriber {
             utterPhrase("NO")
         }
 
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+        dispatchAfterSeconds(5) {
             self.hudScene.clearYesNoIndicator()
         }
     }
@@ -115,8 +113,7 @@ public class HUDController: MessengerSubscriber {
 
         utterPhrase(response)
 
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+        dispatchAfterSeconds(5) {
             self.hudScene.clearVerbalResponseIndicator()
         }
     }

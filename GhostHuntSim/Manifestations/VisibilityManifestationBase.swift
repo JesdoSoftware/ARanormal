@@ -37,8 +37,7 @@ public class VisibilityManifestationBase: Manifestation {
         SCNTransaction.commit()
 
         let delayRnd = (1...5).randomInt()
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(Double(delayRnd) * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+        dispatchAfterSeconds(Double(delayRnd)) {
             self.messenger.publishMessage(IsGhostVisibleMessage(isVisible: false))
 
             SCNTransaction.begin()

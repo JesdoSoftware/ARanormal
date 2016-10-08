@@ -286,30 +286,49 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
 
             stopCapturingVideo()
 
+            var darkOneNodes = [SCNNode]()
+
             let darkOneNode1 = createDarkOneNode(SCNVector3Make(0, 35, 0))
             darkOneNode1.eulerAngles = SCNVector3Make(1.570795, 0, 3.14159)     // HACK
-            sceneView!.scene!.rootNode.addChildNode(darkOneNode1)
-            let darkOneNode2 = createDarkOneNode(SCNVector3Make(35, 25, 0))
-            sceneView!.scene!.rootNode.addChildNode(darkOneNode2)
-            let darkOneNode3 = createDarkOneNode(SCNVector3Make(35, -25, 0))
-            sceneView!.scene!.rootNode.addChildNode(darkOneNode3)
-            let darkOneNode4 = createDarkOneNode(SCNVector3Make(0, -35, 0))
-            sceneView!.scene!.rootNode.addChildNode(darkOneNode4)
-            let darkOneNode5 = createDarkOneNode(SCNVector3Make(-35, -25, 0))
-            sceneView!.scene!.rootNode.addChildNode(darkOneNode5)
-            let darkOneNode6 = createDarkOneNode(SCNVector3Make(-35, 25, 0))
-            sceneView!.scene!.rootNode.addChildNode(darkOneNode6)
+            darkOneNodes.append(darkOneNode1)
+            darkOneNodes.append(createDarkOneNode(SCNVector3Make(35, 25, 0)))
+            darkOneNodes.append(createDarkOneNode(SCNVector3Make(35, -25, 0)))
+            darkOneNodes.append(createDarkOneNode(SCNVector3Make(0, -35, 0)))
+            darkOneNodes.append(createDarkOneNode(SCNVector3Make(-35, -25, 0)))
+            darkOneNodes.append(createDarkOneNode(SCNVector3Make(-35, 25, 0)))
+            darkOneNodes.forEach { (let darkOneNode : SCNNode) -> () in
+                sceneView!.scene!.rootNode.addChildNode(darkOneNode)
+            }
 
-            darkOneSoundPlayer1 = createDarkOneSoundPlayer("Roar1")
-            darkOneSoundPlayer1!.play()
-            darkOneSoundPlayer2 = createDarkOneSoundPlayer("Roar2")
-            darkOneSoundPlayer2!.play()
-            darkOneSoundPlayer3 = createDarkOneSoundPlayer("Roar3")
-            darkOneSoundPlayer3!.play()
-            darkOneSoundPlayer4 = createDarkOneSoundPlayer("Roar4")
-            darkOneSoundPlayer4!.play()
-            darkOneSoundPlayer5 = createDarkOneSoundPlayer("Roar5")
-            darkOneSoundPlayer5!.play()
+            dispatchAfterSeconds(3) {
+                self.darkOneSoundPlayer1 = self.createDarkOneSoundPlayer("Roar1")
+                self.darkOneSoundPlayer1!.play()
+                self.darkOneSoundPlayer2 = self.createDarkOneSoundPlayer("Roar2")
+                self.darkOneSoundPlayer2!.play()
+                self.darkOneSoundPlayer3 = self.createDarkOneSoundPlayer("Roar3")
+                self.darkOneSoundPlayer3!.play()
+                self.darkOneSoundPlayer4 = self.createDarkOneSoundPlayer("Roar4")
+                self.darkOneSoundPlayer4!.play()
+                self.darkOneSoundPlayer5 = self.createDarkOneSoundPlayer("Roar5")
+                self.darkOneSoundPlayer5!.play()
+
+                dispatchAfterSeconds(3) {
+                    SCNTransaction.begin()
+                    SCNTransaction.setAnimationDuration(0.33)
+
+                    let position = SCNVector3Make(0, 0, 0)
+                    darkOneNodes.forEach { (let darkOneNode: SCNNode) -> () in
+                        darkOneNode.position = position
+                    }
+                    SCNTransaction.commit()
+
+                    dispatchAfterSeconds(0.33) {
+                        darkOneNodes.forEach { (let darkOneNode: SCNNode) -> () in
+                            darkOneNode.hidden = true
+                        }
+                    }
+                }
+            }
         }
     }
 

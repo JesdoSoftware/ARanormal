@@ -26,6 +26,7 @@
 		6056222BCBBF8B02ED11B249 /* Growling1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605627A4E7466C6C9C9DDDD3 /* Growling1.caf */; };
 		60562282CFD515F53F6B462F /* FlashlightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562387327536ED28DA3483 /* FlashlightController.swift */; };
 		6056228458084616DCB5D683 /* Scratching5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562A026AEA8DAA86F12FF8 /* Scratching5.caf */; };
+		6056228A61857364B5B88BCB /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562B8D98B9F34FB7BE853B /* Utility.swift */; };
 		6056228A8E019F235FE5675A /* YesNoResponseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562CEFA3DB6F0CB9E8991F /* YesNoResponseMessage.swift */; };
 		605622AB577308BFC86ACD55 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605621CC4E8CE0C13A44598D /* ArrayExtensions.swift */; };
 		605622C4A4D0F480170F9A9F /* Giggling2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605629740569E5A5211662D8 /* Giggling2.caf */; };
@@ -108,6 +109,7 @@
 		60562C00F281F80C63E4C05E /* MistVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056271C0CCDA59E35E6A345 /* MistVisibilityManifestation.swift */; };
 		60562C055A66A36384964020 /* ScoreIncreasedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562E9A0FF175CCE9FB00E6 /* ScoreIncreasedMessage.swift */; };
 		60562C056050E1631F2097CB /* FlashlightFlickerManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562E20B07571D77F948EEB /* FlashlightFlickerManifestation.swift */; };
+		60562C08484921D90DF43775 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562B8D98B9F34FB7BE853B /* Utility.swift */; };
 		60562C132E7C9BE3A62A93C3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60562BB1A56A1433159F2F1E /* AudioToolbox.framework */; };
 		60562C19E05ABBC8C6710B34 /* PhraseRecognizedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605629A6C779E703759C0734 /* PhraseRecognizedMessage.swift */; };
 		60562C24944D6EB92A338DAD /* Scratching5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562A026AEA8DAA86F12FF8 /* Scratching5.caf */; };
@@ -285,6 +287,7 @@
 		60562B3E7A84F37C9EA7EBE1 /* Growling4.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Growling4.caf; sourceTree = "<group>"; };
 		60562B54D397B4A2EB1A3AA9 /* FlashlightOnOffMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashlightOnOffMessage.swift; sourceTree = "<group>"; };
 		60562B77E392480FE8A28480 /* Shutter.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Shutter.caf; sourceTree = "<group>"; };
+		60562B8D98B9F34FB7BE853B /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		60562BAACA793105F49FCF2D /* Crash2.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Crash2.caf; sourceTree = "<group>"; };
 		60562BB1A56A1433159F2F1E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		60562BBF98AFEF734B054B15 /* Footsteps8.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Footsteps8.caf; sourceTree = "<group>"; };
@@ -602,6 +605,7 @@
 				60562840DC7ADA703B2BF6D2 /* Scenes */,
 				605623A9855555428EB22BCE /* ParticleSystems */,
 				6056233689507E3C170B8B52 /* Images */,
+				60562B8D98B9F34FB7BE853B /* Utility.swift */,
 			);
 			path = GhostHuntSim;
 			sourceTree = "<group>";
@@ -903,6 +907,7 @@
 				6056258524199E4AE60948CE /* ShadowVisibilityManifestation.swift in Sources */,
 				605629D55E97ED61209C26EE /* FigureVisibilityManifestation.swift in Sources */,
 				60562A1009E3583B68104BA4 /* GameOverMessage.swift in Sources */,
+				60562C08484921D90DF43775 /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,6 +950,7 @@
 				60562B7CBDCD38E7EACE8921 /* ShadowVisibilityManifestation.swift in Sources */,
 				60562822E194C0C9A383E201 /* FigureVisibilityManifestation.swift in Sources */,
 				6056269C17EAE86F52B6EA22 /* GameOverMessage.swift in Sources */,
+				6056228A61857364B5B88BCB /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

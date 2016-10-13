@@ -29,7 +29,7 @@ public class HUDController: MessengerSubscriber {
 
         sceneView.overlaySKScene = hudScene
         sceneView.overlaySKScene!.hidden = false
-        sceneView.overlaySKScene!.scaleMode = SKSceneScaleMode.ResizeFill
+        sceneView.overlaySKScene!.scaleMode = .ResizeFill
         sceneView.overlaySKScene!.userInteractionEnabled = true
 
         let url = NSBundle.mainBundle().URLForResource("Shutter", withExtension: "caf")
@@ -69,7 +69,7 @@ public class HUDController: MessengerSubscriber {
         hudScene.setEmfRating(amount)
 
         // TODO set game over activity limit
-        if (amount >= 0.2) {
+        if (amount >= 10) {
             messenger.publishMessage(GameOverMessage(score: hudScene.getScore()))
         }
     }
@@ -123,5 +123,9 @@ public class HUDController: MessengerSubscriber {
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
 
         speechSynthesizer.speakUtterance(utterance)
+    }
+
+    private func displayDialog(text: String, dismissAction: (() -> Void)?) {
+        dismissAction!()
     }
 }

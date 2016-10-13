@@ -27,8 +27,12 @@ class HUDScene: SKScene {
     private var verbalResponseIndicator: SKLabelNode! = nil
     private var cameraButton: SKSpriteNode! = nil
     private var scoreIndicator: SKLabelNode! = nil
+    private var dialogBox: SKSpriteNode! = nil
     private var score: Int = 0
     private var isCameraEnabled = true
+
+    private var dialogView: SKView! = nil
+    private var dialogText: UILabel! = nil
 
     override func didMoveToView(view: SKView) {
         let emfIcon = SKSpriteNode(texture: emfGaugeTexture)
@@ -82,6 +86,17 @@ class HUDScene: SKScene {
         scoreIndicator.horizontalAlignmentMode = .Center
         scoreIndicator.verticalAlignmentMode = .Center
         addChild(scoreIndicator)
+
+        dialogView = SKView(frame: CGRect(x: 15, y: 15, width: 345, height: 637))
+        dialogText = UILabel(frame: CGRect(x: 0, y: 0, width: 345, height: 637))
+        dialogText.backgroundColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1.0)
+        dialogText.textColor = UIColor.whiteColor()
+        dialogText.font = UIFont(name: "Helvetica", size: 28)
+        dialogText.textAlignment = .Center
+        dialogText.baselineAdjustment = .AlignCenters
+        dialogText.lineBreakMode = .ByWordWrapping
+        dialogText.numberOfLines = 0
+        dialogView.addSubview(dialogText)
     }
 
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -154,5 +169,14 @@ class HUDScene: SKScene {
         } else {
             cameraButton.texture = cameraTexture
         }
+    }
+
+    func showDialogWithText(text: String) {
+        dialogText.text = text
+        view!.addSubview(dialogView)
+    }
+
+    func hideDialog() {
+        dialogView.removeFromSuperview()
     }
 }

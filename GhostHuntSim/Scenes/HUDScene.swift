@@ -35,6 +35,7 @@ class HUDScene: SKScene {
     private var dialogText: MultilineLabel! = nil
     private var dialogButton: SKSpriteNode! = nil
     private var dialogButtonText: SKLabelNode! = nil
+    private var isDialogDisplayed: Bool = false
 
     override func didMoveToView(view: SKView) {
         let emfIcon = SKSpriteNode(texture: emfGaugeTexture)
@@ -122,10 +123,17 @@ class HUDScene: SKScene {
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
-            if flashlightButton.containsPoint(location) {
-                controller?.toggleFlashlight()
-            } else if isCameraEnabled && cameraButton.containsPoint(location) {
-                controller?.takePicture()
+            if isDialogDisplayed {
+                if dialogButton.containsPoint(location) {
+                    hideDialog()
+                    controller?.onDialogDismissed()
+                }
+            } else {
+                if flashlightButton.containsPoint(location) {
+                    controller?.toggleFlashlight()
+                } else if isCameraEnabled && cameraButton.containsPoint(location) {
+                    controller?.takePicture()
+                }
             }
         }
         super.touchesEnded(touches, withEvent: event)
@@ -194,10 +202,13 @@ class HUDScene: SKScene {
     func showDialogWithText(text: String, buttonText: String) {
         dialogText.text = text
         dialogButtonText.text = buttonText
+
         view!.addSubview(dialogView)
+        isDialogDisplayed = true
     }
 
-    func hideDialog() {
+    private func hideDialog() {
         dialogView.removeFromSuperview()
+        isDialogDisplayed = false
     }
 }

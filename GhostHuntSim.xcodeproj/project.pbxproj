@@ -24,6 +24,7 @@
 		605621E51ED10750A7EEE5F8 /* FlashlightFlickerManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562E20B07571D77F948EEB /* FlashlightFlickerManifestation.swift */; };
 		605621ED6843F003FEC97876 /* SoundManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562C8D715D46CFF6A5963D /* SoundManifestation.swift */; };
 		6056222BCBBF8B02ED11B249 /* Growling1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605627A4E7466C6C9C9DDDD3 /* Growling1.caf */; };
+		60562260C776F3B211784144 /* ShowDialogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605623C40DE18BDBA26C8F66 /* ShowDialogMessage.swift */; };
 		60562282CFD515F53F6B462F /* FlashlightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562387327536ED28DA3483 /* FlashlightController.swift */; };
 		6056228458084616DCB5D683 /* Scratching5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562A026AEA8DAA86F12FF8 /* Scratching5.caf */; };
 		6056228A61857364B5B88BCB /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562B8D98B9F34FB7BE853B /* Utility.swift */; };
@@ -70,6 +71,7 @@
 		60562684FBEE30C528DE7793 /* ResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562483CFE3F10C515D0B38 /* ResponseBase.swift */; };
 		6056269C17EAE86F52B6EA22 /* GameOverMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605627CC478334E913667860 /* GameOverMessage.swift */; };
 		605626E7B894E7E440B03A0E /* Screaming2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605629938D6167F0E5848F0C /* Screaming2.caf */; };
+		605626EE344D111051270400 /* ShowDialogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605623C40DE18BDBA26C8F66 /* ShowDialogMessage.swift */; };
 		605626F668BC3FC4BEDFED4F /* Crash3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056203C7CB8100C739B74B4 /* Crash3.caf */; };
 		6056275A8E40AE9DF4135C2B /* ActivityChangedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */; };
 		60562762B543842EB3481EDA /* Footsteps6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562423E9D3FA6B53B6FE99 /* Footsteps6.caf */; };
@@ -258,6 +260,7 @@
 		605623344E4B9138A09341E0 /* OrbVisibilityManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrbVisibilityManifestation.swift; sourceTree = "<group>"; };
 		60562387327536ED28DA3483 /* FlashlightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashlightController.swift; sourceTree = "<group>"; };
 		605623AFEBF9DE966FC4F9C8 /* Ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ghost.png; sourceTree = "<group>"; };
+		605623C40DE18BDBA26C8F66 /* ShowDialogMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDialogMessage.swift; sourceTree = "<group>"; };
 		6056240D0E8F4DC0B95311E7 /* Footsteps5.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Footsteps5.caf; sourceTree = "<group>"; };
 		60562423E9D3FA6B53B6FE99 /* Footsteps6.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Footsteps6.caf; sourceTree = "<group>"; };
 		60562483CFE3F10C515D0B38 /* ResponseBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseBase.swift; sourceTree = "<group>"; };
@@ -467,6 +470,7 @@
 				60562C846AA343C8F0CB0535 /* IsGhostVisibleMessage.swift */,
 				60562E9A0FF175CCE9FB00E6 /* ScoreIncreasedMessage.swift */,
 				605627CC478334E913667860 /* GameOverMessage.swift */,
+				605623C40DE18BDBA26C8F66 /* ShowDialogMessage.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -913,6 +917,7 @@
 				60562A1009E3583B68104BA4 /* GameOverMessage.swift in Sources */,
 				60562C08484921D90DF43775 /* Utility.swift in Sources */,
 				60562A0E65E048D36F632AB4 /* MultilineLabel.swift in Sources */,
+				605626EE344D111051270400 /* ShowDialogMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -957,6 +962,7 @@
 				6056269C17EAE86F52B6EA22 /* GameOverMessage.swift in Sources */,
 				6056228A61857364B5B88BCB /* Utility.swift in Sources */,
 				60562334308D3E5F044DB6E2 /* MultilineLabel.swift in Sources */,
+				60562260C776F3B211784144 /* ShowDialogMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

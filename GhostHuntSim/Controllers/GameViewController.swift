@@ -66,6 +66,10 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
         sceneRendererDelegate = SceneRendererDelegate(motionManager: motionManager, sceneView: sceneView,
                 cameraNode: cameraNode, ghostNode: ghostNode, messenger: messenger)
         sceneView.delegate = sceneRendererDelegate!
+
+//        messenger.publishMessage(ShowDialogMessage(text: "foo", buttonText: "gumdrop button") {
+//            messenger.publishMessage(ShowDialogMessage(text: "bar", buttonText: "button", dismissalAction: nil))
+//        })
     }
 
     private func getRequiredWordsFromYesNoResponses(yesNoResponses: [YesNoResponse],

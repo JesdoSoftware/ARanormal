@@ -20,6 +20,8 @@ public class HUDController: MessengerSubscriber {
 
     private var shutterSoundPlayer: AVAudioPlayer? = nil
 
+    private var dialogDismissalAction: (() -> Void)?
+
     init(sceneView: SCNView, messenger: Messenger) {
         self.messenger = messenger
         speechSynthesizer = AVSpeechSynthesizer()
@@ -62,6 +64,9 @@ public class HUDController: MessengerSubscriber {
             isGhostVisible = isGhostVisibleMessage.isVisible
         } else if let scoreIncreasedMessage = message as? ScoreIncreasedMessage {
             hudScene.increaseScoreBy(scoreIncreasedMessage.amount)
+        } else if let showDialogMessage = message as? ShowDialogMessage {
+            showDialogWithText(showDialogMessage.text, buttonText: showDialogMessage.buttonText,
+                    dismissalAction: showDialogMessage.dismissalAction)
         }
     }
 
@@ -125,7 +130,12 @@ public class HUDController: MessengerSubscriber {
         speechSynthesizer.speakUtterance(utterance)
     }
 
-    private func displayDialog(text: String, dismissAction: (() -> Void)?) {
-        dismissAction!()
+    private func showDialogWithText(text: String, buttonText: String, dismissalAction: (() -> Void)?) {
+        dialogDismissalAction = dismissalAction
+        hudScene.showDialogWithText(text, buttonText: buttonText)
+    }
+
+    func onDialogDismissed() {
+        dialogDismissalAction?()
     }
 }

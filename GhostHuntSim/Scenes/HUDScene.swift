@@ -32,7 +32,9 @@ class HUDScene: SKScene {
     private var isCameraEnabled = true
 
     private var dialogView: SKView! = nil
-    private var dialogText: UILabel! = nil
+    private var dialogText: MultilineLabel! = nil
+    private var dialogButton: SKSpriteNode! = nil
+    private var dialogButtonText: SKLabelNode! = nil
 
     override func didMoveToView(view: SKView) {
         let emfIcon = SKSpriteNode(texture: emfGaugeTexture)
@@ -87,16 +89,34 @@ class HUDScene: SKScene {
         scoreIndicator.verticalAlignmentMode = .Center
         addChild(scoreIndicator)
 
+        setUpDialog()
+    }
+
+    private func setUpDialog() {
         dialogView = SKView(frame: CGRect(x: 15, y: 15, width: 345, height: 637))
-        dialogText = UILabel(frame: CGRect(x: 0, y: 0, width: 345, height: 637))
-        dialogText.backgroundColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1.0)
-        dialogText.textColor = UIColor.whiteColor()
-        dialogText.font = UIFont(name: "Helvetica", size: 28)
-        dialogText.textAlignment = .Center
-        dialogText.baselineAdjustment = .AlignCenters
-        dialogText.lineBreakMode = .ByWordWrapping
-        dialogText.numberOfLines = 0
-        dialogView.addSubview(dialogText)
+
+        let dialogScene = SKScene(size: CGSize(width: 345, height: 637))
+        dialogScene.backgroundColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1.0)
+
+        dialogText = MultilineLabel(text: "", labelWidth: Int(dialogScene.size.width - 20),
+                pos: CGPoint(x: dialogScene.size.width / 2, y: dialogScene.size.height - 10), fontName: "Courier",
+                fontSize: 28, fontColor: SKColor.whiteColor(), leading: 28)
+        dialogScene.addChild(dialogText)
+
+        dialogButtonText = SKLabelNode(text: "")
+        dialogButtonText.fontName = "Courier"
+        dialogButtonText.fontSize = 28
+        dialogButtonText.fontColor = UIColor.whiteColor()
+        dialogButtonText.horizontalAlignmentMode = .Center
+        dialogButtonText.verticalAlignmentMode = .Center
+
+        dialogButton = SKSpriteNode(color: UIColor.blackColor(),
+                size: CGSize(width: dialogScene.size.width, height: 50))
+        dialogButton.position = CGPoint(x: dialogScene.size.width / 2, y: 25)
+        dialogButton.addChild(dialogButtonText)
+        dialogScene.addChild(dialogButton)
+
+        dialogView.presentScene(dialogScene)
     }
 
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -171,8 +191,9 @@ class HUDScene: SKScene {
         }
     }
 
-    func showDialogWithText(text: String) {
+    func showDialogWithText(text: String, buttonText: String) {
         dialogText.text = text
+        dialogButtonText.text = buttonText
         view!.addSubview(dialogView)
     }
 

@@ -16,6 +16,8 @@ import SpriteKit
 
 class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerSubscriber {
 
+    private var messenger: Messenger! = nil
+
     private var avCaptureSession: AVCaptureSession?
     private var avCaptureDeviceInput: AVCaptureDeviceInput?
     private var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
@@ -40,7 +42,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
         self.sceneView = sceneView
         self.cameraNode = cameraNode
 
-        let messenger = Messenger()
+        messenger = Messenger()
         messenger.addSubscriber(self)
 
         let hudController = HUDController(sceneView: sceneView, messenger: messenger)
@@ -129,11 +131,6 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
         avCaptureSession!.startRunning()
 
         return captureDevice
-    }
-
-    private func stopCapturingVideo() {
-        avCaptureSession!.stopRunning()
-        cameraPreviewLayer!.removeFromSuperlayer()
     }
 
     private func setUpSceneView() ->
@@ -288,7 +285,8 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
         if let gameOverMessage = message as? GameOverMessage {
             ghostController?.isActive = false
 
-            stopCapturingVideo()
+            self.messenger.publishMessage(FlashlightOnOffMessage(isOn: false))
+            sceneView!.backgroundColor = UIColor.blackColor()
 
             var darkOneNodes = [SCNNode]()
 
@@ -335,6 +333,16 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
                     dispatchAfterSeconds(0.33) {
                         darkOneNodes.forEach { (let darkOneNode: SCNNode) -> () in
                             darkOneNode.hidden = true
+                            self.sceneView!.backgroundColor = UIColor.clearColor()
+                            self.messenger.publishMessage(FlashlightOnOffMessage(isOn: true))
+
+                            dispatchAfterSeconds(2) {
+                                let prompt = "The spirits have retreated.\n\nFor now.\n\nYour score is $\(gameOverMessage.score)."
+                                self.messenger.publishMessage(ShowDialogMessage(text: prompt,
+                                        buttonText: "Return to Menu") {
+                                    // TODO return to menu
+                                })
+                            }
                         }
                     }
                 }

@@ -90,30 +90,50 @@ class HUDScene: SKScene {
         scoreIndicator.verticalAlignmentMode = .Center
         addChild(scoreIndicator)
 
-        setUpDialog()
+        setUpDialogView()
     }
 
-    private func setUpDialog() {
-        dialogView = SKView(frame: CGRect(x: 15, y: 15, width: 345, height: 637))
+    private func setUpDialogView() {
+        let screenWidth = 375
+        let screenHeight = 667
+        let dialogWidth = 345
+        let dialogHeight = 300
+        let dialogX = 15
+        let dialogY = (screenHeight / 2) - (dialogHeight / 2)
+        let fontSize: CGFloat = 20
+        let labelMargin = 10
+        let buttonHeight = 50
+        let borderWidth: CGFloat = 1
 
-        let dialogScene = SKScene(size: CGSize(width: 345, height: 637))
-        dialogScene.backgroundColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1.0)
+        dialogView = SKView(frame: CGRect(x: 0, y: 0, width: 375, height: 667))
+        dialogView.allowsTransparency = true
 
-        dialogText = MultilineLabel(text: "", labelWidth: Int(dialogScene.size.width - 20),
-                pos: CGPoint(x: dialogScene.size.width / 2, y: dialogScene.size.height - 10), fontName: "Courier",
-                fontSize: 28, fontColor: SKColor.whiteColor(), leading: 28)
-        dialogScene.addChild(dialogText)
+        let dialogScene = SKScene(size: CGSize(width: 375, height: 667))
+        dialogScene.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+
+        let dialogBackground = SKShapeNode(rect: CGRect(x: dialogX, y: dialogY, width: dialogWidth,
+                height: dialogHeight))
+        dialogBackground.fillColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.8)
+        dialogBackground.lineWidth = borderWidth
+        dialogBackground.strokeColor = UIColor.whiteColor()
+        dialogScene.addChild(dialogBackground)
+
+        dialogText = MultilineLabel(text: "", labelWidth: Int(dialogWidth - (labelMargin * 2)),
+                pos: CGPoint(x: screenWidth / 2, y: dialogY + (dialogHeight - labelMargin)), fontName: "Courier",
+                fontSize: fontSize, fontColor: SKColor.whiteColor(), leading: Int(fontSize))
+        dialogBackground.addChild(dialogText)
 
         dialogButtonText = SKLabelNode(text: "")
         dialogButtonText.fontName = "Courier"
-        dialogButtonText.fontSize = 28
+        dialogButtonText.fontSize = 24
         dialogButtonText.fontColor = UIColor.whiteColor()
         dialogButtonText.horizontalAlignmentMode = .Center
         dialogButtonText.verticalAlignmentMode = .Center
 
-        dialogButton = SKSpriteNode(color: UIColor.blackColor(),
-                size: CGSize(width: dialogScene.size.width, height: 50))
-        dialogButton.position = CGPoint(x: dialogScene.size.width / 2, y: 25)
+        dialogButton = SKSpriteNode(color: UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.8),
+                size: CGSize(width: dialogWidth - Int(borderWidth * 2), height: buttonHeight))
+        dialogButton.position = CGPoint(x: Double(screenWidth) / 2.0,
+                y: Double(dialogY + (buttonHeight / 2) + Int(borderWidth)))
         dialogButton.addChild(dialogButtonText)
         dialogScene.addChild(dialogButton)
 

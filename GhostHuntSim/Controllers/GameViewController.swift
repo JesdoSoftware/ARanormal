@@ -69,9 +69,21 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
                 cameraNode: cameraNode, ghostNode: ghostNode, messenger: messenger)
         sceneView.delegate = sceneRendererDelegate!
 
-//        messenger.publishMessage(ShowDialogMessage(text: "foo", buttonText: "gumdrop button") {
-//            messenger.publishMessage(ShowDialogMessage(text: "bar", buttonText: "button", dismissalAction: nil))
-//        })
+        messenger.publishMessage(ShowDialogMessage(
+                text: "Objective: Collect audio and visual evidence of the paranormal.",
+                buttonText: "Next") {
+            self.messenger.publishMessage(ShowDialogMessage(
+                    text: "The EMF meter (upper left) shows how active nearby spirits are.\n\nThe temperature indicator (upper right) shows cold spots, revealing spirits' locations.",
+                    buttonText: "Next") {
+                self.messenger.publishMessage(ShowDialogMessage(
+                        text: "If a spirit manifests, take its picture with the camera (lower left).",
+                        buttonText: "Next") {
+                    self.messenger.publishMessage(ShowDialogMessage(
+                            text: "Spirits can manipulate this device to answer both yes/no and open-ended questions.\n\nTry to locate a spirit and ask it about itself!",
+                            buttonText: "OK", dismissalAction: nil))
+                })
+            })
+        })
     }
 
     private func getRequiredWordsFromYesNoResponses(yesNoResponses: [YesNoResponse],
@@ -337,7 +349,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
                             self.messenger.publishMessage(FlashlightOnOffMessage(isOn: true))
 
                             dispatchAfterSeconds(2) {
-                                let prompt = "The spirits have retreated.\n\nFor now.\n\nYour score is $\(gameOverMessage.score)."
+                                let prompt = "The spirits have retreated. For now.\n\nYour score is $\(gameOverMessage.score)."
                                 self.messenger.publishMessage(ShowDialogMessage(text: prompt,
                                         buttonText: "Return to Menu") {
                                     // TODO return to menu

@@ -14,7 +14,6 @@
 		605620923431C2F2C0D813B9 /* Whispering4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605627FE9810F2CC8459533A /* Whispering4.caf */; };
 		605620A214B70036D075BA02 /* Ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 605623AFEBF9DE966FC4F9C8 /* Ghost.png */; };
 		605620C1419837F52FBA9C0D /* GhostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562AF55525B869C4DF71E8 /* GhostController.swift */; };
-		605620F9CE68272F7B52E8FE /* Whispering5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605621D545E7605247EE43F8 /* Whispering5.caf */; };
 		6056211772C8D1F5500741AC /* ActivityChangedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */; };
 		6056212BD1E0ABA8B5C661FB /* Crash4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605627787069715E3039F3B6 /* Crash4.caf */; };
 		605621382E7C3740EC90541B /* Growling1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605627A4E7466C6C9C9DDDD3 /* Growling1.caf */; };
@@ -72,11 +71,9 @@
 		6056269C17EAE86F52B6EA22 /* GameOverMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605627CC478334E913667860 /* GameOverMessage.swift */; };
 		605626E7B894E7E440B03A0E /* Screaming2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605629938D6167F0E5848F0C /* Screaming2.caf */; };
 		605626EE344D111051270400 /* ShowDialogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605623C40DE18BDBA26C8F66 /* ShowDialogMessage.swift */; };
-		605626F668BC3FC4BEDFED4F /* Crash3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056203C7CB8100C739B74B4 /* Crash3.caf */; };
 		6056275A8E40AE9DF4135C2B /* ActivityChangedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */; };
 		60562762B543842EB3481EDA /* Footsteps6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562423E9D3FA6B53B6FE99 /* Footsteps6.caf */; };
 		605627A148768F0D8E5AC84F /* ManifestationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605624DBF877829699278989 /* ManifestationSet.swift */; };
-		605627C7A532D765C9C4C4EA /* Crash3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056203C7CB8100C739B74B4 /* Crash3.caf */; };
 		6056280A010B8BF424F5600E /* Footsteps5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056240D0E8F4DC0B95311E7 /* Footsteps5.caf */; };
 		60562822E194C0C9A383E201 /* FigureVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562F2D4AE1537C5C72DA5B /* FigureVisibilityManifestation.swift */; };
 		605628359B935E111D9062EC /* Knocking5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056280CF31A525E57949E66 /* Knocking5.caf */; };
@@ -138,7 +135,6 @@
 		60562E7B8969E3D119B2B0FC /* HeartbeatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056272997C9618DB2041738 /* HeartbeatMessage.swift */; };
 		60562ED3C93C783598570BD8 /* VerbalResponseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605622E78844510E2C407ABB /* VerbalResponseMessage.swift */; };
 		60562F0A76BF4184C83E0DE7 /* VisibilityManifestationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DCB7C6B6EBC29DD7A19 /* VisibilityManifestationBase.swift */; };
-		60562F301B0C8D0F36C55115 /* Whispering5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605621D545E7605247EE43F8 /* Whispering5.caf */; };
 		60562F3338D9846452334260 /* Scratching3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562CE98BE9B5CCCABA4078 /* Scratching3.caf */; };
 		60562F36939E2D6A84B20800 /* Growling3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562866AD14E750C290316A /* Growling3.caf */; };
 		60562F42E04420EBC7D032FE /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562DADA770BFF0430140D4 /* Messenger.swift */; };
@@ -227,6 +223,8 @@
 		88C2DF011D5A931B000D4B5C /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C2DEFC1D5A931B000D4B5C /* OpenEars.framework */; };
 		88C2DF021D5A931B000D4B5C /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C2DEFD1D5A931B000D4B5C /* Slt.framework */; };
 		88C2DF031D5A931B000D4B5C /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C2DEFD1D5A931B000D4B5C /* Slt.framework */; };
+		88DAB7CD1DB2CEFA0095A695 /* Whispering6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 88DAB7CC1DB2CEFA0095A695 /* Whispering6.caf */; };
+		88DAB7CE1DB2CEFA0095A695 /* Whispering6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 88DAB7CC1DB2CEFA0095A695 /* Whispering6.caf */; };
 		88EE999F1D90C59C007773F1 /* Rejecto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EE999E1D90C59C007773F1 /* Rejecto.framework */; };
 		88EE99A01D90C59C007773F1 /* Rejecto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EE999E1D90C59C007773F1 /* Rejecto.framework */; };
 /* End PBXBuildFile section */
@@ -242,13 +240,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6056203C7CB8100C739B74B4 /* Crash3.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Crash3.caf; sourceTree = "<group>"; };
 		6056209311D7A242E2433B21 /* YesNoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YesNoResponse.swift; sourceTree = "<group>"; };
 		60562114179444D0D7B12D34 /* VerbalResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbalResponse.swift; sourceTree = "<group>"; };
 		60562166C76ED5051A7E67D3 /* Giggling1.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Giggling1.caf; sourceTree = "<group>"; };
 		605621CC4E8CE0C13A44598D /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		605621D3FC30731B702C16D8 /* Whispering1.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Whispering1.caf; sourceTree = "<group>"; };
-		605621D545E7605247EE43F8 /* Whispering5.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Whispering5.caf; sourceTree = "<group>"; };
 		6056224320F9DEB85451FB71 /* Screaming1.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Screaming1.caf; sourceTree = "<group>"; };
 		60562288C2A62C93E9FD59D4 /* MultilineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultilineLabel.swift; sourceTree = "<group>"; };
 		6056229E60B803921D9DAD2A /* Manifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manifestation.swift; sourceTree = "<group>"; };
@@ -362,6 +358,7 @@
 		88C2DEFB1D5A931B000D4B5C /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
 		88C2DEFC1D5A931B000D4B5C /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
 		88C2DEFD1D5A931B000D4B5C /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+		88DAB7CC1DB2CEFA0095A695 /* Whispering6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Whispering6.caf; sourceTree = "<group>"; };
 		88EE999E1D90C59C007773F1 /* Rejecto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Rejecto.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -490,6 +487,7 @@
 		60562B31EF21A8D498039298 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				88DAB7CC1DB2CEFA0095A695 /* Whispering6.caf */,
 				882E44C61DA1ED8800017793 /* Roar1.caf */,
 				882E44C71DA1ED8800017793 /* Roar2.caf */,
 				882E44C81DA1ED8800017793 /* Roar3.caf */,
@@ -499,7 +497,6 @@
 				605627787069715E3039F3B6 /* Crash4.caf */,
 				60562BAACA793105F49FCF2D /* Crash2.caf */,
 				6056257F4F79F024EFC1152E /* Crash1.caf */,
-				6056203C7CB8100C739B74B4 /* Crash3.caf */,
 				6056240D0E8F4DC0B95311E7 /* Footsteps5.caf */,
 				605627E8C1ECDF2198997B91 /* Footsteps1.caf */,
 				605629740569E5A5211662D8 /* Giggling2.caf */,
@@ -520,7 +517,6 @@
 				60562BBF98AFEF734B054B15 /* Footsteps8.caf */,
 				60562423E9D3FA6B53B6FE99 /* Footsteps6.caf */,
 				6056279788298A000B70F13F /* Footsteps7.caf */,
-				605621D545E7605247EE43F8 /* Whispering5.caf */,
 				60562A026AEA8DAA86F12FF8 /* Scratching5.caf */,
 				60562B77E392480FE8A28480 /* Shutter.caf */,
 			);
@@ -752,7 +748,6 @@
 				6056253F07B4D57D7A62CAE3 /* Crash2.caf in Resources */,
 				605623C95EE0DD5EB5516E19 /* Crash1.caf in Resources */,
 				886C134A1D9E018300DB507B /* basic1-097_camera_photography_disabled@3x.png in Resources */,
-				605626F668BC3FC4BEDFED4F /* Crash3.caf in Resources */,
 				88C0CDA11D9CAC49006EE494 /* basic2-072_thumbs_up_like.png in Resources */,
 				605623076B4FA9C9072678D6 /* Footsteps5.caf in Resources */,
 				886C13461D9E018300DB507B /* basic1-097_camera_photography_disabled.png in Resources */,
@@ -782,6 +777,7 @@
 				88C0CD9D1D9CAC49006EE494 /* basic2-001_comment_bubble_chat@2x.png in Resources */,
 				88C0CD9F1D9CAC49006EE494 /* basic2-001_comment_bubble_chat@3x.png in Resources */,
 				605624A269CF77DB7AA380B6 /* Whispering1.caf in Resources */,
+				88DAB7CD1DB2CEFA0095A695 /* Whispering6.caf in Resources */,
 				605620923431C2F2C0D813B9 /* Whispering4.caf in Resources */,
 				88C0CD7F1D9C8BE1006EE494 /* basic1-165_temperature_low@2x.png in Resources */,
 				88C0CD771D9C8BE1006EE494 /* basic1-164_temperature_high.png in Resources */,
@@ -792,7 +788,6 @@
 				60562E2A03411E60C8E35871 /* Footsteps6.caf in Resources */,
 				882E44CD1DA1ED8800017793 /* Roar2.caf in Resources */,
 				60562428C2A5D1CABE99BB9E /* Footsteps7.caf in Resources */,
-				60562F301B0C8D0F36C55115 /* Whispering5.caf in Resources */,
 				60562C24944D6EB92A338DAD /* Scratching5.caf in Resources */,
 				60562D6C75BC84C1D5FBCD7E /* Shutter.caf in Resources */,
 			);
@@ -814,6 +809,7 @@
 				8844819F1D94A81500784249 /* Shadow.scnp in Resources */,
 				882E44CE1DA1ED8800017793 /* Roar2.caf in Resources */,
 				881EFE011D90CB66008D8B79 /* smoke.png in Resources */,
+				88DAB7CE1DB2CEFA0095A695 /* Whispering6.caf in Resources */,
 				88C0CD941D9C9B3B006EE494 /* basic2-293_dashboard_gauge@3x.png in Resources */,
 				88C0CD7E1D9C8BE1006EE494 /* basic1-165_temperature_low.png in Resources */,
 				88C0CD871D9C9623006EE494 /* basic1-097_camera_photography.png in Resources */,
@@ -828,7 +824,6 @@
 				605624989161E04F606EF23E /* Crash2.caf in Resources */,
 				60562626A8671F64519DCE76 /* Crash1.caf in Resources */,
 				882E44CC1DA1ED8800017793 /* Roar1.caf in Resources */,
-				605627C7A532D765C9C4C4EA /* Crash3.caf in Resources */,
 				88C0CD681D9C8A74006EE494 /* basic2-174_light_bulb@2x.png in Resources */,
 				88C0CD6E1D9C8A74006EE494 /* basic2-175_light_bulb_on@2x.png in Resources */,
 				6056280A010B8BF424F5600E /* Footsteps5.caf in Resources */,
@@ -865,7 +860,6 @@
 				605628AD60EDEB4950C1D714 /* Footsteps8.caf in Resources */,
 				60562762B543842EB3481EDA /* Footsteps6.caf in Resources */,
 				60562B60A03BF8A633A1E345 /* Footsteps7.caf in Resources */,
-				605620F9CE68272F7B52E8FE /* Whispering5.caf in Resources */,
 				6056228458084616DCB5D683 /* Scratching5.caf in Resources */,
 				605629C6CED7E221B566A041 /* Shutter.caf in Resources */,
 			);

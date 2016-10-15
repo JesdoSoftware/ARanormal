@@ -73,10 +73,6 @@ public class GhostController: MessengerSubscriber {
                 soundFileName: "Crash2.caf",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
-        let crash3SoundManifestation = SoundManifestation(minimumActivityLevel: 2,
-                soundFileName: "Crash3.caf",
-                soundNode: soundNode,
-                soundPivotNode: soundPivotNode)
         let crash4SoundManifestation = SoundManifestation(minimumActivityLevel: 2,
                 soundFileName: "Crash4.caf",
                 soundNode: soundNode,
@@ -169,13 +165,12 @@ public class GhostController: MessengerSubscriber {
                 soundFileName: "Whispering4.caf",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
-        let whispering5SoundManifestation = SoundManifestation(minimumActivityLevel: 3,
-                soundFileName: "Whispering5.caf",
+        let whispering6SoundManifestation = SoundManifestation(minimumActivityLevel: 3,
+                soundFileName: "Whispering6.caf",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         soundManifestations = ManifestationSet(manifestations: [crash1SoundManifestation,
                                                                 crash2SoundManifestation,
-                                                                crash3SoundManifestation,
                                                                 crash4SoundManifestation,
                                                                 footsteps1SoundManifestation,
                                                                 footsteps5SoundManifestation,
@@ -199,7 +194,7 @@ public class GhostController: MessengerSubscriber {
                                                                 screaming3SoundManifestation,
                                                                 whispering1SoundManifestation,
                                                                 whispering4SoundManifestation,
-                                                                whispering5SoundManifestation],
+                                                                whispering6SoundManifestation],
                 chancePerSixty: 1)
     }
 

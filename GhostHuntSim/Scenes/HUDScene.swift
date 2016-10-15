@@ -66,15 +66,15 @@ class HUDScene: SKScene {
 
         yesNoIndicator = SKLabelNode(text: "")
         yesNoIndicator.position = CGPoint(x: 188, y: 334)
-        yesNoIndicator.fontName = "Helvetica-BoldOblique"
-        yesNoIndicator.fontSize = 40
+        yesNoIndicator.fontName = "SCM Zephyr Deluxe"
+        yesNoIndicator.fontSize = 48
         yesNoIndicator.verticalAlignmentMode = .Center
         addChild(yesNoIndicator)
 
         verbalResponseIndicator = SKLabelNode(text: "")
         verbalResponseIndicator.position = CGPoint(x: 188, y: 334)
-        verbalResponseIndicator.fontName = "Helvetica-BoldOblique"
-        verbalResponseIndicator.fontSize = 40
+        verbalResponseIndicator.fontName = "SCM Zephyr Deluxe"
+        verbalResponseIndicator.fontSize = 48
         verbalResponseIndicator.verticalAlignmentMode = .Center
         addChild(verbalResponseIndicator)
 
@@ -100,7 +100,8 @@ class HUDScene: SKScene {
         let dialogHeight = 300
         let dialogX = 15
         let dialogY = (screenHeight / 2) - (dialogHeight / 2)
-        let fontSize: CGFloat = 20
+        let fontName = "SCM Zephyr Deluxe"
+        let fontSize: CGFloat = 24
         let labelMargin = 10
         let buttonHeight = 50
         let borderWidth: CGFloat = 1
@@ -119,12 +120,12 @@ class HUDScene: SKScene {
         dialogScene.addChild(dialogBackground)
 
         dialogText = MultilineLabel(text: "", labelWidth: Int(dialogWidth - (labelMargin * 2)),
-                pos: CGPoint(x: screenWidth / 2, y: dialogY + (dialogHeight - labelMargin)), fontName: "Courier",
+                pos: CGPoint(x: screenWidth / 2, y: dialogY + (dialogHeight - labelMargin)), fontName: fontName,
                 fontSize: fontSize, fontColor: SKColor.whiteColor(), leading: Int(fontSize))
         dialogBackground.addChild(dialogText)
 
         dialogButtonText = SKLabelNode(text: "")
-        dialogButtonText.fontName = "Courier"
+        dialogButtonText.fontName = fontName
         dialogButtonText.fontSize = 24
         dialogButtonText.fontColor = UIColor.whiteColor()
         dialogButtonText.horizontalAlignmentMode = .Center

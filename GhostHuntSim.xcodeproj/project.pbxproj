@@ -207,6 +207,8 @@
 		60562FA81CD17C7731829777 /* basic1-097_camera_photography_disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60562CA39E14DB9177339525 /* basic1-097_camera_photography_disabled@2x.png */; };
 		60562FD03FAB96245530467D /* basic2-175_light_bulb_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 605620FDBA46ECD315EAF7B3 /* basic2-175_light_bulb_on@3x.png */; };
 		60562FE1788D77780CF5BFD5 /* SceneRendererDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605622B8995D5AD941755FEF /* SceneRendererDelegate.swift */; };
+		8803E1501DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8803E14F1DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf */; };
+		8803E1511DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8803E14F1DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf */; };
 		8807B5431D541ED500BA3EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8807B5421D541ED500BA3EA5 /* AppDelegate.swift */; };
 		8807B5451D541ED500BA3EA5 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 8807B5441D541ED500BA3EA5 /* art.scnassets */; };
 		8807B54A1D541ED500BA3EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8807B5481D541ED500BA3EA5 /* Main.storyboard */; };
@@ -342,6 +344,7 @@
 		60562FD540586F82D5EF393F /* basic2-175_light_bulb_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic2-175_light_bulb_on@2x.png"; sourceTree = "<group>"; };
 		60562FED92A002F23AF1C47D /* Scratching4.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Scratching4.caf; sourceTree = "<group>"; };
 		60562FFBEC56A94E9CEC46CC /* basic1-097_camera_photography.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic1-097_camera_photography.png"; sourceTree = "<group>"; };
+		8803E14F1DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCMZephyrDeluxe.ttf; sourceTree = "<group>"; };
 		8807B53F1D541ED500BA3EA5 /* ARanormal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARanormal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8807B5421D541ED500BA3EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8807B5441D541ED500BA3EA5 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -400,6 +403,7 @@
 		605621ECDBA8E3C7E33D4D5F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8803E14E1DB2DC7B00386CC4 /* Fonts */,
 				60562C32ECB5E846B0099E99 /* Images */,
 				605623CAB68772C83FDA7687 /* Sounds */,
 			);
@@ -583,6 +587,14 @@
 				60562114179444D0D7B12D34 /* VerbalResponse.swift */,
 			);
 			path = Responses;
+			sourceTree = "<group>";
+		};
+		8803E14E1DB2DC7B00386CC4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8803E14F1DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		8807B5361D541ED500BA3EA5 = {
@@ -774,6 +786,7 @@
 				60562FD03FAB96245530467D /* basic2-175_light_bulb_on@3x.png in Resources */,
 				605621DA37D681A393456151 /* Ghost.png in Resources */,
 				605620052D359975125C4539 /* Eyes.png in Resources */,
+				8803E1501DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf in Resources */,
 				605623211CCBE0979C5B108E /* Whispering6.caf in Resources */,
 				60562C22E9D2C9A52D550E94 /* Roar1.caf in Resources */,
 				60562CEF8BE6B4CBDA711ADC /* Roar2.caf in Resources */,
@@ -874,6 +887,7 @@
 				60562ADDF9622B67757277E5 /* Whispering1.caf in Resources */,
 				60562C1027404A0102A3FC9C /* Whispering4.caf in Resources */,
 				60562CB08D6E2F374BAC8685 /* Footsteps8.caf in Resources */,
+				8803E1511DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf in Resources */,
 				6056268ACCF52BA7C4D721F6 /* Footsteps6.caf in Resources */,
 				6056247762D25822A84A922E /* Footsteps7.caf in Resources */,
 				60562F0237D154AC35B00236 /* Scratching5.caf in Resources */,

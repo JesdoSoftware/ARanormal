@@ -144,6 +144,7 @@ class HUDScene: SKScene {
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
+
             if isDialogDisplayed {
                 if dialogButton.containsPoint(location) {
                     hideDialog()

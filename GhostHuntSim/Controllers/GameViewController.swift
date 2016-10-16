@@ -36,6 +36,32 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        startMenuScene()
+    }
+
+    private func startMenuScene() {
+        let scene = SCNScene()
+
+        let sceneView = SCNView(frame: view.bounds)
+        sceneView.scene = scene
+        sceneView.backgroundColor = UIColor.blackColor()
+
+        let menuScene = MenuScene()
+        menuScene.gameViewController = self
+        menuScene.hidden = false
+        menuScene.scaleMode = .ResizeFill
+
+        sceneView.overlaySKScene = menuScene
+        sceneView.playing = true
+        view.addSubview(sceneView)
+
+        sceneView.allowsCameraControl = false
+        sceneView.showsStatistics = false
+
+        self.sceneView = sceneView
+    }
+
+    func startGameScene() {
         let captureDevice = startCapturingVideo()
         let motionManager = createMotionManager()
         let (sceneView, cameraNode, ghostNode, ghostPivotNode, soundNode, soundPivotNode) = setUpSceneView()
@@ -171,16 +197,16 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
         soundNode.position = SCNVector3Make(0, 50, 50)
         scene.rootNode.addChildNode(soundPivotNode)
 
-        let scnView = SCNView(frame: view.bounds)
-        scnView.scene = scene
-        scnView.backgroundColor = UIColor.clearColor()
-        scnView.playing = true
-        view.addSubview(scnView)
+        let sceneView = SCNView(frame: view.bounds)
+        sceneView.scene = scene
+        sceneView.backgroundColor = UIColor.clearColor()
+        sceneView.playing = true
+        view.addSubview(sceneView)
 
-        scnView.allowsCameraControl = false
-        scnView.showsStatistics = false
+        sceneView.allowsCameraControl = false
+        sceneView.showsStatistics = false
 
-        return (scnView, cameraNode, ghostNode, ghostPivotNode, soundNode, soundPivotNode)
+        return (sceneView, cameraNode, ghostNode, ghostPivotNode, soundNode, soundPivotNode)
     }
 
     private func createMotionManager() -> CMMotionManager {

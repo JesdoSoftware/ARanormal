@@ -35,6 +35,7 @@
 		605621F2F2961C1AB2F27CC1 /* Knocking5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562CF6011990C5589DB415 /* Knocking5.caf */; };
 		605621F96FC2B140F4D827E3 /* Growling1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605629ED3474AD54553A00CC /* Growling1.caf */; };
 		6056220E02869B071A6B2844 /* knocking-angry.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605627CB817B9F392AD89720 /* knocking-angry.caf */; };
+		6056224DD795D25AD8BCF8A3 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056263F0D31A22A26D3106C /* MenuScene.swift */; };
 		60562260C776F3B211784144 /* ShowDialogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605623C40DE18BDBA26C8F66 /* ShowDialogMessage.swift */; };
 		6056227E640839CB6CA8615B /* Footsteps5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562F6B8BA6A1A9A5B505D4 /* Footsteps5.caf */; };
 		6056227F422F335079950FB8 /* basic1-164_temperature_high.png in Resources */ = {isa = PBXBuildFile; fileRef = 6056272B3296E21B50277CE9 /* basic1-164_temperature_high.png */; };
@@ -160,6 +161,7 @@
 		60562C1027404A0102A3FC9C /* Whispering4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605629943B224457D3F6A2F2 /* Whispering4.caf */; };
 		60562C132E7C9BE3A62A93C3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60562BB1A56A1433159F2F1E /* AudioToolbox.framework */; };
 		60562C19E05ABBC8C6710B34 /* PhraseRecognizedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605629A6C779E703759C0734 /* PhraseRecognizedMessage.swift */; };
+		60562C1BCDA4449C1C744994 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056263F0D31A22A26D3106C /* MenuScene.swift */; };
 		60562C22E9D2C9A52D550E94 /* Roar1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605622381826558C9922DBA3 /* Roar1.caf */; };
 		60562C255FD16415796E4877 /* basic1-097_camera_photography_disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 60562CB111E1B0BF1C6CB249 /* basic1-097_camera_photography_disabled.png */; };
 		60562C2612982743B91F000A /* basic2-072_thumbs_up_like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 605624706EAD475089E5655F /* basic2-072_thumbs_up_like@2x.png */; };
@@ -284,6 +286,7 @@
 		605625FED9E2D592EF208DF0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		605626101F8BE2DF66F8C939 /* basic2-072_thumbs_up_like@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic2-072_thumbs_up_like@3x.png"; sourceTree = "<group>"; };
 		6056261724622B223A30AC30 /* basic2-072_thumbs_up_like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic2-072_thumbs_up_like.png"; sourceTree = "<group>"; };
+		6056263F0D31A22A26D3106C /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		60562669CEE1253A4A101E2A /* IsGhostInViewMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsGhostInViewMessage.swift; sourceTree = "<group>"; };
 		605626DB5D1D7986BF514483 /* Roar2.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Roar2.caf; sourceTree = "<group>"; };
 		6056271C0CCDA59E35E6A345 /* MistVisibilityManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MistVisibilityManifestation.swift; sourceTree = "<group>"; };
@@ -472,6 +475,7 @@
 			children = (
 				605625179DF0ADF6269E4D4E /* HUDScene.swift */,
 				605622B8995D5AD941755FEF /* SceneRendererDelegate.swift */,
+				6056263F0D31A22A26D3106C /* MenuScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -942,6 +946,7 @@
 				60562C08484921D90DF43775 /* Utility.swift in Sources */,
 				605626EE344D111051270400 /* ShowDialogMessage.swift in Sources */,
 				60562DA833F14FE9E4728633 /* MultilineLabel.swift in Sources */,
+				6056224DD795D25AD8BCF8A3 /* MenuScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -987,6 +992,7 @@
 				6056228A61857364B5B88BCB /* Utility.swift in Sources */,
 				60562260C776F3B211784144 /* ShowDialogMessage.swift in Sources */,
 				60562ACC5CEE731396EC8719 /* MultilineLabel.swift in Sources */,
+				60562C1BCDA4449C1C744994 /* MenuScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

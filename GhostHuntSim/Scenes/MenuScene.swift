@@ -92,7 +92,7 @@ class MenuScene: SKScene {
                 "ARanormal makes use of flashing lights, moments of complete darkness, and sudden visual " +
                 "and audible scares. Please use caution while playing.",
                 labelWidth: screenWidth, pos: CGPoint(x: screenWidth / 2, y: 500),
-                fontName: "SCM Zephyr Deluxe", fontSize: 24, fontColor: UIColor.whiteColor(), leading: 24)
+                fontName: "Helvetica-Bold", fontSize: 24, fontColor: UIColor.whiteColor(), leading: 24)
         addChild(warningText)
 
         playRecommendationsText = MultilineLabel(text: "ARanormal is best played in the DARK, " +
@@ -132,7 +132,8 @@ class MenuScene: SKScene {
         let label = createLabelWithText(text)
         label.fontSize = fontSize
 
-        let button = SKSpriteNode(color: UIColor.blackColor(), size: CGSize(width: label.frame.width, height: 75))
+        let width = label.frame.width
+        let button = SKSpriteNode(color: UIColor.blackColor(), size: CGSize(width: width, height: 75))
         button.position = position
 
         button.addChild(label)

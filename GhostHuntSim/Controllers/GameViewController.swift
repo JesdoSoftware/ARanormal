@@ -96,16 +96,19 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
         sceneView.delegate = sceneRendererDelegate!
 
         messenger.publishMessage(ShowDialogMessage(
-                text: "Objective: Collect audio and visual evidence of the paranormal.",
+                text: "Objective: Collect audio and visual evidence of the paranormal to increase your score " +
+                        "(lower right).",
                 buttonText: "Next") {
             self.messenger.publishMessage(ShowDialogMessage(
-                    text: "The EMF meter (upper left) shows how active nearby spirits are.\n\nThe temperature indicator (upper right) shows cold spots, revealing spirits' locations.",
+                    text: "The EMF meter (upper left) shows how active nearby spirits are.\n\n" +
+                            "The temperature indicator (upper right) shows cold spots, revealing spirits' locations.",
                     buttonText: "Next") {
                 self.messenger.publishMessage(ShowDialogMessage(
-                        text: "If a spirit manifests, take its picture with the camera (lower left).",
+                        text: "If a spirit appears, take its picture with the camera (lower left).",
                         buttonText: "Next") {
                     self.messenger.publishMessage(ShowDialogMessage(
-                            text: "Spirits can manipulate this device to answer both yes/no and open-ended questions.\n\nTry to locate a spirit and ask it about itself!",
+                            text: "Spirits can manipulate this device to answer both yes/no and open-ended " +
+                                    "questions.\n\nTry to locate a spirit and ask it some questions!",
                             buttonText: "OK", dismissalAction: nil))
                 })
             })

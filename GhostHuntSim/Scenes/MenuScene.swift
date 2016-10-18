@@ -14,6 +14,7 @@ class MenuScene: SKScene {
     var gameViewController: GameViewController? = nil
 
     private var currentPage: MenuPage = .MainMenu
+    private var isEnabled: Bool = true
 
     private var logo: SKLabelNode! = nil
     private var copyright: MultilineLabel! = nil
@@ -169,7 +170,17 @@ class MenuScene: SKScene {
     }
 
     private func showPermissionsPage() {
-        // TODO check if permissions are not yet granted
+        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo)
+        let microphoneAuthorizationStatus = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeAudio)
+
+        if cameraAuthorizationStatus == .Authorized && microphoneAuthorizationStatus == .Authorized {
+            showWarningPage()
+            return
+        } else if cameraAuthorizationStatus != .NotDetermined && microphoneAuthorizationStatus != .NotDetermined {
+            showMainMenuPage()
+            showPermissionRequirementAlert()
+        }
+
         hidePageControls()
         currentPage = .Permissions
 
@@ -212,41 +223,89 @@ class MenuScene: SKScene {
     }
 
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        for touch: AnyObject in touches {
-            let location = touch.locationInNode(self)
+        if isEnabled {
+            for touch: AnyObject in touches {
+                let location = touch.locationInNode(self)
 
-            if currentPage == .MainMenu {
-                if playButton.containsPoint(location) {
-                    showPermissionsPage()
-                } else if aboutButton.containsPoint(location) {
-                    showAboutPage()
-                }
-            } else if currentPage == .About {
-                if backButton.containsPoint(location) {
-                    showMainMenuPage()
-                } else if soundAttributionsButton.containsPoint(location) {
-                    showSoundAttributionsPage()
-                }
-            } else if currentPage == .SoundAttributions {
-                if backButton.containsPoint(location) {
-                    showMainMenuPage()
-                }
-            } else if currentPage == .Permissions {
-                if okButton.containsPoint(location) {
-                    showWarningPage()
-                }
-            } else if currentPage == .Warning {
-                if okButton.containsPoint(location) {
-                    showPlayRecommendationsPage()
-                }
-            } else if currentPage == .PlayRecommendations {
-                if okButton.containsPoint(location) {
-                    hidePageControls()
-                    gameViewController?.startGameScene()
+                if currentPage == .MainMenu {
+                    if playButton.containsPoint(location) {
+                        showPermissionsPage()
+                    } else if aboutButton.containsPoint(location) {
+                        showAboutPage()
+                    }
+                } else if currentPage == .About {
+                    if backButton.containsPoint(location) {
+                        showMainMenuPage()
+                    } else if soundAttributionsButton.containsPoint(location) {
+                        showSoundAttributionsPage()
+                    }
+                } else if currentPage == .SoundAttributions {
+                    if backButton.containsPoint(location) {
+                        showMainMenuPage()
+                    }
+                } else if currentPage == .Permissions {
+                    if okButton.containsPoint(location) {
+                        checkPermissions()
+                    }
+                } else if currentPage == .Warning {
+                    if okButton.containsPoint(location) {
+                        showPlayRecommendationsPage()
+                    }
+                } else if currentPage == .PlayRecommendations {
+                    if okButton.containsPoint(location) {
+                        isEnabled = false
+                        hidePageControls()
+                        dispatchAfterSeconds(0.5) {
+                            self.gameViewController?.startGameScene()
+                        }
+                    }
                 }
             }
         }
         super.touchesEnded(touches, withEvent: event)
+    }
+
+    private func checkPermissions() {
+        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo)
+        let microphoneAuthorizationStatus = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeAudio)
+
+        if cameraAuthorizationStatus == .NotDetermined {
+            AVCaptureDevice.requestAccessForMediaType(AVMediaTypeVideo,
+                    completionHandler: { (videoGranted: Bool) -> Void in
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.checkPermissions()
+                        }
+                    })
+        } else if microphoneAuthorizationStatus == .NotDetermined {
+            AVCaptureDevice.requestAccessForMediaType(AVMediaTypeAudio,
+                    completionHandler: { (audioGranted: Bool) -> Void in
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.checkPermissions()
+                        }
+                    })
+        } else if cameraAuthorizationStatus == .Denied || cameraAuthorizationStatus == .Restricted ||
+                microphoneAuthorizationStatus == .Denied || microphoneAuthorizationStatus == .Restricted {
+            dispatch_async(dispatch_get_main_queue()) {
+                self.showMainMenuPage()
+                self.showPermissionRequirementAlert()
+            }
+        } else {
+            dispatch_async(dispatch_get_main_queue()) {
+                self.showWarningPage()
+            }
+        }
+    }
+
+    private func showPermissionRequirementAlert() {
+        let alert = UIAlertController(title: "Permissions Required",
+                message: "ARanormal requires camera and microphone permissions to provide its gameplay experience. " +
+                        "Please enable these permissions in the Settings.",
+                preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Open Settings", style: .Default, handler: { (alert) -> Void in
+            UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
+        }))
+        view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
     }
 
     private enum MenuPage {

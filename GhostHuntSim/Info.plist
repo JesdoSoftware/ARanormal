@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>The microphone listens to your speech to interact with the ghost.</string>
+	<string>The microphone listens to your speech to interact with spirits.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>The camera is required to render the gameplay experience.</string>
 	<key>CFBundleDevelopmentRegion</key>

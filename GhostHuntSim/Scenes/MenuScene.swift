@@ -8,10 +8,10 @@ import SpriteKit
 
 class MenuScene: SKScene {
 
-    var screenWidth: CGFloat = 375
-    var screenHeight: CGFloat = 667
-
     var gameViewController: GameViewController? = nil
+
+    private var screenWidth: CGFloat = 375
+    private var screenHeight: CGFloat = 667
 
     private var currentPage: MenuPage = .MainMenu
     private var isEnabled: Bool = true

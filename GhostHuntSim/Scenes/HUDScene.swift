@@ -10,6 +10,9 @@ class HUDScene: SKScene {
 
     var controller: HUDController?
 
+    private var screenWidth: CGFloat = 375
+    private var screenHeight: CGFloat = 667
+
     private let temperatureHighTexture = SKTexture(imageNamed: "basic1-164_temperature_high.png")
     private let temperatureLowTexture = SKTexture(imageNamed: "basic1-165_temperature_low.png")
     private let flashlightOnTexture = SKTexture(imageNamed: "basic2-175_light_bulb_on.png")
@@ -38,18 +41,21 @@ class HUDScene: SKScene {
     private var isDialogDisplayed: Bool = false
 
     override func didMoveToView(view: SKView) {
+        screenWidth = view.frame.width
+        screenHeight = view.frame.height
+
         let emfIcon = SKSpriteNode(texture: emfGaugeTexture)
-        emfIcon.position = CGPoint(x: 50, y: 617)
+        emfIcon.position = CGPoint(x: 50, y: screenHeight - 50)
         addChild(emfIcon)
         emfIndicator = SKLabelNode(text: "0.0 mG")
-        emfIndicator.position = CGPoint(x: 125, y: 617)
+        emfIndicator.position = CGPoint(x: 125, y: screenHeight - 50)
         emfIndicator.fontName = "Helvetica-Bold"
         emfIndicator.fontSize = 24
         emfIndicator.verticalAlignmentMode = .Center
         addChild(emfIndicator)
 
         temperatureIndicator = SKSpriteNode(texture: temperatureHighTexture)
-        temperatureIndicator.position = CGPoint(x: 325, y: 617)
+        temperatureIndicator.position = CGPoint(x: screenWidth - 50, y: screenHeight - 50)
         addChild(temperatureIndicator)
 
         flashlightButton = SKSpriteNode(texture: flashlightOnTexture)
@@ -57,22 +63,22 @@ class HUDScene: SKScene {
         addChild(flashlightButton)
 
         let yesNoIcon = SKSpriteNode(texture: yesNoTexture)
-        yesNoIcon.position = CGPoint(x: 325, y: 542)
+        yesNoIcon.position = CGPoint(x: screenWidth - 50, y: screenHeight - 125)
         addChild(yesNoIcon)
 
         let itcIcon = SKSpriteNode(texture: itcTexture)
-        itcIcon.position = CGPoint(x: 325, y: 467)
+        itcIcon.position = CGPoint(x: screenWidth - 50, y: screenHeight - 200)
         addChild(itcIcon)
 
         yesNoIndicator = SKLabelNode(text: "")
-        yesNoIndicator.position = CGPoint(x: 188, y: 334)
+        yesNoIndicator.position = CGPoint(x: screenWidth / 2, y: screenHeight / 2)
         yesNoIndicator.fontName = "SCM Zephyr Deluxe"
         yesNoIndicator.fontSize = 48
         yesNoIndicator.verticalAlignmentMode = .Center
         addChild(yesNoIndicator)
 
         verbalResponseIndicator = SKLabelNode(text: "")
-        verbalResponseIndicator.position = CGPoint(x: 188, y: 334)
+        verbalResponseIndicator.position = CGPoint(x: screenWidth / 2, y: screenHeight / 2)
         verbalResponseIndicator.fontName = "SCM Zephyr Deluxe"
         verbalResponseIndicator.fontSize = 48
         verbalResponseIndicator.verticalAlignmentMode = .Center
@@ -83,7 +89,7 @@ class HUDScene: SKScene {
         addChild(cameraButton)
 
         scoreIndicator = SKLabelNode(text: "$\(score)")
-        scoreIndicator.position = CGPoint(x: 300, y: 75)
+        scoreIndicator.position = CGPoint(x: screenWidth - 75, y: 75)
         scoreIndicator.fontName = "Helvetica-Bold"
         scoreIndicator.fontSize = 24
         scoreIndicator.horizontalAlignmentMode = .Center
@@ -94,16 +100,14 @@ class HUDScene: SKScene {
     }
 
     private func setUpDialogView() {
-        let screenWidth = 375
-        let screenHeight = 667
-        let dialogWidth = 345
-        let dialogHeight = 300
-        let dialogX = 15
-        let dialogY = (screenHeight / 2) - (dialogHeight / 2)
+        let dialogWidth = screenWidth - 30
+        let dialogHeight = screenHeight - 367
+        let dialogX: CGFloat = 15
+        let dialogY: CGFloat = (screenHeight / 2) - (dialogHeight / 2)
         let fontName = "SCM Zephyr Deluxe"
         let fontSize: CGFloat = 24
-        let labelMargin = 10
-        let buttonHeight = 50
+        let labelMargin: CGFloat = 10
+        let buttonHeight: CGFloat = 50
         let borderWidth: CGFloat = 1
 
         dialogView = SKView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
@@ -132,9 +136,9 @@ class HUDScene: SKScene {
         dialogButtonText.verticalAlignmentMode = .Center
 
         dialogButton = SKSpriteNode(color: UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.8),
-                size: CGSize(width: dialogWidth - Int(borderWidth * 2), height: buttonHeight))
-        dialogButton.position = CGPoint(x: Double(screenWidth) / 2.0,
-                y: Double(dialogY + (buttonHeight / 2) + Int(borderWidth)))
+                size: CGSize(width: dialogWidth - (borderWidth * 2), height: buttonHeight))
+        dialogButton.position = CGPoint(x: screenWidth / 2.0,
+                y: (dialogY + (buttonHeight / 2) + borderWidth))
         dialogButton.addChild(dialogButtonText)
         dialogScene.addChild(dialogButton)
 

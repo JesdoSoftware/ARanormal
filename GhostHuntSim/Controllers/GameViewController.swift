@@ -21,6 +21,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
     private var avCaptureSession: AVCaptureSession?
     private var avCaptureDeviceInput: AVCaptureDeviceInput?
     private var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
+    private var motionManager: CMMotionManager?
     private var sceneRendererDelegate: SceneRendererDelegate?
     private var sceneView: SCNView?
     private var cameraNode: SCNNode?
@@ -63,7 +64,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
 
     func startGameScene() {
         let captureDevice = startCapturingVideo()
-        let motionManager = createMotionManager()
+        motionManager = createMotionManager()
         let (sceneView, cameraNode, ghostNode, ghostPivotNode, soundNode, soundPivotNode) = setUpSceneView()
         self.sceneView = sceneView
         self.cameraNode = cameraNode
@@ -91,7 +92,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
         voiceController = VoiceController(words: requiredWords, messenger: messenger)
         voiceController!.startListening()
 
-        sceneRendererDelegate = SceneRendererDelegate(motionManager: motionManager, sceneView: sceneView,
+        sceneRendererDelegate = SceneRendererDelegate(motionManager: motionManager!, sceneView: sceneView,
                 cameraNode: cameraNode, ghostNode: ghostNode, messenger: messenger)
         sceneView.delegate = sceneRendererDelegate!
 
@@ -381,7 +382,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
                                 let prompt = "The spirits have retreated. For now.\n\nYour score is $\(gameOverMessage.score)."
                                 self.messenger.publishMessage(ShowDialogMessage(text: prompt,
                                         buttonText: "Return to Menu") {
-                                    // TODO return to menu
+                                    self.returnToMenuScene()
                                 })
                             }
                         }
@@ -420,5 +421,14 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
         }
 
         return audioPlayer
+    }
+
+    private func returnToMenuScene() {
+        voiceController!.stopListening()
+        motionManager!.stopDeviceMotionUpdates()
+        avCaptureSession!.stopRunning()
+        sceneView!.playing = false
+
+        startMenuScene()
     }
 }

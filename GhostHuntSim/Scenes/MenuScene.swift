@@ -223,8 +223,8 @@ class MenuScene: SKScene {
     }
 
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if isEnabled {
-            for touch: AnyObject in touches {
+        for touch: AnyObject in touches {
+            if isEnabled {
                 let location = touch.locationInNode(self)
 
                 if currentPage == .MainMenu {

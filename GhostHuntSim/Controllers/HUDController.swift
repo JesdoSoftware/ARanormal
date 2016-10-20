@@ -73,7 +73,6 @@ public class HUDController: MessengerSubscriber {
     private func setEmfRatingTo(amount: Double) {
         hudScene.setEmfRating(amount)
 
-        // TODO set game over activity limit
         if (amount >= 10) {
             messenger.publishMessage(GameOverMessage(score: hudScene.getScore()))
         }

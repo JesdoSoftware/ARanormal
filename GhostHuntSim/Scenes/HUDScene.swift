@@ -106,10 +106,10 @@ class HUDScene: SKScene {
         let buttonHeight = 50
         let borderWidth: CGFloat = 1
 
-        dialogView = SKView(frame: CGRect(x: 0, y: 0, width: 375, height: 667))
+        dialogView = SKView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
         dialogView.allowsTransparency = true
 
-        let dialogScene = SKScene(size: CGSize(width: 375, height: 667))
+        let dialogScene = SKScene(size: CGSize(width: screenWidth, height: screenHeight))
         dialogScene.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
 
         let dialogBackground = SKShapeNode(rect: CGRect(x: dialogX, y: dialogY, width: dialogWidth,

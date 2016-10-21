@@ -100,9 +100,9 @@ class HUDScene: SKScene {
     }
 
     private func setUpDialogView() {
-        let dialogWidth = screenWidth - 30
-        let dialogHeight = screenHeight - 367
-        let dialogX: CGFloat = 15
+        let dialogWidth = CGFloat(300)
+        let dialogHeight = CGFloat(320)
+        let dialogX: CGFloat = (screenWidth / 2) - (dialogWidth / 2)
         let dialogY: CGFloat = (screenHeight / 2) - (dialogHeight / 2)
         let fontName = "SCM Zephyr Deluxe"
         let fontSize: CGFloat = 24

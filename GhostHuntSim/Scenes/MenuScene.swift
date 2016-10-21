@@ -43,13 +43,13 @@ class MenuScene: SKScene {
     {
         logo = createLabelWithText("ARanormal")
         logo.fontSize = 52
-        logo.position = CGPoint(x: screenWidth / 2, y: 450)
+        logo.position = CGPoint(x: screenWidth / 2, y: screenHeight * 0.67)
         addChild(logo)
 
-        playButton = createButtonWithText("Play", position: CGPoint(x: screenWidth / 2, y: 300))
+        playButton = createButtonWithText("Play", position: CGPoint(x: screenWidth / 2, y: (screenHeight * 0.33) + 75))
         addChild(playButton)
 
-        aboutButton = createButtonWithText("About", position: CGPoint(x: screenWidth / 2, y: 225))
+        aboutButton = createButtonWithText("About", position: CGPoint(x: screenWidth / 2, y: screenHeight * 0.33))
         addChild(aboutButton)
 
         copyright = MultilineLabel(text: "Copyright © 2016 Jesdo Software LLC.\nAll rights reserved.",
@@ -57,10 +57,12 @@ class MenuScene: SKScene {
                 fontSize: 16, fontColor: UIColor.whiteColor(), leading: 16)
         addChild(copyright)
 
+        let textY: CGFloat = screenHeight * 0.67
+
         aboutText = MultilineLabel(text: "Copyright © 2016 Jesdo Software LLC. All rights reserved.\n\n" +
                 "ARanormal uses the CMU Pocketsphinx library, the CMU Flite library, the CMU CMUCMLTK library " +
                 "(http://cmusphinx.sourceforge.net) and Politepix’s OpenEars (http://www.politepix.com/openears).",
-                labelWidth: Int(screenWidth), pos: CGPoint(x: screenWidth / 2, y: 500), fontName: "SCM Zephyr Deluxe",
+                labelWidth: Int(screenWidth), pos: CGPoint(x: screenWidth / 2, y: textY), fontName: "SCM Zephyr Deluxe",
                 fontSize: 14, fontColor: UIColor.whiteColor(), leading: 14)
         addChild(aboutText)
 
@@ -82,40 +84,43 @@ class MenuScene: SKScene {
                 "Creative Commons Sampling+ License (https://creativecommons.org/licenses/sampling+/1.0/):\n" +
                 "growl5.wav (lendrick)\n" +
                 "roar1.wav (Vegemyte)",
-                labelWidth: Int(screenWidth), pos: CGPoint(x: screenWidth / 2, y: 500),
+                labelWidth: Int(screenWidth), pos: CGPoint(x: screenWidth / 2, y: textY + 100),
                 fontName: "SCM Zephyr Deluxe", fontSize: 10, fontColor: UIColor.whiteColor(), leading: 10)
         addChild(soundAttributionsText)
 
         permissionsText = MultilineLabel(text: "ARanormal requires access to your camera and microphone to provide " +
                 "an augmented reality interactive experience.",
-                labelWidth: Int(screenWidth), pos: CGPoint(x: screenWidth / 2, y: 400),
+                labelWidth: Int(screenWidth), pos: CGPoint(x: screenWidth / 2, y: textY),
                 fontName: "SCM Zephyr Deluxe", fontSize: 24, fontColor: UIColor.whiteColor(), leading: 24)
         addChild(permissionsText)
 
         warningText = MultilineLabel(text: "WARNING:\n\n" +
                 "ARanormal makes use of flashing lights, moments of complete darkness, and sudden visual " +
                 "and audible scares. Please use caution while playing.",
-                labelWidth: Int(screenWidth), pos: CGPoint(x: screenWidth / 2, y: 500),
+                labelWidth: Int(screenWidth), pos: CGPoint(x: screenWidth / 2, y: textY + 50),
                 fontName: "Helvetica-Bold", fontSize: 24, fontColor: UIColor.whiteColor(), leading: 24)
         addChild(warningText)
 
         playRecommendationsText = MultilineLabel(text: "ARanormal is best played in the DARK, " +
                 "with headphones and a sturdy device case.",
-                labelWidth: Int(screenWidth), pos: CGPoint(x: screenWidth / 2, y: 400),
+                labelWidth: Int(screenWidth), pos: CGPoint(x: screenWidth / 2, y: textY),
                 fontName: "SCM Zephyr Deluxe", fontSize: 24, fontColor: UIColor.whiteColor(), leading: 24)
         addChild(playRecommendationsText)
 
-        backButton = createButtonWithText("Back", position: CGPoint(x: screenWidth / 4, y: 200), fontSize: 20)
+        let buttonY: CGFloat = screenHeight * 0.25
+
+        backButton = createButtonWithText("Back", position: CGPoint(x: screenWidth / 4, y: buttonY), fontSize: 20)
         addChild(backButton)
 
         soundAttributionsButton = createButtonWithText("Attributions",
-                position: CGPoint(x: (screenWidth / 4) * 3, y: 200), fontSize: 20)
+                position: CGPoint(x: (screenWidth / 4) * 3, y: buttonY), fontSize: 20)
         addChild(soundAttributionsButton)
 
-        okButton = createButtonWithText("OK", position: CGPoint(x: screenWidth / 2, y: 200), fontSize: 24)
+        okButton = createButtonWithText("OK", position: CGPoint(x: screenWidth / 2, y: buttonY), fontSize: 24)
         addChild(okButton)
 
-        letsPlayButton = createButtonWithText("Let's Play", position: CGPoint(x: screenWidth / 2, y: 200), fontSize: 24)
+        letsPlayButton = createButtonWithText("Let's Play", position: CGPoint(x: screenWidth / 2, y: buttonY),
+                fontSize: 24)
         addChild(letsPlayButton)
 
         hidePageControls()

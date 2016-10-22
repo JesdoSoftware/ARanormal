@@ -169,6 +169,26 @@ public class GhostController: MessengerSubscriber {
                 soundFileName: "Whispering6.caf",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
+        let creaking1SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Creaking1.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let creaking2SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Creaking2.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let creaking3SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Creaking3.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let creaking4SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Creaking4.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
+        let creaking5SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
+                soundFileName: "Creaking5.caf",
+                soundNode: soundNode,
+                soundPivotNode: soundPivotNode)
         soundManifestations = ManifestationSet(manifestations: [crash1SoundManifestation,
                                                                 crash2SoundManifestation,
                                                                 crash4SoundManifestation,
@@ -194,7 +214,12 @@ public class GhostController: MessengerSubscriber {
                                                                 screaming3SoundManifestation,
                                                                 whispering1SoundManifestation,
                                                                 whispering4SoundManifestation,
-                                                                whispering6SoundManifestation],
+                                                                whispering6SoundManifestation,
+                                                                creaking1SoundManifestation,
+                                                                creaking2SoundManifestation,
+                                                                creaking3SoundManifestation,
+                                                                creaking4SoundManifestation,
+                                                                creaking5SoundManifestation],
                 chancePerSixty: 1)
     }
 

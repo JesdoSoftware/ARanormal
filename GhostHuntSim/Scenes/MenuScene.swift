@@ -80,7 +80,10 @@ class MenuScene: SKScene {
                 "Scream 06.wav (AlSarcoli007)\n" +
                 "Creepy Whisper - Go Outside.mp3 (acekasbo)\n" +
                 "Whispers.wav (Breathe2015)\n" +
-                "Ignis Aurum Dry Rev.wav (arytopia)\n\n" +
+                "Ignis Aurum Dry Rev.wav (arytopia)\n" +
+                "Door Squeak, Normal, C.wav (InspectorJ)\n" +
+                "Creak Wood Floor 03 (f4kf4ce)\n" +
+                "Creaking-chair-uni.wav (HeraclitoPD)\n\n" +
                 "Creative Commons Sampling+ License (https://creativecommons.org/licenses/sampling+/1.0/):\n" +
                 "growl5.wav (lendrick)\n" +
                 "roar1.wav (Vegemyte)",

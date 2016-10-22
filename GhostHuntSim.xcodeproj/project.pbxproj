@@ -24,6 +24,7 @@
 		605621427EE37DF026668720 /* Manifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056229E60B803921D9DAD2A /* Manifestation.swift */; };
 		60562174042389842EE190F0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562C3B53347366CACB3E77 /* GameViewController.swift */; };
 		60562174D7201836BB9949DF /* Crash2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562A0A7A654EFFB16151CB /* Crash2.caf */; };
+		6056219FCEF7398C65F2365C /* Creaking5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562E86B0EAEA797007888D /* Creaking5.caf */; };
 		605621C88C1A0FA1CBA97955 /* Crash4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562533768771174B4F5495 /* Crash4.caf */; };
 		605621D2C57945B3514DA6DB /* Roar2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605626DB5D1D7986BF514483 /* Roar2.caf */; };
 		605621DA37D681A393456151 /* Ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 60562240794EBCFE48B1E6F3 /* Ghost.png */; };
@@ -76,7 +77,9 @@
 		605624EF8CC302A0C51A228F /* basic1-165_temperature_low@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 605628DEDA5F231F437A3FC9 /* basic1-165_temperature_low@3x.png */; };
 		605624FCAE4A04A5A7D86E15 /* FlashlightFlickerMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562AD250A635B02342DCE1 /* FlashlightFlickerMessage.swift */; };
 		6056251C58988E6F751022C7 /* HUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605622E9F3484EA52865F6BF /* HUDController.swift */; };
+		605625210C5C2074657A989B /* Creaking1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605626BD9B6626D3CB436E9B /* Creaking1.caf */; };
 		6056254ADA668CDFDD7DD4FB /* FlashlightOnOffMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562B54D397B4A2EB1A3AA9 /* FlashlightOnOffMessage.swift */; };
+		60562558ACA5DE5AB6109FDA /* Creaking3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562E03BB21846EC711B77E /* Creaking3.caf */; };
 		6056256193AACFD970E02174 /* OrbVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605623344E4B9138A09341E0 /* OrbVisibilityManifestation.swift */; };
 		605625680A0F6C6779F55833 /* Giggling1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605627E2CA82866D48CE0698 /* Giggling1.caf */; };
 		6056256DF78B63F231A079DE /* FlashlightOnOffMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562B54D397B4A2EB1A3AA9 /* FlashlightOnOffMessage.swift */; };
@@ -107,6 +110,7 @@
 		60562773C3BBAD589B9912A4 /* basic1-165_temperature_low.png in Resources */ = {isa = PBXBuildFile; fileRef = 6056218BA0A88B4E9F12FA49 /* basic1-165_temperature_low.png */; };
 		605627A148768F0D8E5AC84F /* ManifestationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605624DBF877829699278989 /* ManifestationSet.swift */; };
 		605627C75F84A895D489A15C /* Growling4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056290D7D1E7604A6315218 /* Growling4.caf */; };
+		605628179FBCC2B6AB5335F7 /* Creaking3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562E03BB21846EC711B77E /* Creaking3.caf */; };
 		60562822E194C0C9A383E201 /* FigureVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562F2D4AE1537C5C72DA5B /* FigureVisibilityManifestation.swift */; };
 		6056282C3003F62800E31195 /* Footsteps6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605621C11430FC6343F391B1 /* Footsteps6.caf */; };
 		60562835C7B6D73A98A870EB /* Scratching5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562CCF221ABF352BA1B3D9 /* Scratching5.caf */; };
@@ -124,6 +128,7 @@
 		605629429B39A24BD76C6AC5 /* HUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605622E9F3484EA52865F6BF /* HUDController.swift */; };
 		6056298F9E549B866376E700 /* PhraseRecognizedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605629A6C779E703759C0734 /* PhraseRecognizedMessage.swift */; };
 		6056299132E1ECC9D33FAD4A /* VerbalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562114179444D0D7B12D34 /* VerbalResponse.swift */; };
+		605629B57524031799148FB5 /* Creaking2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605621F2F5451036C4B539B6 /* Creaking2.caf */; };
 		605629B8A60F04BCC6C72CCF /* basic2-072_thumbs_up_like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 605624706EAD475089E5655F /* basic2-072_thumbs_up_like@2x.png */; };
 		605629D55E97ED61209C26EE /* FigureVisibilityManifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562F2D4AE1537C5C72DA5B /* FigureVisibilityManifestation.swift */; };
 		605629FA3C671C7BF9208531 /* basic2-175_light_bulb_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 605620FDBA46ECD315EAF7B3 /* basic2-175_light_bulb_on@3x.png */; };
@@ -135,6 +140,7 @@
 		60562A3DADBEEF48B5E1390D /* Giggling1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605627E2CA82866D48CE0698 /* Giggling1.caf */; };
 		60562A4B4CE7161E040D9DAD /* Growling2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562C1E29C4E718FDCE21DE /* Growling2.caf */; };
 		60562A5DE8F0FD9FD1F4EB9A /* MessengerSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605628283F75E118B52D0033 /* MessengerSubscriber.swift */; };
+		60562AB7BDDE4AB9ADF50375 /* Creaking2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605621F2F5451036C4B539B6 /* Creaking2.caf */; };
 		60562ABB3CC6C3B97CCE69F5 /* basic2-293_dashboard_gauge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60562574707DAB2D9C92645C /* basic2-293_dashboard_gauge@2x.png */; };
 		60562AC0A8175F64DE129518 /* Roar4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056242580FE043D5B49ACBB /* Roar4.caf */; };
 		60562AC108B8688F3BCC995F /* Growling3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562A645A10411E8519A183 /* Growling3.caf */; };
@@ -171,6 +177,8 @@
 		60562C8FAAC7757644420A8E /* Roar3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605623F30E17BF8F5C3615DA /* Roar3.caf */; };
 		60562CB08D6E2F374BAC8685 /* Footsteps8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056223A6C3A07970B23C4B8 /* Footsteps8.caf */; };
 		60562CB37825CDC7507BCF72 /* basic2-174_light_bulb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 605622E7F8935A36937014C9 /* basic2-174_light_bulb@2x.png */; };
+		60562CC8279968BE355D6B28 /* Creaking4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605624C68E22D87216576971 /* Creaking4.caf */; };
+		60562CE8E527027266646AC9 /* Creaking1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605626BD9B6626D3CB436E9B /* Creaking1.caf */; };
 		60562CEF8BE6B4CBDA711ADC /* Roar2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605626DB5D1D7986BF514483 /* Roar2.caf */; };
 		60562D029ED62D0FA6E17CE7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605625FED9E2D592EF208DF0 /* AVFoundation.framework */; };
 		60562D15AC11D3906639B1D7 /* Growling4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6056290D7D1E7604A6315218 /* Growling4.caf */; };
@@ -182,6 +190,7 @@
 		60562D4713856028E028E051 /* Roar5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605623AAED1351F183C0892E /* Roar5.caf */; };
 		60562D4FF5C8BD0F71FEE0F9 /* basic1-097_camera_photography_disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60562CA39E14DB9177339525 /* basic1-097_camera_photography_disabled@2x.png */; };
 		60562D68C54314308B8F4922 /* basic1-165_temperature_low.png in Resources */ = {isa = PBXBuildFile; fileRef = 6056218BA0A88B4E9F12FA49 /* basic1-165_temperature_low.png */; };
+		60562D6BCF25D44884FDBBBC /* Creaking5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562E86B0EAEA797007888D /* Creaking5.caf */; };
 		60562D7F07B99EA257BECCD6 /* IsGhostInViewMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562669CEE1253A4A101E2A /* IsGhostInViewMessage.swift */; };
 		60562D9AF39F1E7D76AA4544 /* Crash1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 60562347C3E1D71F11CD5865 /* Crash1.caf */; };
 		60562D9B19D7C0D2C7FFB646 /* Roar3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605623F30E17BF8F5C3615DA /* Roar3.caf */; };
@@ -197,6 +206,7 @@
 		60562E1EEA3522AEFEE9E4C0 /* Manifestation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056229E60B803921D9DAD2A /* Manifestation.swift */; };
 		60562E4C819DBE57800A2E5E /* VerbalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60562114179444D0D7B12D34 /* VerbalResponse.swift */; };
 		60562E7B8969E3D119B2B0FC /* HeartbeatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056272997C9618DB2041738 /* HeartbeatMessage.swift */; };
+		60562E926134989E21DA88AF /* Creaking4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 605624C68E22D87216576971 /* Creaking4.caf */; };
 		60562ED3C93C783598570BD8 /* VerbalResponseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605622E78844510E2C407ABB /* VerbalResponseMessage.swift */; };
 		60562EF81B8691D41D9E05B2 /* basic2-174_light_bulb.png in Resources */ = {isa = PBXBuildFile; fileRef = 60562BBFE8E5E33B91F89ED0 /* basic2-174_light_bulb.png */; };
 		60562EF95D85CD377BF138EF /* basic1-164_temperature_high@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 605620B37E26DF94ED05992C /* basic1-164_temperature_high@2x.png */; };
@@ -252,6 +262,7 @@
 		605621C11430FC6343F391B1 /* Footsteps6.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Footsteps6.caf; sourceTree = "<group>"; };
 		605621C720206B1D96BAE74F /* Screaming2.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Screaming2.caf; sourceTree = "<group>"; };
 		605621CC4E8CE0C13A44598D /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		605621F2F5451036C4B539B6 /* Creaking2.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Creaking2.caf; sourceTree = "<group>"; };
 		605622381826558C9922DBA3 /* Roar1.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Roar1.caf; sourceTree = "<group>"; };
 		6056223854A5365FADB189F9 /* basic2-293_dashboard_gauge@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic2-293_dashboard_gauge@3x.png"; sourceTree = "<group>"; };
 		6056223A6C3A07970B23C4B8 /* Footsteps8.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Footsteps8.caf; sourceTree = "<group>"; };
@@ -278,6 +289,7 @@
 		605624706EAD475089E5655F /* basic2-072_thumbs_up_like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic2-072_thumbs_up_like@2x.png"; sourceTree = "<group>"; };
 		60562483CFE3F10C515D0B38 /* ResponseBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseBase.swift; sourceTree = "<group>"; };
 		605624AE41BC7BEEF6DA1882 /* Screaming1.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Screaming1.caf; sourceTree = "<group>"; };
+		605624C68E22D87216576971 /* Creaking4.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Creaking4.caf; sourceTree = "<group>"; };
 		605624DBF877829699278989 /* ManifestationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManifestationSet.swift; sourceTree = "<group>"; };
 		605625179DF0ADF6269E4D4E /* HUDScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDScene.swift; sourceTree = "<group>"; };
 		60562533768771174B4F5495 /* Crash4.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Crash4.caf; sourceTree = "<group>"; };
@@ -288,6 +300,7 @@
 		6056261724622B223A30AC30 /* basic2-072_thumbs_up_like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic2-072_thumbs_up_like.png"; sourceTree = "<group>"; };
 		6056263F0D31A22A26D3106C /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		60562669CEE1253A4A101E2A /* IsGhostInViewMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsGhostInViewMessage.swift; sourceTree = "<group>"; };
+		605626BD9B6626D3CB436E9B /* Creaking1.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Creaking1.caf; sourceTree = "<group>"; };
 		605626DB5D1D7986BF514483 /* Roar2.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Roar2.caf; sourceTree = "<group>"; };
 		6056271C0CCDA59E35E6A345 /* MistVisibilityManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MistVisibilityManifestation.swift; sourceTree = "<group>"; };
 		6056272997C9618DB2041738 /* HeartbeatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartbeatMessage.swift; sourceTree = "<group>"; };
@@ -335,9 +348,11 @@
 		60562DADA770BFF0430140D4 /* Messenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
 		60562DCB7C6B6EBC29DD7A19 /* VisibilityManifestationBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibilityManifestationBase.swift; sourceTree = "<group>"; };
 		60562DF7AF8C9AA99FCF7A9D /* ActivityChangedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityChangedMessage.swift; sourceTree = "<group>"; };
+		60562E03BB21846EC711B77E /* Creaking3.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Creaking3.caf; sourceTree = "<group>"; };
 		60562E20B07571D77F948EEB /* FlashlightFlickerManifestation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashlightFlickerManifestation.swift; sourceTree = "<group>"; };
 		60562E534CB563306F685CE0 /* MultilineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultilineLabel.swift; sourceTree = "<group>"; };
 		60562E72760A0C4A92B88EFD /* basic1-164_temperature_high@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic1-164_temperature_high@3x.png"; sourceTree = "<group>"; };
+		60562E86B0EAEA797007888D /* Creaking5.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Creaking5.caf; sourceTree = "<group>"; };
 		60562E9A0FF175CCE9FB00E6 /* ScoreIncreasedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreIncreasedMessage.swift; sourceTree = "<group>"; };
 		60562EB47CC623CA7DB78F53 /* basic2-175_light_bulb_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic2-175_light_bulb_on.png"; sourceTree = "<group>"; };
 		60562EB95330EBFDB07BCBA1 /* basic2-001_comment_bubble_chat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic2-001_comment_bubble_chat@2x.png"; sourceTree = "<group>"; };
@@ -458,6 +473,11 @@
 				60562AD5DCDB67C562723D40 /* Footsteps7.caf */,
 				60562CCF221ABF352BA1B3D9 /* Scratching5.caf */,
 				60562BFE9F90B7F5447F007B /* Shutter.caf */,
+				60562E03BB21846EC711B77E /* Creaking3.caf */,
+				605624C68E22D87216576971 /* Creaking4.caf */,
+				605626BD9B6626D3CB436E9B /* Creaking1.caf */,
+				60562E86B0EAEA797007888D /* Creaking5.caf */,
+				605621F2F5451036C4B539B6 /* Creaking2.caf */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -823,6 +843,11 @@
 				605628B985209A8F9D362D04 /* Footsteps7.caf in Resources */,
 				60562835C7B6D73A98A870EB /* Scratching5.caf in Resources */,
 				605623A937B338C297EBF7C9 /* Shutter.caf in Resources */,
+				605628179FBCC2B6AB5335F7 /* Creaking3.caf in Resources */,
+				60562CC8279968BE355D6B28 /* Creaking4.caf in Resources */,
+				60562CE8E527027266646AC9 /* Creaking1.caf in Resources */,
+				6056219FCEF7398C65F2365C /* Creaking5.caf in Resources */,
+				60562AB7BDDE4AB9ADF50375 /* Creaking2.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,6 +921,11 @@
 				6056247762D25822A84A922E /* Footsteps7.caf in Resources */,
 				60562F0237D154AC35B00236 /* Scratching5.caf in Resources */,
 				60562F9A13891DDAF12421F8 /* Shutter.caf in Resources */,
+				60562558ACA5DE5AB6109FDA /* Creaking3.caf in Resources */,
+				60562E926134989E21DA88AF /* Creaking4.caf in Resources */,
+				605625210C5C2074657A989B /* Creaking1.caf in Resources */,
+				60562D6BCF25D44884FDBBBC /* Creaking5.caf in Resources */,
+				605629B57524031799148FB5 /* Creaking2.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

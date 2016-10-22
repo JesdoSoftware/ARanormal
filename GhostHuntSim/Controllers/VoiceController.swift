@@ -15,15 +15,12 @@ public class VoiceController: NSObject, OEEventsObserverDelegate {
     private let dictionaryPath: String
 
     init(words: [String], messenger: Messenger) {
-        // TODO: check for/request permissions
-
         self.messenger = messenger
 
         openEarsEventsObserver = OEEventsObserver()
 
         let languageModelFileName = "GhostHuntSimLanguageModelFile"
         let languageModelGenerator = OELanguageModelGenerator()
-        // TODO: purchase full version of Rejecto
         languageModelGenerator.generateRejectingLanguageModelFromArray(words,
                 withFilesNamed: languageModelFileName,
                 withOptionalExclusions: nil,

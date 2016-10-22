@@ -279,7 +279,6 @@ public class GhostController: MessengerSubscriber {
     }
 
     private func respondToPhrase(phrase: String) {
-        // TODO: make chance of response based on activity level
         for verbalResponse in verbalResponses {
             if let response = verbalResponse.respondToPhrase(phrase) {
                 messenger.publishMessage(VerbalResponseMessage(response: response))

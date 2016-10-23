@@ -222,7 +222,6 @@
 		8803E1501DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8803E14F1DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf */; };
 		8803E1511DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8803E14F1DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf */; };
 		8807B5431D541ED500BA3EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8807B5421D541ED500BA3EA5 /* AppDelegate.swift */; };
-		8807B5451D541ED500BA3EA5 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 8807B5441D541ED500BA3EA5 /* art.scnassets */; };
 		8807B54A1D541ED500BA3EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8807B5481D541ED500BA3EA5 /* Main.storyboard */; };
 		8807B54C1D541ED500BA3EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8807B54B1D541ED500BA3EA5 /* Assets.xcassets */; };
 		8807B54F1D541ED500BA3EA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8807B54D1D541ED500BA3EA5 /* LaunchScreen.storyboard */; };
@@ -365,7 +364,6 @@
 		8803E14F1DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCMZephyrDeluxe.ttf; sourceTree = "<group>"; };
 		8807B53F1D541ED500BA3EA5 /* ARanormal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARanormal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8807B5421D541ED500BA3EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8807B5441D541ED500BA3EA5 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		8807B5491D541ED500BA3EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8807B54B1D541ED500BA3EA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8807B54E1D541ED500BA3EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -645,7 +643,6 @@
 			isa = PBXGroup;
 			children = (
 				8807B5421D541ED500BA3EA5 /* AppDelegate.swift */,
-				8807B5441D541ED500BA3EA5 /* art.scnassets */,
 				8807B5481D541ED500BA3EA5 /* Main.storyboard */,
 				8807B54B1D541ED500BA3EA5 /* Assets.xcassets */,
 				8807B54D1D541ED500BA3EA5 /* LaunchScreen.storyboard */,
@@ -774,7 +771,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				881EFDFE1D90CB66008D8B79 /* Mist.scnp in Resources */,
-				8807B5451D541ED500BA3EA5 /* art.scnassets in Resources */,
 				8807B54F1D541ED500BA3EA5 /* LaunchScreen.storyboard in Resources */,
 				881EFE001D90CB66008D8B79 /* smoke.png in Resources */,
 				8807B54C1D541ED500BA3EA5 /* Assets.xcassets in Resources */,
@@ -1167,6 +1163,7 @@
 				PRODUCT_NAME = ARanormal;
 				SWIFT_OBJC_BRIDGING_HEADER = "GhostHuntSim/GhostHuntSim-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1189,6 +1186,7 @@
 				PRODUCT_NAME = ARanormal;
 				SWIFT_OBJC_BRIDGING_HEADER = "GhostHuntSim/GhostHuntSim-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

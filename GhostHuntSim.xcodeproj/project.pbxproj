@@ -733,9 +733,9 @@
 				TargetAttributes = {
 					8807B53E1D541ED500BA3EA5 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = X295ZZ5D8X;
+						DevelopmentTeam = 623855LKB8;
 						LastSwiftMigration = 0800;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					8807B5541D541ED500BA3EA5 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1148,19 +1148,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEPLOYMENT_POSTPROCESSING = YES;
-				DEVELOPMENT_TEAM = X295ZZ5D8X;
+				DEVELOPMENT_TEAM = 623855LKB8;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = GhostHuntSim/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = net.jessedouglas.aranormal;
 				PRODUCT_NAME = ARanormal;
+				PROVISIONING_PROFILE = "9d70b693-ae61-40bb-84d1-552e5088a23d";
+				PROVISIONING_PROFILE_SPECIFIER = "XC net jessedouglas dev";
 				SWIFT_OBJC_BRIDGING_HEADER = "GhostHuntSim/GhostHuntSim-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1171,19 +1175,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jesdo Software LLC (623855LKB8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEPLOYMENT_POSTPROCESSING = YES;
-				DEVELOPMENT_TEAM = X295ZZ5D8X;
+				DEVELOPMENT_TEAM = 623855LKB8;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = GhostHuntSim/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = net.jessedouglas.aranormal;
 				PRODUCT_NAME = ARanormal;
+				PROVISIONING_PROFILE = "fa6b1e18-fa11-487b-b99a-6e9dc6d2bd93";
+				PROVISIONING_PROFILE_SPECIFIER = "XC net jessedouglas";
 				SWIFT_OBJC_BRIDGING_HEADER = "GhostHuntSim/GhostHuntSim-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -20,7 +20,7 @@ class HUDScene: SKScene {
     private let cameraTexture = SKTexture(imageNamed: "basic1-097_camera_photography.png")
     private let cameraDisabledTexture = SKTexture(imageNamed: "basic1-097_camera_photography_disabled.png")
     private let emfGaugeTexture = SKTexture(imageNamed: "basic2-293_dashboard_gauge.png")
-    private let yesNoTexture = SKTexture(imageNamed: "basic2-072_thumbs_up_like.png")
+//    private let yesNoTexture = SKTexture(imageNamed: "basic2-072_thumbs_up_like.png")
     private let itcTexture = SKTexture(imageNamed: "basic2-001_comment_bubble_chat.png")
 
     private var temperatureIndicator: SKSpriteNode! = nil
@@ -62,12 +62,12 @@ class HUDScene: SKScene {
         flashlightButton.position = CGPoint(x: 75, y: 200)
         addChild(flashlightButton)
 
-        let yesNoIcon = SKSpriteNode(texture: yesNoTexture)
-        yesNoIcon.position = CGPoint(x: screenWidth - 50, y: screenHeight - 125)
-        addChild(yesNoIcon)
+//        let yesNoIcon = SKSpriteNode(texture: yesNoTexture)
+//        yesNoIcon.position = CGPoint(x: screenWidth - 50, y: screenHeight - 125)
+//        addChild(yesNoIcon)
 
         let itcIcon = SKSpriteNode(texture: itcTexture)
-        itcIcon.position = CGPoint(x: screenWidth - 50, y: screenHeight - 200)
+        itcIcon.position = CGPoint(x: screenWidth - 50, y: screenHeight - 125)
         addChild(itcIcon)
 
         yesNoIndicator = SKLabelNode(text: "")

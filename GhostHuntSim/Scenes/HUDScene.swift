@@ -234,6 +234,7 @@ class HUDScene: SKScene {
     }
 
     private func hideDialog() {
+        dialogText.text = ""
         dialogView.removeFromSuperview()
         isDialogDisplayed = false
     }

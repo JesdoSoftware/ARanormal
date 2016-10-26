@@ -219,6 +219,7 @@
 		60562FA81CD17C7731829777 /* basic1-097_camera_photography_disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60562CA39E14DB9177339525 /* basic1-097_camera_photography_disabled@2x.png */; };
 		60562FD03FAB96245530467D /* basic2-175_light_bulb_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 605620FDBA46ECD315EAF7B3 /* basic2-175_light_bulb_on@3x.png */; };
 		60562FE1788D77780CF5BFD5 /* SceneRendererDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605622B8995D5AD941755FEF /* SceneRendererDelegate.swift */; };
+		880358DA1DC112850080712F /* Rejecto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880358D91DC112850080712F /* Rejecto.framework */; };
 		8803E1501DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8803E14F1DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf */; };
 		8803E1511DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8803E14F1DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf */; };
 		8807B5431D541ED500BA3EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8807B5421D541ED500BA3EA5 /* AppDelegate.swift */; };
@@ -238,8 +239,6 @@
 		88C2DF011D5A931B000D4B5C /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C2DEFC1D5A931B000D4B5C /* OpenEars.framework */; };
 		88C2DF021D5A931B000D4B5C /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C2DEFD1D5A931B000D4B5C /* Slt.framework */; };
 		88C2DF031D5A931B000D4B5C /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C2DEFD1D5A931B000D4B5C /* Slt.framework */; };
-		88EE999F1D90C59C007773F1 /* Rejecto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EE999E1D90C59C007773F1 /* Rejecto.framework */; };
-		88EE99A01D90C59C007773F1 /* Rejecto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EE999E1D90C59C007773F1 /* Rejecto.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -361,6 +360,7 @@
 		60562FD540586F82D5EF393F /* basic2-175_light_bulb_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic2-175_light_bulb_on@2x.png"; sourceTree = "<group>"; };
 		60562FED92A002F23AF1C47D /* Scratching4.caf */ = {isa = PBXFileReference; lastKnownFileType = file.caf; path = Scratching4.caf; sourceTree = "<group>"; };
 		60562FFBEC56A94E9CEC46CC /* basic1-097_camera_photography.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic1-097_camera_photography.png"; sourceTree = "<group>"; };
+		880358D91DC112850080712F /* Rejecto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Rejecto.framework; sourceTree = "<group>"; };
 		8803E14F1DB2DC8700386CC4 /* SCMZephyrDeluxe.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCMZephyrDeluxe.ttf; sourceTree = "<group>"; };
 		8807B53F1D541ED500BA3EA5 /* ARanormal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARanormal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8807B5421D541ED500BA3EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -378,7 +378,6 @@
 		88C2DEFB1D5A931B000D4B5C /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
 		88C2DEFC1D5A931B000D4B5C /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
 		88C2DEFD1D5A931B000D4B5C /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
-		88EE999E1D90C59C007773F1 /* Rejecto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Rejecto.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,7 +385,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88EE999F1D90C59C007773F1 /* Rejecto.framework in Frameworks */,
+				880358DA1DC112850080712F /* Rejecto.framework in Frameworks */,
 				88C2DF021D5A931B000D4B5C /* Slt.framework in Frameworks */,
 				88C2DF001D5A931B000D4B5C /* OpenEars.framework in Frameworks */,
 				60562C132E7C9BE3A62A93C3 /* AudioToolbox.framework in Frameworks */,
@@ -398,7 +397,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88EE99A01D90C59C007773F1 /* Rejecto.framework in Frameworks */,
 				88C2DF031D5A931B000D4B5C /* Slt.framework in Frameworks */,
 				88C2DF011D5A931B000D4B5C /* OpenEars.framework in Frameworks */,
 			);
@@ -675,7 +673,7 @@
 		88C2DEFA1D5A931B000D4B5C /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				88EE999E1D90C59C007773F1 /* Rejecto.framework */,
+				880358D91DC112850080712F /* Rejecto.framework */,
 				88C2DEFB1D5A931B000D4B5C /* AcousticModelEnglish.bundle */,
 				88C2DEFC1D5A931B000D4B5C /* OpenEars.framework */,
 				88C2DEFD1D5A931B000D4B5C /* Slt.framework */,

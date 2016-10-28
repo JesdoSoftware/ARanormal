@@ -63,7 +63,10 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
     }
 
     func startGameScene() {
-        let captureDevice = startCapturingVideo()
+        var captureDevice: AVCaptureDevice? = nil
+        if isCameraAvailable() {
+            captureDevice = startCapturingVideo()
+        }
         motionManager = createMotionManager()
         let (sceneView, cameraNode, ghostNode, ghostPivotNode, soundNode, soundPivotNode) = setUpSceneView()
         self.sceneView = sceneView
@@ -76,7 +79,6 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
         messenger.addSubscriber(hudController)
 
         let yesNoResponses = getYesNoResponses()
-
         let verbalResponses = getVerbalResponses()
 
         ghostController = GhostController(ghostNode: ghostNode, ghostPivotNode: ghostPivotNode,
@@ -84,13 +86,17 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, MessengerS
                 yesNoResponses: yesNoResponses, verbalResponses: verbalResponses)
         messenger.addSubscriber(ghostController!)
 
-        let flashlightController = FlashlightController(captureDevice: captureDevice)
-        messenger.addSubscriber(flashlightController)
-        messenger.publishMessage(FlashlightOnOffMessage(isOn: true))
+        if captureDevice != nil {
+            let flashlightController = FlashlightController(captureDevice: captureDevice!)
+            messenger.addSubscriber(flashlightController)
+            messenger.publishMessage(FlashlightOnOffMessage(isOn: true))
+        }
 
-        let requiredWords = getRequiredWordsFromYesNoResponses(yesNoResponses, verbalResponses: verbalResponses)
-        voiceController = VoiceController(words: requiredWords, messenger: messenger)
-        voiceController!.startListening()
+        if isMicrophoneAvailable() {
+            let requiredWords = getRequiredWordsFromYesNoResponses(yesNoResponses, verbalResponses: verbalResponses)
+            voiceController = VoiceController(words: requiredWords, messenger: messenger)
+            voiceController!.startListening()
+        }
 
         sceneRendererDelegate = SceneRendererDelegate(motionManager: motionManager!, sceneView: sceneView,
                 cameraNode: cameraNode, ghostNode: ghostNode, messenger: messenger)

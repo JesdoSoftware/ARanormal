@@ -26,9 +26,9 @@ public class FlashlightController: MessengerSubscriber {
             flickerFlashlight(times: flashlightFlickerMessage.times)
         }
     }
-
+    
     private func turnOnFlashlight() {
-        if (!isOn) {
+        if !isOn && isTorchAvailable() {
             do {
                 try captureDevice.lockForConfiguration()
 //			captureDevice.setExposureModeCustomWithDuration(captureDevice.activeFormat.maxExposureDuration,
@@ -45,7 +45,7 @@ public class FlashlightController: MessengerSubscriber {
     }
 
     private func turnOffFlashlight() {
-        if (isOn) {
+        if isOn && isTorchAvailable() {
             do {
                 try captureDevice.lockForConfiguration()
                 captureDevice.torchMode = AVCaptureTorchMode.Off
@@ -59,7 +59,7 @@ public class FlashlightController: MessengerSubscriber {
     }
 
     private func flickerFlashlight(times times: Int) {
-        if (isOn) {
+        if isOn {
             self.turnOffFlashlight()
 
             let delayRnd = (1...8).randomInt()

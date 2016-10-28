@@ -25,7 +25,7 @@ class HUDScene: SKScene {
 
     private var temperatureIndicator: SKSpriteNode! = nil
     private var emfIndicator: SKLabelNode! = nil
-    private var flashlightButton: SKSpriteNode! = nil
+    private var flashlightButton: SKSpriteNode? = nil
     private var yesNoIndicator: SKLabelNode! = nil
     private var verbalResponseIndicator: SKLabelNode! = nil
     private var cameraButton: SKSpriteNode! = nil
@@ -58,9 +58,11 @@ class HUDScene: SKScene {
         temperatureIndicator.position = CGPoint(x: screenWidth - 50, y: screenHeight - 50)
         addChild(temperatureIndicator)
 
-        flashlightButton = SKSpriteNode(texture: flashlightOnTexture)
-        flashlightButton.position = CGPoint(x: 75, y: 200)
-        addChild(flashlightButton)
+        if isTorchAvailable() {
+            flashlightButton = SKSpriteNode(texture: flashlightOnTexture)
+            flashlightButton!.position = CGPoint(x: 75, y: 200)
+            addChild(flashlightButton!)
+        }
 
 //        let yesNoIcon = SKSpriteNode(texture: yesNoTexture)
 //        yesNoIcon.position = CGPoint(x: screenWidth - 50, y: screenHeight - 125)
@@ -155,7 +157,7 @@ class HUDScene: SKScene {
                     controller?.onDialogDismissed()
                 }
             } else {
-                if flashlightButton.containsPoint(location) {
+                if flashlightButton != nil && flashlightButton!.containsPoint(location) {
                     controller?.toggleFlashlight()
                 } else if isCameraEnabled && cameraButton.containsPoint(location) {
                     controller?.takePicture()
@@ -179,10 +181,10 @@ class HUDScene: SKScene {
 
     func setFlashlightIndicatorOn(isOn: Bool) {
         if isOn {
-            flashlightButton.texture = flashlightOnTexture
+            flashlightButton?.texture = flashlightOnTexture
         }
         else {
-            flashlightButton.texture = flashlightOffTexture
+            flashlightButton?.texture = flashlightOffTexture
         }
     }
 

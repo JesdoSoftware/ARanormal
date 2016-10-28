@@ -279,6 +279,7 @@ class MenuScene: SKScene {
     private func checkPermissions() {
         let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo)
         let microphoneAuthorizationStatus = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeAudio)
+        let recordPermission = AVAudioSession.sharedInstance().recordPermission()
 
         if cameraAuthorizationStatus == .NotDetermined {
             AVCaptureDevice.requestAccessForMediaType(AVMediaTypeVideo,
@@ -287,7 +288,7 @@ class MenuScene: SKScene {
                             self.checkPermissions()
                         }
                     })
-        } else if microphoneAuthorizationStatus == .NotDetermined {
+        } else if microphoneAuthorizationStatus == .NotDetermined && recordPermission != .Granted {
             AVCaptureDevice.requestAccessForMediaType(AVMediaTypeAudio,
                     completionHandler: { (audioGranted: Bool) -> Void in
                         dispatch_async(dispatch_get_main_queue()) {

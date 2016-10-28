@@ -66,127 +66,127 @@ public class GhostController: MessengerSubscriber {
 
     private func initializeSoundManifestations() {
         let crash1SoundManifestation = SoundManifestation(minimumActivityLevel: 2,
-                soundFileName: "Crash1.caf",
+                soundFileName: "Crash1",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let crash2SoundManifestation = SoundManifestation(minimumActivityLevel: 2,
-                soundFileName: "Crash2.caf",
+                soundFileName: "Crash2",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let crash4SoundManifestation = SoundManifestation(minimumActivityLevel: 2,
-                soundFileName: "Crash4.caf",
+                soundFileName: "Crash4",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let footsteps1SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
-                soundFileName: "Footsteps1.caf",
+                soundFileName: "Footsteps1",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let footsteps5SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
-                soundFileName: "Footsteps5.caf",
+                soundFileName: "Footsteps5",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let footsteps6SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
-                soundFileName: "Footsteps6.caf",
+                soundFileName: "Footsteps6",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let footsteps7SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
-                soundFileName: "Footsteps7.caf",
+                soundFileName: "Footsteps7",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let footsteps8SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
-                soundFileName: "Footsteps8.caf",
+                soundFileName: "Footsteps8",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let giggling1SoundManifestation = SoundManifestation(minimumActivityLevel: 3,
-                soundFileName: "Giggling1.caf",
+                soundFileName: "Giggling1",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let giggling2SoundManifestation = SoundManifestation(minimumActivityLevel: 3,
-                soundFileName: "Giggling2.caf",
+                soundFileName: "Giggling2",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let growling1SoundManifestation = SoundManifestation(minimumActivityLevel: 5,
-                soundFileName: "Growling1.caf",
+                soundFileName: "Growling1",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let growling2SoundManifestation = SoundManifestation(minimumActivityLevel: 5,
-                soundFileName: "Growling2.caf",
+                soundFileName: "Growling2",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let growling3SoundManifestation = SoundManifestation(minimumActivityLevel: 5,
-                soundFileName: "Growling3.caf",
+                soundFileName: "Growling3",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let growling4SoundManifestation = SoundManifestation(minimumActivityLevel: 5,
-                soundFileName: "Growling4.caf",
+                soundFileName: "Growling4",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let knocking4SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
-                soundFileName: "Knocking4.caf",
+                soundFileName: "Knocking4",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let knocking5SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
-                soundFileName: "Knocking5.caf",
+                soundFileName: "Knocking5",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let knocking1SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
-                soundFileName: "knocking-angry.caf",
+                soundFileName: "knocking-angry",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let scratching3SoundManifestation = SoundManifestation(minimumActivityLevel: 2,
-                soundFileName: "Scratching3.caf",
+                soundFileName: "Scratching3",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let scratching4SoundManifestation = SoundManifestation(minimumActivityLevel: 2,
-                soundFileName: "Scratching4.caf",
+                soundFileName: "Scratching4",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let scratching5SoundManifestation = SoundManifestation(minimumActivityLevel: 3,
-                soundFileName: "Scratching5.caf",
+                soundFileName: "Scratching5",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let screaming1SoundManifestation = SoundManifestation(minimumActivityLevel: 5,
-                soundFileName: "Screaming1.caf",
+                soundFileName: "Screaming1",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let screaming2SoundManifestation = SoundManifestation(minimumActivityLevel: 5,
-                soundFileName: "Screaming2.caf",
+                soundFileName: "Screaming2",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let screaming3SoundManifestation = SoundManifestation(minimumActivityLevel: 4,
-                soundFileName: "Screaming3.caf",
+                soundFileName: "Screaming3",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let whispering1SoundManifestation = SoundManifestation(minimumActivityLevel: 3,
-                soundFileName: "Whispering1.caf",
+                soundFileName: "Whispering1",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let whispering4SoundManifestation = SoundManifestation(minimumActivityLevel: 3,
-                soundFileName: "Whispering4.caf",
+                soundFileName: "Whispering4",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let whispering6SoundManifestation = SoundManifestation(minimumActivityLevel: 3,
-                soundFileName: "Whispering6.caf",
+                soundFileName: "Whispering6",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let creaking1SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
-                soundFileName: "Creaking1.caf",
+                soundFileName: "Creaking1",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let creaking2SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
-                soundFileName: "Creaking2.caf",
+                soundFileName: "Creaking2",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let creaking3SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
-                soundFileName: "Creaking3.caf",
+                soundFileName: "Creaking3",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let creaking4SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
-                soundFileName: "Creaking4.caf",
+                soundFileName: "Creaking4",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         let creaking5SoundManifestation = SoundManifestation(minimumActivityLevel: 1,
-                soundFileName: "Creaking5.caf",
+                soundFileName: "Creaking5",
                 soundNode: soundNode,
                 soundPivotNode: soundPivotNode)
         soundManifestations = ManifestationSet(manifestations: [crash1SoundManifestation,

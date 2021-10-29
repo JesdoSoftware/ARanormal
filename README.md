@@ -4,6 +4,8 @@ An augmented reality (AR) ghost hunting simulation for iPhone
 
 ## About
 
+ARanormal simulates a haunting in your own home. Turn off the lights and launch the app, and use your phone's camera to record paranormal activity around you. When you spot a ghost, take a picture to increase your score. Your phone may also pick up signals of otherwordly communication; ask questions aloud to prompt a response! But be careful not to provoke them...
+
 ARanormal was the first game by Jesdo Software, released for iPhone in October 2016. Though it's no longer distributed on the App Store, we're making the source code available, both to celebrate Jesdo Software's fifth anniversary, and to demonstrate a commitment to open source and software preservation.
 
 Despite releasing the source code, we consider ARanormal a legacy project, and do not intend to maintain it, release any new versions, or offer support.
